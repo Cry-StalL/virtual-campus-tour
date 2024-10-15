@@ -6,8 +6,7 @@ import (
 
 func main() {
 	r := gin.Default()
-	// 将后端的"assets”文件夹与 URI"/static”关联
-	r.static("/static", "./assets")
+	r.Static("/static/panos", "./static/panos")
 	// 启动服务器
 	r.Run(":8080")
 }
