@@ -1,4 +1,4 @@
-module sysu_project
+module virtual-campus-tour-backend
 
 go 1.22.2
 
