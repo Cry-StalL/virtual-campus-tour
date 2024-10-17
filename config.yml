@@ -1,0 +1,4 @@
+server:
+  port: 8080 # Gin 后端服务器的端口
+frontend:
+  url: http://localhost:5173 # Vue 前端服务器的端口
