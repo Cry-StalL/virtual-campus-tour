@@ -14,7 +14,7 @@
       initPanorama() {
         const viewer = pannellum.viewer(this.$refs.panorama, {
           autoLoad: true,
-          panorama: 'src/assets/img/pano_7000.jpg',
+          panorama: 'http://127.0.0.1:8080/static/panos/pano_7000.jpg',
           haov: 360, // 水平视角范围（360 表示全范围）
           vaov: 180, // 垂直视角范围（180 表示全范围）
           vOffset: 0, // 垂直偏移
