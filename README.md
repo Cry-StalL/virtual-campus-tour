@@ -1,5 +1,14 @@
 # virtual-campus-tour
 
+前端(gc-dev)
+
+## 环境配置
+`npm install`
+
+如果提示`pannellum`没有安装，直接运行`npm install pannellum`即可。
+
+---
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
