@@ -12,7 +12,7 @@ func main() {
 	r := gin.Default()
 
 	// 加载配置
-	config, err := ConfigLoader.LoadConfig("config.yaml")
+	config, err := ConfigLoader.LoadConfig("config.yml")
 	if err != nil {
 		log.Fatalf("error loading config: %v", err)
 	}
