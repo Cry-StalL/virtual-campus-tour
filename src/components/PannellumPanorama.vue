@@ -15,16 +15,24 @@
         const viewer = pannellum.viewer(this.$refs.panorama, {
           autoLoad: true,
           panorama: 'http://127.0.0.1:8080/static/panos/pano_7000.jpg',
-          haov: 360, // 水平视角范围（360 表示全范围）
-          vaov: 180, // 垂直视角范围（180 表示全范围）
-          vOffset: 0, // 垂直偏移
-          vOffset: 0, // 水平偏移
-          // 其他配置项...
-
         });
-  
-        // 你可以在这里添加一些其他逻辑
-  
+
+        // 添加鼠标点击事件监听器
+        this.$refs.panorama.addEventListener('mousedown', this.getMouseCoords);
+      },
+
+      getMouseCoords(event) {
+        // 使用 viewer.mouseEventToCoords 获取光标位置的 yaw 和 pitch
+        const coords = this.viewer.mouseEventToCoords(event);
+
+        if (coords) {
+          const yaw = coords[0];   // 水平方向的角度
+          const pitch = coords[1]; // 垂直方向的角度
+
+          console.log(`Yaw: ${yaw}, Pitch: ${pitch}`);
+
+        }
+
       }
     }
   };
