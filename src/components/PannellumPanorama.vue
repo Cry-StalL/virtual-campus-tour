@@ -5,6 +5,7 @@
 <script>
   import 'pannellum'
   import 'pannellum/build/pannellum.css'
+  import axios from 'axios'
   
   export default {
     mounted() {
@@ -12,9 +13,9 @@
     },
     methods: {
       initPanorama() {
-        const viewer = pannellum.viewer(this.$refs.panorama, {
+        this.viewer = pannellum.viewer(this.$refs.panorama, {
           autoLoad: true,
-          panorama: 'http://127.0.0.1:8080/static/panos/pano_7000.jpg',
+          panorama: 'http://127.0.0.1:8080/static/panos/pano_1.jpg',
           hotSpots: [
             {
               pitch:  -3.562,
@@ -33,15 +34,28 @@
           ]
         });
 
-        viewer.on('mousedown', function(event){
+        this.viewer.on('mousedown', function(event){
           console.log(viewer.mouseEventToCoords(event));
         });
 
       },
 
       getNextPanorama(event, arg) {
-        console.log(arg);
-        // 请求后端: 传当前场景、参数给后端
+        const current_pano = this.viewer.getConfig().panorama
+
+        // 发送HTTP请求给后端: 传当前场景、参数给后端
+        axios.get('http://localhost:8080/api/next-pano', {
+          params: {
+            current_pano: current_pano,
+            arg: arg
+          },
+        })
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.error('请求失败', error);
+        });
 
         //
       }
