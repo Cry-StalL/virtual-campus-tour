@@ -19,7 +19,16 @@
             {
               pitch:  -3.562,
               yaw: -14.748,
-              type: 'scene'
+              type: 'scene',
+              clickHandlerFunc: this.getNextPanorama,
+              clickHandlerArgs: ['+']
+            },
+            {
+              pitch:  -16.495,
+              yaw: 138.978,
+              type: 'scene',
+              clickHandlerFunc: this.getNextPanorama,
+              clickHandlerArgs: ['-']
             }
           ]
         });
@@ -29,6 +38,13 @@
         });
 
       },
+
+      getNextPanorama(event, arg) {
+        console.log(arg);
+        // 请求后端: 传当前场景、参数给后端
+
+        //
+      }
 
     }
   };
