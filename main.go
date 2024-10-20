@@ -4,6 +4,7 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"log"
+	"net/http"
 	"time"
 	"virtual-campus-tour-backend/utils"
 )
@@ -29,6 +30,16 @@ func main() {
 
 	// 绑定静态资源
 	r.Static("/static/panos", "./static/panos")
+
+	// getNextPanorama接口
+	r.GET("/api/next-pano", func(c *gin.Context) {
+		// 获取所有查询参数
+		params := c.Request.URL.Query()
+
+		// 返回JSON响应
+		c.JSON(http.StatusOK, params)
+	})
+
 	// 启动服务器
 	r.Run(":" + config.Server.Port)
 }
