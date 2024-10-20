@@ -15,6 +15,13 @@
         const viewer = pannellum.viewer(this.$refs.panorama, {
           autoLoad: true,
           panorama: 'http://127.0.0.1:8080/static/panos/pano_7000.jpg',
+          hotSpots: [
+            {
+              pitch:  -3.562,
+              yaw: -14.748,
+              type: 'scene'
+            }
+          ]
         });
 
         viewer.on('mousedown', function(event){
