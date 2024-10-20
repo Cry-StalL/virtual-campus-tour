@@ -17,23 +17,12 @@
           panorama: 'http://127.0.0.1:8080/static/panos/pano_7000.jpg',
         });
 
-        // 添加鼠标点击事件监听器
-        this.$refs.panorama.addEventListener('mousedown', this.getMouseCoords);
+        viewer.on('mousedown', function(event){
+          console.log(viewer.mouseEventToCoords(event));
+        });
+
       },
 
-      getMouseCoords(event) {
-        // 使用 viewer.mouseEventToCoords 获取光标位置的 yaw 和 pitch
-        const coords = this.viewer.mouseEventToCoords(event);
-
-        if (coords) {
-          const yaw = coords[0];   // 水平方向的角度
-          const pitch = coords[1]; // 垂直方向的角度
-
-          console.log(`Yaw: ${yaw}, Pitch: ${pitch}`);
-
-        }
-
-      }
     }
   };
 </script>
