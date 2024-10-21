@@ -33,14 +33,57 @@
             panorama: 'http://127.0.0.1:8080/static/panos/pano_1.jpg',
             hotSpots: [
               {
-                pitch:  0,
-                yaw: 0,
+                pitch:  -25.727,
+                yaw: -95.330,
                 type: 'scene',
                 clickHandlerFunc: this.getNextPanorama,
                 clickHandlerArgs: ['+']
+              },
+              {
+                pitch:  -16.714,
+                yaw: 100.570,
+                type: 'scene',
+                clickHandlerFunc: this.getNextPanorama,
+                clickHandlerArgs: ['-']
               }
             ]
-          }]
+          },
+          {
+            id: 2,
+            autoLoad: true,
+            panorama: 'http://127.0.0.1:8080/static/panos/pano_2.jpg',
+            hotSpots: [
+              {
+                pitch:  -14.975,
+                yaw: -7.043,
+                type: 'scene',
+                clickHandlerFunc: this.getNextPanorama,
+                clickHandlerArgs: ['+']
+              },
+              {
+                pitch:  -11.200,
+                yaw: -149.777,
+                type: 'scene',
+                clickHandlerFunc: this.getNextPanorama,
+                clickHandlerArgs: ['-']
+              }
+            ]
+          },
+          {
+            id: 3,
+            autoLoad: true,
+            panorama: 'http://127.0.0.1:8080/static/panos/pano_3.jpg',
+            hotSpots: [
+              {
+                pitch:  -16.203,
+                yaw: 179.270,
+                type: 'scene',
+                clickHandlerFunc: this.getNextPanorama,
+                clickHandlerArgs: ['-']
+              }
+            ]
+          }
+          ]
 
         this.viewer = pannellum.viewer(this.$refs.panorama, {
           scenes: {},
@@ -48,6 +91,8 @@
 
         this.viewer.addScene('0', configs[0])
         this.viewer.addScene('1', configs[1])
+        this.viewer.addScene('2', configs[2])
+        this.viewer.addScene('3', configs[3])
 
         this.viewer.loadScene('0')
 
@@ -75,16 +120,12 @@
           const next_pano_id = response.data["next_pano_id"]
 
           // 加载新场景
-          this.viewer.loadScene("1")
+          this.viewer.loadScene(next_pano_id, this.viewer.getPitch(), this.viewer.getYaw(), this.viewer.getHfov())
         })
         .catch(error => {
           console.error('请求失败', error);
         });
-
-
-
       }
-
     }
   };
 </script>
