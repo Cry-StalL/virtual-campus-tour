@@ -87,6 +87,7 @@
 
         this.viewer = pannellum.viewer(this.$refs.panorama, {
           scenes: {},
+          "sceneFadeDuration": 1000,
         });
 
         this.viewer.addScene('0', configs[0])
