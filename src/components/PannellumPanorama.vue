@@ -51,7 +51,7 @@
 
         this.viewer.loadScene('0')
 
-        this.viewer.on('mousedown', function(event){
+        this.viewer.on('mousedown', (event) =>{
           console.log(this.viewer.mouseEventToCoords(event));
         });
 
