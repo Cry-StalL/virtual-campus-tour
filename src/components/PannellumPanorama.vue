@@ -13,9 +13,10 @@
     },
     methods: {
       initPanorama() {
-        this.viewer = pannellum.viewer(this.$refs.panorama, {
+        const configs = [{
+          id: 0,
           autoLoad: true,
-          panorama: 'http://127.0.0.1:8080/static/panos/pano_1.jpg',
+          panorama: 'http://127.0.0.1:8080/static/panos/pano_0.jpg',
           hotSpots: [
             {
               pitch:  -3.562,
@@ -23,41 +24,65 @@
               type: 'scene',
               clickHandlerFunc: this.getNextPanorama,
               clickHandlerArgs: ['+']
-            },
-            {
-              pitch:  -16.495,
-              yaw: 138.978,
-              type: 'scene',
-              clickHandlerFunc: this.getNextPanorama,
-              clickHandlerArgs: ['-']
             }
           ]
+        },
+          {
+            id: 1,
+            autoLoad: true,
+            panorama: 'http://127.0.0.1:8080/static/panos/pano_1.jpg',
+            hotSpots: [
+              {
+                pitch:  0,
+                yaw: 0,
+                type: 'scene',
+                clickHandlerFunc: this.getNextPanorama,
+                clickHandlerArgs: ['+']
+              }
+            ]
+          }]
+
+        this.viewer = pannellum.viewer(this.$refs.panorama, {
+          scenes: {},
         });
 
+        this.viewer.addScene('0', configs[0])
+        this.viewer.addScene('1', configs[1])
+
+        this.viewer.loadScene('0')
+
         this.viewer.on('mousedown', function(event){
-          console.log(viewer.mouseEventToCoords(event));
+          console.log(this.viewer.mouseEventToCoords(event));
         });
 
       },
 
-      getNextPanorama(event, arg) {
+      getNextPanorama(event, args) {
         const current_pano = this.viewer.getConfig().panorama
+        const direction = args[0]
 
         // 发送HTTP请求给后端: 传当前场景、参数给后端
         axios.get('http://localhost:8080/api/next-pano', {
           params: {
             current_pano: current_pano,
-            arg: arg
+            direction: direction
           },
         })
         .then(response => {
           console.log(response.data);
+
+          // 切换到下张全景图
+          const next_pano_id = response.data["next_pano_id"]
+
+          // 加载新场景
+          this.viewer.loadScene("1")
         })
         .catch(error => {
           console.error('请求失败', error);
         });
 
-        //
+
+
       }
 
     }
