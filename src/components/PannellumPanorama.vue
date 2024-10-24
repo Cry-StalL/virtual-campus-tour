@@ -34,7 +34,7 @@
 </script>
   
 <style>
-body, html, #app {
+body, html {
     margin: 0;
     padding: 0;
     width: 100%;
