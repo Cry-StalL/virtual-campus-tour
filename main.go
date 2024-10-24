@@ -6,10 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
-	"net/url"
-	"path"
 	"strconv"
-	"strings"
 	"time"
 	"virtual-campus-tour-backend/utils"
 )
@@ -42,27 +39,13 @@ func main() {
 		direction := c.Query("direction")
 		current_pano := c.Query("current_pano")
 
-		log.Println(direction)
-		log.Println(current_pano)
-
-		// 解析URL
-		parsedUrl, err := url.Parse(current_pano)
+		// 将current_pano_id转换为int
+		current_pano_id, err := strconv.Atoi(current_pano)
 		if err != nil {
-			fmt.Println("解析URL出错:", err)
-			return
+			fmt.Println("转换错误:", err)
 		}
-		// 获取路径中的文件名
-		current_pano_filename := path.Base(parsedUrl.Path)
-		// 查找下划线和扩展名的位置
-		underscoreIndex := strings.LastIndex(current_pano_filename, "_")
-		dotIndex := strings.LastIndex(current_pano_filename, ".")
-		// 提取下划线和扩展名之间的数字部分
-		var current_pano_id int
-		if underscoreIndex != -1 && dotIndex != -1 && underscoreIndex < dotIndex {
-			current_pano_id, err = strconv.Atoi(current_pano_filename[underscoreIndex+1 : dotIndex])
-		} else {
-			fmt.Println("文件名格式不符合预期")
-		}
+		log.Println(direction)
+		log.Println(current_pano_id)
 
 		var next_pano_id int
 		if direction == "+" {
