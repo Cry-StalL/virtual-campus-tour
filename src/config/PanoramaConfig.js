@@ -74,10 +74,10 @@ const configs = [
 ]
 
 function getNextPanorama(event, args) {
-    const current_pano = this.viewer.getConfig().panorama
+    const current_pano = this.viewer.getConfig().id
     const direction = args[0]
 
-    // 发送HTTP请求给后端: 传当前场景、参数给后端
+    // 发送HTTP请求给后端: 传当前场景ID、参数给后端
     axios.get('http://localhost:8080/api/next-pano', {
         params: {
             current_pano: current_pano,
