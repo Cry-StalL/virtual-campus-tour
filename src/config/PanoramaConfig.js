@@ -74,7 +74,7 @@ const configs = [
 ]
 
 function getNextPanorama(event, args) {
-    const current_pano = this.viewer.getConfig().id
+    const current_pano = window.panoramaViewer.getConfig().id
     const direction = args[0]
 
     // 发送HTTP请求给后端: 传当前场景ID、参数给后端
@@ -91,7 +91,7 @@ function getNextPanorama(event, args) {
             const next_pano_id = response.data["next_pano_id"]
 
             // 加载新场景
-            this.viewer.loadScene(next_pano_id, this.viewer.getPitch(), this.viewer.getYaw(), this.viewer.getHfov())
+            window.panoramaViewer.loadScene(next_pano_id, window.panoramaViewer.getPitch(), window.panoramaViewer.getYaw(), window.panoramaViewer.getHfov())
         })
         .catch(error => {
             console.error('请求失败', error);

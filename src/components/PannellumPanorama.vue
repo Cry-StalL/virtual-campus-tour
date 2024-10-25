@@ -28,6 +28,8 @@
         this.viewer.on('mousedown', (event) =>{
           console.log(this.viewer.mouseEventToCoords(event));
         });
+
+        window.panoramaViewer = this.viewer; // TODO: 目前viewer是全局的
       },
     }
   };
