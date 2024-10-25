@@ -5,6 +5,7 @@
 <script>
   import 'pannellum'
   import 'pannellum/build/pannellum.css'
+  import configs from '../config/PanoramaConfig.js'
   
   export default {
     mounted() {
@@ -12,20 +13,24 @@
     },
     methods: {
       initPanorama() {
-        const viewer = pannellum.viewer(this.$refs.panorama, {
-          autoLoad: true,
-          panorama: 'http://127.0.0.1:8080/static/panos/pano_7000.jpg',
-          haov: 360, // 水平视角范围（360 表示全范围）
-          vaov: 180, // 垂直视角范围（180 表示全范围）
-          vOffset: 0, // 垂直偏移
-          vOffset: 0, // 水平偏移
-          // 其他配置项...
-
+        this.viewer = pannellum.viewer(this.$refs.panorama, {
+          scenes: {},
+          "sceneFadeDuration": 1000,
         });
-  
-        // 你可以在这里添加一些其他逻辑
-  
-      }
+
+        this.viewer.addScene('0', configs[0])
+        this.viewer.addScene('1', configs[1])
+        this.viewer.addScene('2', configs[2])
+        this.viewer.addScene('3', configs[3])
+
+        this.viewer.loadScene('0')
+
+        this.viewer.on('mousedown', (event) =>{
+          console.log(this.viewer.mouseEventToCoords(event));
+        });
+
+        window.panoramaViewer = this.viewer; // TODO: 目前viewer是全局的
+      },
     }
   };
 </script>
