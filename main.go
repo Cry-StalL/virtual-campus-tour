@@ -81,6 +81,71 @@ func main() {
 
 		} else {
 			// TODO: 如果direction参数为数字(十字路口的情况)
+
+			// 获取该crossing的roads信息
+			parts := strings.Split(current_pano_id, ",")
+			var road_list []int
+			var point_list []int
+			for _, part := range parts {
+
+				firstNum := strings.Split(part, "-")[0] // 取每个部分的第一个数字（以"-"分隔）
+				secondNum := strings.Split(part, "-")[1]
+				road, err := strconv.Atoi(firstNum)
+				if err != nil {
+					fmt.Println("转换错误:", err)
+					return
+				}
+				point, err := strconv.Atoi(secondNum)
+				if err != nil {
+					fmt.Println("转换错误:", err)
+					return
+				}
+				road_list = append(road_list, road)
+				point_list = append(point_list, point)
+			}
+			var road_list_str []string
+			for _, road := range road_list {
+				road_list_str = append(road_list_str, strconv.Itoa(road))
+			}
+
+			roads := strings.Join(road_list_str, ",") // 将结果连接为一个字符串
+
+			// 使用roads值在crossings表中查询id
+			var crossing models.Crossings
+			if err := db.Where("roads = ?", roads).First(&crossing).Error; err != nil {
+				fmt.Println("查询路口失败:", err)
+				return
+			}
+
+			crossingID := crossing.ID
+
+			// 查询crossing_directions表
+			var operationData models.Crossing_Directions
+			if err := db.Where("crossing_id = ? AND direction = ?", crossingID, direction).First(&operationData).Error; err != nil {
+				fmt.Println("查询失败:", err)
+				return
+			}
+			road_operation := operationData.Road_Operation
+			point_operation := operationData.Point_Operation
+
+			// 执行操作
+			var next_road_id, current_point_id, next_point_id int
+
+			next_road_id = road_list[road_operation]
+
+			current_point_id = point_list[road_operation]
+
+			if point_operation == "+" {
+				next_point_id = current_point_id + 1
+			} else if point_operation == "-" {
+				next_point_id = current_point_id - 1
+			}
+
+			// 返回响应(下一张图的ID)
+			c.JSON(http.StatusOK, gin.H{
+				"next_pano_id": fmt.Sprintf("%d-%d", next_road_id, next_point_id),
+			})
+
 		}
 	})
 

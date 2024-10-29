@@ -9,6 +9,6 @@ type Crossings struct {
 type Crossing_Directions struct {
 	Crossing_ID     uint   `gorm:"primary_key"`
 	Direction       uint   `gorm:"primary_key"`
-	Road_Operation  string `gorm:"not null"`
+	Road_Operation  uint   `gorm:"not null"`
 	Point_Operation string `gorm:"not null"`
 }
