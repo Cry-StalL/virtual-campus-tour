@@ -22,7 +22,7 @@
           this.viewer.addScene(configs[i].id, configs[i]);
         }
 
-        this.viewer.loadScene('1-2')
+        this.viewer.loadScene('1-3,2-3')
 
         this.viewer.on('mousedown', (event) =>{
           console.log(this.viewer.mouseEventToCoords(event));
