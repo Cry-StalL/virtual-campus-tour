@@ -2,85 +2,108 @@ import axios from "axios";
 
 const configs = [
     {
-    id: 0,
-    autoLoad: true,
-    panorama: 'http://127.0.0.1:8080/static/panos/pano_0.jpg',
-    hotSpots: [
-        {
-            pitch:  -3.562,
-            yaw: -14.748,
-            type: 'scene',
-            clickHandlerFunc: getNextPanorama,
-            clickHandlerArgs: ['+']
-        }
-    ]
-},
-    {
-        id: 1,
+        id: '1-1',
         autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/pano_1.jpg',
+        panorama: 'http://127.0.0.1:8080/static/panos/1-1.jpg',
         hotSpots: [
             {
-                pitch:  -25.727,
-                yaw: -95.330,
+                pitch:  -17.058,
+                yaw: -87.394,
                 type: 'scene',
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
-            },
-            {
-                pitch:  -16.714,
-                yaw: 100.570,
-                type: 'scene',
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
             }
         ]
     },
     {
-        id: 2,
+        id: '1-2',
         autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/pano_2.jpg',
+        panorama: 'http://127.0.0.1:8080/static/panos/1-2.jpg',
         hotSpots: [
             {
-                pitch:  -14.975,
-                yaw: -7.043,
+                pitch:  -10.126,
+                yaw: 0.463,
                 type: 'scene',
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
-            },
-            {
-                pitch:  -11.200,
-                yaw: -149.777,
-                type: 'scene',
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
             }
         ]
     },
     {
-        id: 3,
+        id: '1-3,2-3',
         autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/pano_3.jpg',
+        panorama: 'http://127.0.0.1:8080/static/panos/1-3,2-3.jpg',
         hotSpots: [
             {
-                pitch:  -16.203,
-                yaw: 179.270,
+                pitch:  -8.621,
+                yaw: -89.989,
                 type: 'scene',
                 clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
+                clickHandlerArgs: ['1']
+            },
+            {
+                pitch:  -13.782,
+                yaw: 90.910,
+                type: 'scene',
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['2']
+            },
+            {
+                pitch:  -11.780,
+                yaw: 0.945,
+                type: 'scene',
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['3']
+            },
+            {
+                pitch:  -9.924,
+                yaw: 178.715,
+                type: 'scene',
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['4']
             }
         ]
-    }
+    },
+    {
+        id: '1-4',
+        autoLoad: true,
+        panorama: 'http://127.0.0.1:8080/static/panos/1-4.jpg',
+    },
+    {
+        id: '1-5',
+        autoLoad: true,
+        panorama: 'http://127.0.0.1:8080/static/panos/1-5.jpg',
+    },
+    {
+        id: '2-1',
+        autoLoad: true,
+        panorama: 'http://127.0.0.1:8080/static/panos/2-1.jpg',
+    },
+    {
+        id: '2-2',
+        autoLoad: true,
+        panorama: 'http://127.0.0.1:8080/static/panos/2-2.jpg',
+    },
+    {
+        id: '2-4',
+        autoLoad: true,
+        panorama: 'http://127.0.0.1:8080/static/panos/2-4.jpg',
+    },
+    {
+        id: '2-5',
+        autoLoad: true,
+        panorama: 'http://127.0.0.1:8080/static/panos/2-5.jpg',
+    },
 ]
 
 function getNextPanorama(event, args) {
-    const current_pano = window.panoramaViewer.getConfig().id
+    const current_pano_id = window.panoramaViewer.getConfig().id
     const direction = args[0]
 
     // 发送HTTP请求给后端: 传当前场景ID、参数给后端
     axios.get('http://localhost:8080/api/next-pano', {
         params: {
-            current_pano: current_pano,
+            current_pano_id: current_pano_id,
             direction: direction
         },
     })
@@ -92,6 +115,7 @@ function getNextPanorama(event, args) {
 
             // 加载新场景
             window.panoramaViewer.loadScene(next_pano_id, window.panoramaViewer.getPitch(), window.panoramaViewer.getYaw(), window.panoramaViewer.getHfov())
+            // window.panoramaViewer.loadScene(next_pano_id)
         })
         .catch(error => {
             console.error('请求失败', error);

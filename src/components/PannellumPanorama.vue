@@ -18,12 +18,11 @@
           "sceneFadeDuration": 1000,
         });
 
-        this.viewer.addScene('0', configs[0])
-        this.viewer.addScene('1', configs[1])
-        this.viewer.addScene('2', configs[2])
-        this.viewer.addScene('3', configs[3])
+        for (let i = 0; i < configs.length; i++) {
+          this.viewer.addScene(configs[i].id, configs[i]);
+        }
 
-        this.viewer.loadScene('0')
+        this.viewer.loadScene('1-2')
 
         this.viewer.on('mousedown', (event) =>{
           console.log(this.viewer.mouseEventToCoords(event));
