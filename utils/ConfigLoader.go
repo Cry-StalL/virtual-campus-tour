@@ -13,9 +13,16 @@ type FrontendConfig struct {
 	URL string `yaml:"url"`
 }
 
+type DatabaseConfig struct {
+	Username string `yaml:"username"`
+	Password string `yaml:"password"`
+	Port     string `yaml:"port"`
+}
+
 type Config struct {
 	Server   ServerConfig   `yaml:"server"`
 	Frontend FrontendConfig `yaml:"frontend"`
+	Database DatabaseConfig `yaml:"database"`
 }
 
 func LoadConfig(configPath string) (*Config, error) {

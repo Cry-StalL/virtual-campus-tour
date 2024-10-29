@@ -7,7 +7,10 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
+	"virtual-campus-tour-backend/internal/database"
+	"virtual-campus-tour-backend/internal/models"
 	"virtual-campus-tour-backend/utils"
 )
 
@@ -33,31 +36,52 @@ func main() {
 	// 绑定静态资源
 	r.Static("/static/panos", "./static/panos")
 
+	// 连接mysql数据库
+	dsn := fmt.Sprintf("%s:%s@tcp(127.0.0.1:%s)/", config.Database.Username, config.Database.Password, config.Database.Port)
+	dbName := "virtual_campus_tour"
+	db, nil := database.InitDatabase(dsn, dbName)
+
+	// 创建数据表
+	if err := db.AutoMigrate(&models.Crossings{}, &models.Crossing_Directions{}); err != nil {
+		fmt.Println("自动迁移失败:", err)
+		return
+	}
+	fmt.Println("数据表创建成功")
+
 	// 定义getNextPanorama接口
 	r.GET("/api/next-pano", func(c *gin.Context) {
 		// 接收请求，获取查询参数
 		direction := c.Query("direction")
-		current_pano := c.Query("current_pano")
+		current_pano_id := c.Query("current_pano_id")
 
-		// 将current_pano_id转换为int
-		current_pano_id, err := strconv.Atoi(current_pano)
-		if err != nil {
-			fmt.Println("转换错误:", err)
+		// 如果direction参数为'+'或'-'
+		if direction == "+" || direction == "-" {
+			// 以 "-" 为分隔符切分字符串
+			parts := strings.Split(current_pano_id, "-")
+			var point_id int
+			if len(parts) == 2 {
+				point_id, err = strconv.Atoi(parts[1])
+				if err != nil {
+					log.Fatalf("error parsing current pano")
+				}
+			} else {
+				log.Fatalf("error parsing current pano")
+			}
+
+			if direction == "+" {
+				point_id++
+			} else { //if direction == "-"
+				point_id--
+			}
+
+			// 返回响应(下一张图的ID)
+			c.JSON(http.StatusOK, gin.H{
+				"next_pano_id": fmt.Sprintf("%s-%d", parts[0], point_id),
+			})
+
+		} else {
+			// TODO: 如果direction参数为数字(十字路口的情况)
 		}
-		log.Println(direction)
-		log.Println(current_pano_id)
-
-		var next_pano_id int
-		if direction == "+" {
-			next_pano_id = current_pano_id + 1
-		} else { // if direction == "-"
-			next_pano_id = current_pano_id - 1
-		}
-
-		// 返回响应(下一张图的ID)
-		c.JSON(http.StatusOK, gin.H{
-			"next_pano_id": next_pano_id,
-		})
 	})
 
 	// 启动服务器
