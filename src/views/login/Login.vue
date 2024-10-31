@@ -1,5 +1,6 @@
 <template>
     <div>
+      <div class="container">
       <el-card class="box-card">
         <h2>登录</h2>
         <el-form
@@ -31,6 +32,7 @@
           </router-link>
         </div>
       </el-card>
+    </div>
     </div>
   </template>
   
@@ -105,9 +107,15 @@
   </script>
   
   <style scoped>
+  .container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh; 
+  }
   .box-card {
     margin: auto auto;
-    width: 400px;
+    width: 400px;   
   }
   .login-from {
     margin: auto auto;
