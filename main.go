@@ -49,7 +49,7 @@ func main() {
 	fmt.Println("数据表创建成功")
 
 	// 定义getNextPanorama接口
-	r.GET("/api/next-pano", func(c *gin.Context) {
+	r.GET("/api/pano/next-pano", func(c *gin.Context) {
 		// 接收请求，获取查询参数
 		direction := c.Query("direction")
 		current_pano_id := c.Query("current_pano_id")
