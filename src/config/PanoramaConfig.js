@@ -1,4 +1,5 @@
 import axios from "axios";
+// import ../
 
 const configs = [
     {
@@ -10,6 +11,7 @@ const configs = [
                 pitch:  -17.058,
                 yaw: -87.394,
                 type: 'scene',
+                cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             }
@@ -38,6 +40,7 @@ const configs = [
                 pitch:  -8.621,
                 yaw: -89.989,
                 type: 'scene',
+                cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['1']
             },
@@ -45,6 +48,7 @@ const configs = [
                 pitch:  -13.782,
                 yaw: 90.910,
                 type: 'scene',
+                cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['2']
             },
@@ -52,6 +56,7 @@ const configs = [
                 pitch:  -11.780,
                 yaw: 0.945,
                 type: 'scene',
+                cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['3']
             },
@@ -59,6 +64,7 @@ const configs = [
                 pitch:  -9.924,
                 yaw: 178.715,
                 type: 'scene',
+                cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['4']
             }
@@ -101,7 +107,7 @@ function getNextPanorama(event, args) {
     const direction = args[0]
 
     // 发送HTTP请求给后端: 传当前场景ID、参数给后端
-    axios.get('http://localhost:8080/api/next-pano', {
+    axios.get('http://localhost:8080/api/pano/next-pano', {
         params: {
             current_pano_id: current_pano_id,
             direction: direction
