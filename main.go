@@ -5,9 +5,10 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"log"
-	"net/http"
-	"strconv"
 	"time"
+	"virtual-campus-tour-backend/internal/api"
+	"virtual-campus-tour-backend/internal/database"
+	"virtual-campus-tour-backend/internal/models"
 	"virtual-campus-tour-backend/utils"
 )
 
@@ -15,9 +16,9 @@ func main() {
 	r := gin.Default()
 
 	// 加载配置
-	config, err := ConfigLoader.LoadConfig("config.yml")
-	if err != nil {
-		log.Fatalf("error loading config: %v", err)
+	config, err1 := ConfigLoader.LoadConfig("config.yml")
+	if err1 != nil {
+		log.Fatalf("error loading config: %v", err1)
 	}
 
 	// 配置 CORS, 解决跨域引用问题
@@ -33,32 +34,30 @@ func main() {
 	// 绑定静态资源
 	r.Static("/static/panos", "./static/panos")
 
-	// 定义getNextPanorama接口
-	r.GET("/api/next-pano", func(c *gin.Context) {
-		// 接收请求，获取查询参数
-		direction := c.Query("direction")
-		current_pano := c.Query("current_pano")
+	// 连接mysql数据库
+	dsn := fmt.Sprintf("%s:%s@tcp(127.0.0.1:%s)/", config.Database.Username, config.Database.Password, config.Database.Port)
+	dbName := "virtual_campus_tour"
+	err2 := database.InitDatabase(dsn, dbName)
+	if err2 != nil {
+		return
+	}
 
-		// 将current_pano_id转换为int
-		current_pano_id, err := strconv.Atoi(current_pano)
-		if err != nil {
-			fmt.Println("转换错误:", err)
-		}
-		log.Println(direction)
-		log.Println(current_pano_id)
+	// 获取数据库实例
+	db := database.DB
+	if db == nil {
+		log.Fatalf("error connecting to database")
+	}
 
-		var next_pano_id int
-		if direction == "+" {
-			next_pano_id = current_pano_id + 1
-		} else { // if direction == "-"
-			next_pano_id = current_pano_id - 1
-		}
+	// 创建数据表
+	if err := db.AutoMigrate(&models.Crossings{}, &models.Crossing_Directions{}); err != nil {
+		fmt.Println("自动迁移失败:", err)
+		return
+	}
+	fmt.Println("数据表创建成功")
 
-		// 返回响应(下一张图的ID)
-		c.JSON(http.StatusOK, gin.H{
-			"next_pano_id": next_pano_id,
-		})
-	})
+	// 定义接口
+	r.GET("/api/pano/next-pano", api.GetNextPanorama) // getNextPanorama接口
+	r.GET("/api/pano/real-id", api.GetRealID)
 
 	// 启动服务器
 	r.Run(":" + config.Server.Port)
