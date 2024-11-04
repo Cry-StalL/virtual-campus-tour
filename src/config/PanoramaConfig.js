@@ -23,9 +23,18 @@ const configs = [
         panorama: 'http://127.0.0.1:8080/static/panos/1-2.jpg',
         hotSpots: [
             {
+                pitch:  -9.591,
+                yaw: -179.579,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['-']
+            },
+            {
                 pitch:  -10.126,
                 yaw: 0.463,
                 type: 'scene',
+                cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             }
@@ -74,31 +83,116 @@ const configs = [
         id: '1-4',
         autoLoad: true,
         panorama: 'http://127.0.0.1:8080/static/panos/1-4.jpg',
+        hotSpots: [
+            {
+                pitch:  -10.085,
+                yaw: -0.082,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['-']
+            },
+            {
+                pitch:  -10.715,
+                yaw: 172.109,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['+']
+            }
+        ]
     },
     {
         id: '1-5',
         autoLoad: true,
         panorama: 'http://127.0.0.1:8080/static/panos/1-5.jpg',
+        hotSpots: [
+            {
+                pitch:  -10.085,
+                yaw: -0.082,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['-']
+            }
+        ]
     },
     {
         id: '2-1',
         autoLoad: true,
         panorama: 'http://127.0.0.1:8080/static/panos/2-1.jpg',
+        hotSpots: [
+            {
+                pitch:  -11.925,
+                yaw: -89.813,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['+']
+            }
+        ]
     },
     {
         id: '2-2',
         autoLoad: true,
         panorama: 'http://127.0.0.1:8080/static/panos/2-2.jpg',
+        hotSpots: [
+            {
+                pitch:  -8.448,
+                yaw: 179.257,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['-']
+            },
+            {
+                pitch:  -12.518,
+                yaw: 0.365,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['+']
+            }
+        ]
     },
     {
         id: '2-4',
         autoLoad: true,
         panorama: 'http://127.0.0.1:8080/static/panos/2-4.jpg',
+        hotSpots: [
+            {
+                pitch:  -11.268,
+                yaw: -2.188,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['-']
+            },
+            {
+                pitch:  -8.059,
+                yaw: -179.963,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['+']
+            }
+        ]
+
     },
     {
         id: '2-5',
         autoLoad: true,
         panorama: 'http://127.0.0.1:8080/static/panos/2-5.jpg',
+        hotSpots: [
+            {
+                pitch:  -9.690,
+                yaw: -0.108,
+                type: 'scene',
+                cssClass: "custom-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['-']
+            }
+        ]
     },
 ]
 
@@ -114,14 +208,23 @@ function getNextPanorama(event, args) {
         },
     })
         .then(response => {
-            console.log(response.data);
-
             // 切换到下张全景图
             const next_pano_id = response.data["next_pano_id"]
 
-            // 加载新场景
-            window.panoramaViewer.loadScene(next_pano_id, window.panoramaViewer.getPitch(), window.panoramaViewer.getYaw(), window.panoramaViewer.getHfov())
-            // window.panoramaViewer.loadScene(next_pano_id)
+            // 获取真实ID
+            axios.get('http://localhost:8080/api/pano/real-id', {
+                params: {
+                    id: next_pano_id,
+                }
+            }).then(response => {
+                const next_pano_real_id = response.data["real-id"]
+
+                // 加载新场景
+                window.panoramaViewer.loadScene(next_pano_real_id, window.panoramaViewer.getPitch(), window.panoramaViewer.getYaw(), window.panoramaViewer.getHfov())
+                // window.panoramaViewer.loadScene(next_pano_id)
+            })
+
+
         })
         .catch(error => {
             console.error('请求失败', error);
