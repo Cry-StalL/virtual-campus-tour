@@ -7,6 +7,12 @@
 
 如果提示`pannellum`没有安装，直接运行`npm install pannellum`即可。
 
+`npm install element-plus`
+
+`npm install vue-router`
+
+`npm install axios`
+
 ---
 
 This template should help get you started developing with Vue 3 in Vite.
