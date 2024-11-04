@@ -55,8 +55,9 @@ func main() {
 	}
 	fmt.Println("数据表创建成功")
 
-	// 定义getNextPanorama接口
-	r.GET("/api/pano/next-pano", api.GetNextPanorama)
+	// 定义接口
+	r.GET("/api/pano/next-pano", api.GetNextPanorama) // getNextPanorama接口
+	r.GET("/api/pano/real-id", api.GetRealID)
 
 	// 启动服务器
 	r.Run(":" + config.Server.Port)
