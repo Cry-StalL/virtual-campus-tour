@@ -5,7 +5,7 @@
 <script>
   import 'pannellum'
   import 'pannellum/build/pannellum.css'
-  import configs from '../config/PanoramaConfig.js'
+  import configs from '@/config/PanoramaConfig.js'
   
   export default {
     mounted() {

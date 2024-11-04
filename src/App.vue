@@ -1,15 +1,14 @@
 <template>
   <div id="app">
-    <PannellumPanorama />
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 
 <script>
-import PannellumPanorama from './components/PannellumPanorama.vue';
 
 export default {
+  name: 'App',
   components: {
-    PannellumPanorama
   }
 }
 </script>
