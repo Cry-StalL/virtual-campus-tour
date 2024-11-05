@@ -90,13 +90,13 @@ func GetNextPanorama(c *gin.Context) {
 		crossingID := crossing.ID
 
 		// 查询crossing_directions表
-		var operationData models.Crossing_Directions
+		var operationData models.CrossingDirections
 		if err := db.Where("crossing_id = ? AND direction = ?", crossingID, direction).First(&operationData).Error; err != nil {
 			fmt.Println("查询失败:", err)
 			return
 		}
-		road_operation := operationData.Road_Operation
-		point_operation := operationData.Point_Operation
+		road_operation := operationData.RoadOperation
+		point_operation := operationData.PointOperation
 
 		// 执行操作
 		var next_road_id, current_point_id, next_point_id int

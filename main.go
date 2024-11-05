@@ -8,7 +8,6 @@ import (
 	"time"
 	"virtual-campus-tour-backend/internal/api"
 	"virtual-campus-tour-backend/internal/database"
-	"virtual-campus-tour-backend/internal/models"
 	"virtual-campus-tour-backend/utils"
 )
 
@@ -37,23 +36,18 @@ func main() {
 	// 连接mysql数据库
 	dsn := fmt.Sprintf("%s:%s@tcp(127.0.0.1:%s)/", config.Database.Username, config.Database.Password, config.Database.Port)
 	dbName := "virtual_campus_tour"
+
+	// 初始化数据库(函数内判断数据库是否存在)
 	err2 := database.InitDatabase(dsn, dbName)
 	if err2 != nil {
 		return
 	}
 
-	// 获取数据库实例
-	db := database.DB
-	if db == nil {
-		log.Fatalf("error connecting to database")
-	}
-
-	// 创建数据表
-	if err := db.AutoMigrate(&models.Crossings{}, &models.Crossing_Directions{}); err != nil {
-		fmt.Println("自动迁移失败:", err)
+	// 初始化数据表(函数内判断数据表是否存在)
+	err3 := database.InitTables()
+	if err3 != nil {
 		return
 	}
-	fmt.Println("数据表创建成功")
 
 	// 定义接口
 	r.GET("/api/pano/next-pano", api.GetNextPanorama) // getNextPanorama接口
