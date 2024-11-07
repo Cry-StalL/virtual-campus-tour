@@ -1,6 +1,6 @@
 <template>
-    <div>
-      <div class="container">
+  <div>
+    <div class="container">
       <el-card class="box-card">
         <h2>注册</h2>
         <el-form
@@ -15,9 +15,9 @@
           <el-form-item label="用户名" prop="uname">
             <el-input v-model="ruleForm.uname"></el-input>
           </el-form-item>
-          <el-form-item label="手机号码" prop="uphone">
+          <el-form-item label="手机号码" prop="telephone">
             <el-input
-              v-model="ruleForm.uphone"
+              v-model="ruleForm.telephone"
               autocomplete="off"
             ></el-input>
           </el-form-item>
@@ -37,17 +37,22 @@
           </el-form-item>
         </el-form>
         <div class="btnGroup">
-          <el-button type="primary" @click="submitForm('ruleForm')"
+          <el-button
+            type="primary"
+            @click="submitForm('ruleForm')"
+            v-loading="loading"
             >提交</el-button
           >
           <el-button @click="goBack">返回</el-button>
         </div>
       </el-card>
     </div>
-    </div>
-  </template>
+  </div>
+</template>
   
-  <script>
+<script>
+  import axios from 'axios'
+
   export default {
     data() {
       var validatePass = (rule, value, callback) => {
@@ -72,7 +77,7 @@
       return {
         ruleForm: {
           uname: "",
-          uphone: "",
+          telephone: "",
           pass: "",
           password: "",
         },
@@ -80,7 +85,7 @@
           uname: [
             { required: true, message: "用户名不能为空！", trigger: "blur" },
           ],
-          uphone: [
+          telephone: [
             { required: true, message: "电话号码不能为空！", trigger: "blur" },
           ],
           pass: [{ required: true, validator: validatePass, trigger: "blur" }],
@@ -93,8 +98,56 @@
     methods: {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
+          this.loading = true;
+
           if (valid) {
-            alert("submit!");
+            let _this = this;
+
+            // 获取表单数据
+            const name = _this.ruleForm.uname;
+            const telephone = _this.ruleForm.telephone;
+            const password = _this.ruleForm.password;
+
+            // 使用 axios 将登录信息发送到后端
+            axios.post(
+              'http://localhost:8080/api/register', 
+              {
+                name: name,
+                telephone: telephone,
+                password: password
+              },
+              {
+                headers: {
+                  'Content-Type': 'application/json',
+                }
+              }
+            )
+            .then(response => {
+              console.log(response.data);
+
+              if (response.data.code === 200) {
+                // 显示后端响应的成功信息
+                this.$message({
+                  message: response.data.message,
+                  type: "success",
+                });
+              }
+              _this.loading = false;
+            })
+            .catch(error => {
+              //校验请求返回结果
+              console.error("登录请求失败:", error);
+              console.log('Request Headers:', error.config.headers);
+              console.log('Request Data:', error.config.data); // 打印请求体
+              console.log('Response Status:', error.response ? error.response.status : 'No response');
+              console.log('Response Data:', error.response ? error.response.data : 'No response data');
+
+              this.$message({
+                message: error.response.data.message,
+                type: "warning",
+              });
+              _this.loading = false;
+            });
           } else {
             console.log("error submit!!");
             return false;

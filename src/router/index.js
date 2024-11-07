@@ -26,15 +26,5 @@ const router = createRouter({
     ]
 });
 
-router.beforeEach((to, from, next) => {
-    let isAuthenticated = !!sessionStorage.getItem('userInfo')
-    if (to.path !== '/login' && to.path !== '/register' && !isAuthenticated) {
-        next({ path: '/login' })
-        Message({
-            message: '请先登录！',
-            type: "warning",
-        });
-    } else next()
-})
 
 export default router;
