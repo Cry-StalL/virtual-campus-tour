@@ -6,7 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"log"
 	"time"
-	"virtual-campus-tour-backend/internal/api"
+	"virtual-campus-tour-backend/internal/api/pano"
+	api "virtual-campus-tour-backend/internal/api/user"
 	"virtual-campus-tour-backend/internal/database"
 	"virtual-campus-tour-backend/utils"
 )
@@ -50,8 +51,10 @@ func main() {
 	}
 
 	// 定义接口
-	r.GET("/api/pano/next-pano", api.GetNextPanorama) // getNextPanorama接口
-	r.GET("/api/pano/real-id", api.GetRealID)
+	r.GET("/api/pano/next-pano", pano.GetNextPanorama)
+	r.GET("/api/pano/real-id", pano.GetRealID)
+	r.POST("/api/user/register", api.Register)
+	r.POST("/api/user/login", api.Login)
 
 	// 启动服务器
 	r.Run(":" + config.Server.Port)
