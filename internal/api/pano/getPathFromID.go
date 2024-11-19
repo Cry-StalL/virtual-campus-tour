@@ -1,4 +1,4 @@
-package api
+package pano
 
 import (
 	"github.com/gin-gonic/gin"
