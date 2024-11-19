@@ -74,7 +74,7 @@
 
             // 使用 axios 将登录信息发送到后端
             axios.post(
-              'http://localhost:8080/api/login', 
+              'http://localhost:8080/api/user/login',
               {
                 telephone: telephone,
                 password: password

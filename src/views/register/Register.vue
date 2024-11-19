@@ -110,7 +110,7 @@
 
             // 使用 axios 将登录信息发送到后端
             axios.post(
-              'http://localhost:8080/api/register', 
+              'http://localhost:8080/api/user/register',
               {
                 name: name,
                 telephone: telephone,
