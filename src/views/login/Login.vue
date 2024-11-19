@@ -1,6 +1,6 @@
 <template>
-    <div>
-      <div class="container">
+  <div>
+    <div class="container">
       <el-card class="box-card">
         <h2>登录</h2>
         <el-form
@@ -12,8 +12,8 @@
           label-width="70px"
           class="login-from"
         >
-          <el-form-item label="用户名" prop="uname">
-            <el-input v-model="ruleForm.uname"></el-input>
+          <el-form-item label="电话" prop="telephone">
+            <el-input v-model="ruleForm.telephone"></el-input>
           </el-form-item>
           <el-form-item label="密码" prop="password">
             <el-input
@@ -24,7 +24,10 @@
           </el-form-item>
         </el-form>
         <div class="btnGroup">
-          <el-button type="primary" @click="submitForm('ruleForm')"
+          <el-button
+            type="primary"
+            @click="submitForm('ruleForm')"
+            v-loading="loading"
             >登录</el-button
           >
           <router-link to="/register">
@@ -33,69 +36,84 @@
         </div>
       </el-card>
     </div>
-    </div>
-  </template>
+  </div>
+</template>
   
-  <script>
+<script>
+  import axios from 'axios'
+
   export default {
     data() {
       return {
         ruleForm: {
-          uname: "",
+          telephone: "",
           password: "",
         },
         rules: {
-          uname: [
-            { required: true, message: "用户名不能为空！", trigger: "blur" },
+          telephone: [
+            { required: true, message: "电话号码不能为空！", trigger: "blur" },
           ],
           password: [
             { required: true, message: "密码不能为空！", trigger: "blur" },
           ],
         },
+        loading: false,
       };
     },
     methods: {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
-          // 点击登录后，让登录按钮开始转圈圈（展示加载动画）
           this.loading = true;
-          // 如果经过校验，账号密码都不为空，则发送请求到后端登录接口
+
           if (valid) {
             let _this = this;
+
+            // 获取表单数据
+            const telephone = _this.ruleForm.telephone;
+            const password = _this.ruleForm.password;
+
             // 使用 axios 将登录信息发送到后端
-            this.axios({
-              url: "http://localhost:5173/login",   // 请求地址
-              method: "post",                       // 请求方法
-              headers: {                            // 请求头
-                "Content-Type": "application/json",
+            axios.post(
+              'http://localhost:8080/api/user/login',
+              {
+                telephone: telephone,
+                password: password
               },
-              params: {                             // 请求参数
-                uname: _this.ruleForm.uname,
-                password: _this.ruleForm.password,
-              },
-            }).then((res) => { // 当收到后端的响应时执行该括号内的代码，res 为响应信息，也就是后端返回的信息
-              if (res.data.code === "0") {  // 当响应的编码为 0 时，说明登录成功
-                // 将用户信息存储到sessionStorage中
-                sessionStorage.setItem("userInfo", JSON.stringify(res.data.data));
-                // 跳转页面到首页
+              {
+                headers: {
+                  'Content-Type': 'application/json',
+                }
+              }
+            )
+            .then(response => {
+              console.log(response.data);
+
+              if (response.data.code === 200) {
+
                 this.$router.push('/home');
                 // 显示后端响应的成功信息
                 this.$message({
-                  message: res.data.msg,
+                  message: response.data.message,
                   type: "success",
                 });
-              } else {  // 当响应的编码不为 0 时，说明登录失败
-                // 显示后端响应的失败信息
-                this.$message({
-                  message: res.data.msg,
-                  type: "warning",
-                });
               }
-              // 不管响应成功还是失败，收到后端响应的消息后就不再让登录按钮显示加载动画了
               _this.loading = false;
-              console.log(res);
+            })
+            .catch(error => {
+              //校验请求返回结果
+              console.error("登录请求失败:", error);
+              console.log('Request Headers:', error.config.headers);
+              console.log('Request Data:', error.config.data); // 打印请求体
+              console.log('Response Status:', error.response ? error.response.status : 'No response');
+              console.log('Response Data:', error.response ? error.response.data : 'No response data');
+
+              this.$message({
+                message: error.response.data.message,
+                type: "warning",
+              });
+              _this.loading = false;
             });
-          } else {  // 如果账号或密码有一个没填，就直接提示必填，不向后端请求
+          } else {
             console.log("error submit!!");
             this.loading = false;
             return false;
@@ -104,9 +122,9 @@
       }
     },
   };
-  </script>
+</script>
   
-  <style scoped>
+<style scoped>
   .container {
     display: grid;
     place-items: center;
@@ -120,4 +138,4 @@
   .login-from {
     margin: auto auto;
   }
-  </style>
+</style>
