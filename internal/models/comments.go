@@ -8,3 +8,5 @@ type Comments struct {
 	Pitch   float64 `gorm:"not null"`   // 俯仰角
 	Yaw     float64 `gorm:"not null"`   // 偏航角
 }
+
+//test
