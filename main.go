@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-contrib/cors"
-	"github.com/gin-gonic/gin"
 	"log"
 	"time"
 	"virtual-campus-tour-backend/internal/api/pano"
 	api "virtual-campus-tour-backend/internal/api/user"
 	"virtual-campus-tour-backend/internal/database"
-	"virtual-campus-tour-backend/utils"
+	ConfigLoader "virtual-campus-tour-backend/utils"
+
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -55,6 +56,7 @@ func main() {
 	r.GET("/api/pano/real-id", pano.GetRealID)
 	r.POST("/api/user/register", api.Register)
 	r.POST("/api/user/login", api.Login)
+	r.POST("/api/user/comment", api.PostComment)
 
 	// 启动服务器
 	r.Run(":" + config.Server.Port)
