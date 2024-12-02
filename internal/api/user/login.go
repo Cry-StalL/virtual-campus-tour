@@ -54,5 +54,7 @@ func Login(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"code":    200,
 		"message": "登录成功",
+		"userId":   user.ID,
+		"username": user.Name,
 	})
 }
