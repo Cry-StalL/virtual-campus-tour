@@ -1,7 +1,8 @@
 <template>
     <div ref="panoramaContainer" style="width: 100%; height: 100vh; position: relative;">
       <!-- 全景图容器 -->
-      <div ref="panorama" style="width: 100%; height: 100%;"></div>
+      <div v-if="isStreetVisible" ref="streetPanorama" style="width: 100%; height: 100%;"></div>
+      <div v-if="isSceneVisible" ref="scenePanorama" style="width: 100%; height: 100%;"></div>
 
       <!-- 登录和注册 -->
       <div class="btnGroup1">
@@ -23,7 +24,7 @@
       <el-button class="custom-button" type="primary" @click="toggleChat">留言</el-button>
 
       <!-- 留言框 -->
-      <div v-if="isVisible" class="chat-box">
+      <div v-if="isChatVisible" class="chat-box">
         <el-input type="textarea" :rows="4" placeholder="请输入留言..." v-model="message"></el-input>
         <div class="btnGroup2">
           <el-button @click="sendMessage">发送</el-button>
@@ -33,7 +34,7 @@
 
       <!-- 留言发表框 -->
       <div
-        v-if="isPreviewVisible"
+        v-if="isChatPreviewVisible"
         ref="previewBox"
         class="comment-box preview"
         :style="{ top: previewTop, left: previewLeft, zIndex: zIndex }"
@@ -56,8 +57,10 @@
   export default {
     data() {
       return {
-        isVisible: false,
-        isPreviewVisible: false,
+        isChatVisible: false,
+        isChatPreviewVisible: false,
+        isStreetVisible: true,
+        isSceneVisible: true,
         username:'',
         message: '',
         zIndex: 1, // 用于控制层级
@@ -71,7 +74,7 @@
     watch: {
       message(newMessage) {
         // 当留言框内容变化时，显示预览框
-        this.isPreviewVisible = newMessage.trim() !== '';
+        this.isChatPreviewVisible = newMessage.trim() !== '';
       },
     },
 
@@ -89,33 +92,48 @@
 
     methods: {
       initPanorama() {
-        this.viewer = pannellum.viewer(this.$refs.panorama, {
+        this.streetViewer = pannellum.viewer(this.$refs.streetPanorama, {
           scenes: {},
           "sceneFadeDuration": 1000,
           "minPitch": -62
         });
-
         for (let i = 0; i < configs.length; i++) {
-          this.viewer.addScene(configs[i].id, configs[i]);
+          this.streetViewer.addScene(configs[i].id, configs[i]);
         }
-
-        this.viewer.loadScene('1-1')
-
-        this.viewer.on('mousedown', (event) =>{
-          console.log(this.viewer.mouseEventToCoords(event));
+        this.streetViewer.loadScene('1-1')
+        this.streetViewer.on('mousedown', (event) =>{
+          console.log(this.streetViewer.mouseEventToCoords(event));
         });
+        window.streetPanoViewer = this.streetViewer; // TODO: 目前viewer是全局的
 
-        window.panoramaViewer = this.viewer; // TODO: 目前viewer是全局的
+        this.sceneViewer = pannellum.viewer(this.$refs.scenePanorama, {
+          scenes: {},
+        })
+        for (let i = 0; i < configs.length; i++) {
+          this.sceneViewer.addScene(configs[i].id, configs[i]);
+        }
+        this.sceneViewer.loadScene('1-2')
+        window.scenePanoViewer = this.sceneViewer; // TODO: 目前viewer是全局的
       },
+
+      // EnterScene() {
+      //   this.toggleViewerVisibility();
+      // },
+
+      // toggleViewerVisibility() {
+      //   this.isStreetVisible = !this.isStreetVisible;
+      //   this.isSceneVisible = !this.isSceneVisible;
+      //   console.log(this.isSceneVisible)
+      // },
 
       toggleChat() {
         if (this.isLoggedIn) {
-          this.isVisible = !this.isVisible; // 切换聊天框的显示和隐藏
-          if (this.isVisible) {
-            this.isPreviewVisible = true;
+          this.isChatVisible = !this.isChatVisible; // 切换聊天框的显示和隐藏
+          if (this.isChatVisible) {
+            this.isChatPreviewVisible = true;
           }
           else{
-            this.isPreviewVisible = false;
+            this.isChatPreviewVisible = false;
           }
           this.message = '';
         }

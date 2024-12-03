@@ -1,5 +1,4 @@
 import axios from "axios";
-// import ../
 
 const configs = [
     {
@@ -12,8 +11,7 @@ const configs = [
                 yaw: 68.804,
                 type: 'scene',
                 cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['+']
+                clickHandlerFunc: enterScene
             }
         ]
     },
@@ -27,177 +25,14 @@ const configs = [
                 yaw: -118.142,
                 type: 'scene',
                 cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
-            },
-            {
-                pitch:  -13.876,
-                yaw: 68.804,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['+']
-            }
-        ]
-    },
-    {
-        id: '1-3,2-3',
-        autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/1-3,2-3.jpg',
-        hotSpots: [
-            {
-                pitch:  -13.876,
-                yaw: 68.804,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['1']
-            },
-            {
-                pitch:  -33.737,
-                yaw: -118.142,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['2']
-            },
-            // {
-            //     pitch:  -11.780,
-            //     yaw: 0.945,
-            //     type: 'scene',
-            //     cssClass: "custom-hotspot",
-            //     clickHandlerFunc: getNextPanorama,
-            //     clickHandlerArgs: ['3']
-            // },
-            // {
-            //     pitch:  -9.924,
-            //     yaw: 178.715,
-            //     type: 'scene',
-            //     cssClass: "custom-hotspot",
-            //     clickHandlerFunc: getNextPanorama,
-            //     clickHandlerArgs: ['4']
-            // }
-        ]
-    },
-    {
-        id: '1-4',
-        autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/1-4.jpg',
-        hotSpots: [
-            {
-                pitch:  -33.737,
-                yaw: -118.142,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
-            },
-            {
-                pitch:  -13.876,
-                yaw: 68.804,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['+']
-            }
-        ]
-    },
-    {
-        id: '1-5',
-        autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/1-5.jpg',
-        hotSpots: [
-            {
-                pitch:  -33.737,
-                yaw: -118.142,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
-            }
-        ]
-    },
-    {
-        id: '2-1',
-        autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/2-1.jpg',
-        hotSpots: [
-            {
-                pitch:  -11.925,
-                yaw: -89.813,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['+']
-            }
-        ]
-    },
-    {
-        id: '2-2',
-        autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/2-2.jpg',
-        hotSpots: [
-            {
-                pitch:  -8.448,
-                yaw: 179.257,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
-            },
-            {
-                pitch:  -12.518,
-                yaw: 0.365,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['+']
-            }
-        ]
-    },
-    {
-        id: '2-4',
-        autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/2-4.jpg',
-        hotSpots: [
-            {
-                pitch:  -11.268,
-                yaw: -2.188,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
-            },
-            {
-                pitch:  -8.059,
-                yaw: -179.963,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['+']
-            }
-        ]
-
-    },
-    {
-        id: '2-5',
-        autoLoad: true,
-        panorama: 'http://127.0.0.1:8080/static/panos/2-5.jpg',
-        hotSpots: [
-            {
-                pitch:  -9.690,
-                yaw: -0.108,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['-']
+                clickHandlerFunc: enterScene
             }
         ]
     },
 ]
 
 function getNextPanorama(event, args) {
-    const current_pano_id = window.panoramaViewer.getConfig().id
+    const current_pano_id = window.streetPanoViewer.getConfig().id
     const direction = args[0]
 
     // 发送HTTP请求给后端: 传当前场景ID、参数给后端
@@ -220,7 +55,7 @@ function getNextPanorama(event, args) {
                 const next_pano_real_id = response.data["real-id"]
 
                 // 加载新场景
-                window.panoramaViewer.loadScene(next_pano_real_id, window.panoramaViewer.getPitch(), window.panoramaViewer.getYaw(), window.panoramaViewer.getHfov())
+                window.streetPanoViewer.loadScene(next_pano_real_id, window.streetPanoViewer.getPitch(), window.streetPanoViewer.getYaw(), window.streetPanoViewer.getHfov())
                 // window.panoramaViewer.loadScene(next_pano_id)
             })
 
