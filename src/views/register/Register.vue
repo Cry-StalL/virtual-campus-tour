@@ -17,7 +17,9 @@
           </el-form-item>
           <el-form-item label="手机号码" prop="telephone">
             <el-input
+              type="tel"
               v-model="ruleForm.telephone"
+              @input="handleInput"
               autocomplete="off"
             ></el-input>
           </el-form-item>
@@ -55,9 +57,31 @@
 
   export default {
     data() {
+      var validateUsername = (rule, value, callback) => {
+        if (value === "") {
+          callback(new Error("请输入用户名"));
+        } else if (!/^[\u4e00-\u9fa5\w-]{3,20}$/.test(value)) {
+          callback(new Error("用户名无效!"));
+        } else {
+          callback();
+        }
+      };
+
+      var validateTelephone = (rule, value, callback) => {
+        if (value === "") {
+          callback(new Error("电话号码不能为空！"));
+        } else if (!/^\d{11}$/.test(value)) {
+          callback(new Error("电话号码无效！"));
+        } else {
+          callback();
+        }
+      };
+
       var validatePass = (rule, value, callback) => {
         if (value === "") {
           callback(new Error("请输入密码"));
+        } else if (!/^\S{8,}$/.test(value)) {
+          callback(new Error("密码不能少于8位或密码无效!"));
         } else {
           if (this.ruleForm.checkPass !== "") {
             this.$refs.ruleForm.validateField("checkPass");
@@ -65,6 +89,7 @@
           callback();
         }
       };
+
       var validatePass2 = (rule, value, callback) => {
         if (value === "") {
           callback(new Error("请再次输入密码"));
@@ -74,6 +99,7 @@
           callback();
         }
       };
+
       return {
         ruleForm: {
           uname: "",
@@ -81,14 +107,17 @@
           pass: "",
           password: "",
         },
+
         rules: {
           uname: [
-            { required: true, message: "用户名不能为空！", trigger: "blur" },
+            { required: true, validator: validateUsername, trigger: "blur" },
           ],
           telephone: [
-            { required: true, message: "电话号码不能为空！", trigger: "blur" },
+            { required: true, validator: validateTelephone, trigger: "blur" },
           ],
-          pass: [{ required: true, validator: validatePass, trigger: "blur" }],
+          pass: [
+            { required: true, validator: validatePass, trigger: "blur" },
+          ],
           password: [
             { required: true, validator: validatePass2, trigger: "blur" },
           ],
@@ -96,6 +125,11 @@
       };
     },
     methods: {
+      handleInput(value) {
+        // 使用正则表达式替换非数字字符
+        this.ruleForm.telephone = value.replace(/[^\d]/g, '');
+      },
+
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           this.loading = true;
@@ -126,6 +160,8 @@
               console.log(response.data);
 
               if (response.data.code === 200) {
+                
+                this.$router.push('/login');
                 // 显示后端响应的成功信息
                 this.$message({
                   message: response.data.message,
