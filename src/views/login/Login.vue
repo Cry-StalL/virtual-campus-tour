@@ -13,7 +13,12 @@
           class="login-from"
         >
           <el-form-item label="电话" prop="telephone">
-            <el-input v-model="ruleForm.telephone"></el-input>
+            <el-input 
+              type="tel"
+              v-model="ruleForm.telephone"
+              @input="handleInput"
+              autocomplete="off"
+            ></el-input>
           </el-form-item>
           <el-form-item label="密码" prop="password">
             <el-input
@@ -30,8 +35,8 @@
             v-loading="loading"
             >登录</el-button
           >
-          <router-link to="/register">
-            <el-button style="margin-left:10px">注册</el-button>
+          <router-link to="/home">
+            <el-button style="margin-left:10px">返回</el-button>
           </router-link>
         </div>
       </el-card>
@@ -41,9 +46,33 @@
   
 <script>
   import axios from 'axios'
+  import Cookies from 'js-cookie'
 
   export default {
     data() {
+      var validateTelephone = (rule, value, callback) => {
+        if (value === "") {
+          callback(new Error("电话号码不能为空！"));
+        } else if (!/^\d{11}$/.test(value)) {
+          callback(new Error("电话号码无效！"));
+        } else {
+          callback();
+        }
+      };
+
+      var validatePass = (rule, value, callback) => {
+        if (value === "") {
+          callback(new Error("请输入密码"));
+        } else if (!/^\S{8,}$/.test(value)) {
+          callback(new Error("密码不能少于8位或密码无效!"));
+        } else {
+          if (this.ruleForm.checkPass !== "") {
+            this.$refs.ruleForm.validateField("checkPass");
+          }
+          callback();
+        }
+      };
+
       return {
         ruleForm: {
           telephone: "",
@@ -51,16 +80,21 @@
         },
         rules: {
           telephone: [
-            { required: true, message: "电话号码不能为空！", trigger: "blur" },
+            { required: true, validator: validateTelephone, trigger: "blur" },
           ],
           password: [
-            { required: true, message: "密码不能为空！", trigger: "blur" },
+            { required: true, validator: validatePass, trigger: "blur" },
           ],
         },
         loading: false,
       };
     },
     methods: {
+      handleInput(value) {
+        // 使用正则表达式替换非数字字符
+        this.ruleForm.telephone = value.replace(/[^\d]/g, '');
+      },
+      
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           this.loading = true;
@@ -88,7 +122,14 @@
             .then(response => {
               console.log(response.data);
 
+              // 获取用户编号和名称
+              const userId = response.data.userId || 0;
+              const username = response.data.username;
+
               if (response.data.code === 200) {
+
+                Cookies.set('userId', userId, { expires: 1 }); // 设置1天后过期
+                Cookies.set('username', username, { expires: 1 });
 
                 this.$router.push('/home');
                 // 显示后端响应的成功信息
