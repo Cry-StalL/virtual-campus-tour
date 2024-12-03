@@ -16,13 +16,14 @@
         this.viewer = pannellum.viewer(this.$refs.panorama, {
           scenes: {},
           "sceneFadeDuration": 1000,
+          "minPitch": -62
         });
 
         for (let i = 0; i < configs.length; i++) {
           this.viewer.addScene(configs[i].id, configs[i]);
         }
 
-        this.viewer.loadScene('1-3,2-3')
+        this.viewer.loadScene('1-1')
 
         this.viewer.on('mousedown', (event) =>{
           console.log(this.viewer.mouseEventToCoords(event));

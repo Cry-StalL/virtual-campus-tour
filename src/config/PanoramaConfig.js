@@ -8,8 +8,8 @@ const configs = [
         panorama: 'http://127.0.0.1:8080/static/panos/1-1.jpg',
         hotSpots: [
             {
-                pitch:  -17.058,
-                yaw: -87.394,
+                pitch:  -13.876,
+                yaw: 68.804,
                 type: 'scene',
                 cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
@@ -23,16 +23,16 @@ const configs = [
         panorama: 'http://127.0.0.1:8080/static/panos/1-2.jpg',
         hotSpots: [
             {
-                pitch:  -9.591,
-                yaw: -179.579,
+                pitch:  -33.737,
+                yaw: -118.142,
                 type: 'scene',
                 cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
             {
-                pitch:  -10.126,
-                yaw: 0.463,
+                pitch:  -13.876,
+                yaw: 68.804,
                 type: 'scene',
                 cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
@@ -46,37 +46,37 @@ const configs = [
         panorama: 'http://127.0.0.1:8080/static/panos/1-3,2-3.jpg',
         hotSpots: [
             {
-                pitch:  -8.621,
-                yaw: -89.989,
+                pitch:  -13.876,
+                yaw: 68.804,
                 type: 'scene',
                 cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['1']
             },
             {
-                pitch:  -13.782,
-                yaw: 90.910,
+                pitch:  -33.737,
+                yaw: -118.142,
                 type: 'scene',
                 cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['2']
             },
-            {
-                pitch:  -11.780,
-                yaw: 0.945,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['3']
-            },
-            {
-                pitch:  -9.924,
-                yaw: 178.715,
-                type: 'scene',
-                cssClass: "custom-hotspot",
-                clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['4']
-            }
+            // {
+            //     pitch:  -11.780,
+            //     yaw: 0.945,
+            //     type: 'scene',
+            //     cssClass: "custom-hotspot",
+            //     clickHandlerFunc: getNextPanorama,
+            //     clickHandlerArgs: ['3']
+            // },
+            // {
+            //     pitch:  -9.924,
+            //     yaw: 178.715,
+            //     type: 'scene',
+            //     cssClass: "custom-hotspot",
+            //     clickHandlerFunc: getNextPanorama,
+            //     clickHandlerArgs: ['4']
+            // }
         ]
     },
     {
@@ -85,16 +85,16 @@ const configs = [
         panorama: 'http://127.0.0.1:8080/static/panos/1-4.jpg',
         hotSpots: [
             {
-                pitch:  -10.085,
-                yaw: -0.082,
+                pitch:  -33.737,
+                yaw: -118.142,
                 type: 'scene',
                 cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
             {
-                pitch:  -10.715,
-                yaw: 172.109,
+                pitch:  -13.876,
+                yaw: 68.804,
                 type: 'scene',
                 cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
@@ -108,8 +108,8 @@ const configs = [
         panorama: 'http://127.0.0.1:8080/static/panos/1-5.jpg',
         hotSpots: [
             {
-                pitch:  -10.085,
-                yaw: -0.082,
+                pitch:  -33.737,
+                yaw: -118.142,
                 type: 'scene',
                 cssClass: "custom-hotspot",
                 clickHandlerFunc: getNextPanorama,
