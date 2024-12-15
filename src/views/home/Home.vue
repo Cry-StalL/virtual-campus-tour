@@ -1,8 +1,8 @@
 <template>
     <div ref="panoramaContainer" style="width: 100%; height: 100vh; position: relative;">
       <!-- 全景图容器 -->
-      <div v-if="isStreetVisible" ref="streetPanorama" style="width: 100%; height: 100%;"></div>
-      <div v-if="isSceneVisible" ref="scenePanorama" style="width: 100%; height: 100%;"></div>
+      <div ref="streetPanorama" :style="{position: 'absolute', width: '100%', height: '100%', zIndex: 1}"></div>
+      <scene-viewer v-if="state.isSceneVisible"/>
 
       <!-- 登录和注册 -->
       <div class="btnGroup1">
@@ -49,26 +49,31 @@
 <script>
   import 'pannellum'
   import 'pannellum/build/pannellum.css'
-  import configs from '@/config/PanoramaConfig.js'
   import { bundlerModuleNameResolver } from 'typescript';
   import axios from 'axios'
   import Cookies from 'js-cookie'
+  // import PanoramaConfig from "@/config/PanoramaConfig.js";
+  import {configs, state} from "@/config/PanoramaConfig.js";
+  import sceneViewer from "@/views/home/sceneViewer.vue";
   
   export default {
     data() {
       return {
         isChatVisible: false,
         isChatPreviewVisible: false,
-        isStreetVisible: true,
-        isSceneVisible: true,
         username:'',
         message: '',
         zIndex: 1, // 用于控制层级
+        state,
       };
     },
 
+    components: {
+      sceneViewer
+    },
+
     mounted() {
-      this.initPanorama();
+      this.initStreetPanorama();
     },
 
     watch: {
@@ -76,6 +81,13 @@
         // 当留言框内容变化时，显示预览框
         this.isChatPreviewVisible = newMessage.trim() !== '';
       },
+
+      // 监听 `state.isSceneVisible` 的变化
+      'state.isSceneVisible': function (newValue, oldValue) {
+        console.log(`state.isSceneVisible changed from ${oldValue} to ${newValue}`);
+      },
+
+
     },
 
     computed: {
@@ -91,40 +103,28 @@
     },
 
     methods: {
-      initPanorama() {
-        this.streetViewer = pannellum.viewer(this.$refs.streetPanorama, {
-          scenes: {},
-          "sceneFadeDuration": 1000,
-          "minPitch": -62
-        });
-        for (let i = 0; i < configs.length; i++) {
-          this.streetViewer.addScene(configs[i].id, configs[i]);
-        }
-        this.streetViewer.loadScene('1-1')
-        this.streetViewer.on('mousedown', (event) =>{
-          console.log(this.streetViewer.mouseEventToCoords(event));
-        });
-        window.streetPanoViewer = this.streetViewer; // TODO: 目前viewer是全局的
+      initStreetPanorama(){
+        this.$nextTick(() => {
 
-        this.sceneViewer = pannellum.viewer(this.$refs.scenePanorama, {
-          scenes: {},
+          if (this.$refs.streetPanorama) {
+            this.streetViewer = pannellum.viewer(this.$refs.streetPanorama, {
+              scenes: {},
+              "sceneFadeDuration": 1000,
+              "minPitch": -62
+            });
+            for (let i = 0; i < configs.length; i++) {
+              this.streetViewer.addScene(configs[i].id, configs[i]);
+            }
+            this.streetViewer.loadScene('1-1')
+            this.streetViewer.on('mousedown', (event) =>{
+              console.log(this.streetViewer.mouseEventToCoords(event));
+            });
+            window.streetPanoViewer = this.streetViewer; // TODO: 目前viewer是全局的
+          }else{
+            console.error('streetPanorama reference is not available');
+          }
         })
-        for (let i = 0; i < configs.length; i++) {
-          this.sceneViewer.addScene(configs[i].id, configs[i]);
-        }
-        this.sceneViewer.loadScene('1-2')
-        window.scenePanoViewer = this.sceneViewer; // TODO: 目前viewer是全局的
       },
-
-      // EnterScene() {
-      //   this.toggleViewerVisibility();
-      // },
-
-      // toggleViewerVisibility() {
-      //   this.isStreetVisible = !this.isStreetVisible;
-      //   this.isSceneVisible = !this.isSceneVisible;
-      //   console.log(this.isSceneVisible)
-      // },
 
       toggleChat() {
         if (this.isLoggedIn) {
