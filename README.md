@@ -1,48 +1,28 @@
 # virtual-campus-tour
 
-前端(gc-dev)
+## 项目简介
+本项目旨在打造一个校园全景游览平台，让用户可以随时随地探索校园的每一个角落。使用Go语言+Vue框架开发。
 
-## 环境配置
-`npm install`
-
-如果提示`pannellum`没有安装，直接运行`npm install pannellum`即可。
-
-`npm install element-plus`
-
-`npm install vue-router`
-
-`npm install axios`
-
----
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+## 项目运行
+本项目采用前后端分离开发的模式，前端和后端程序分别在master分支和back分支上，需要同时运行前后端才可以体验程序的完整效果。
+### 前端
+#### 前端环境配置
 ```sh
 npm install
 ```
-
-### Compile and Hot-Reload for Development
-
+#### 前端程序运行
 ```sh
 npm run dev
 ```
+### 后端
+#### 后端环境配置
 
-### Type-Check, Compile and Minify for Production
-
+#### 后端程序运行
 ```sh
-npm run build
+go run main.go
 ```
+
+## 技术栈
+前端：[Vue3](https://cn.vuejs.org/) + [ElementPlus](https://element-plus.org/zh-CN/)
+
+后端：[Gin](https://gin-gonic.com/)
