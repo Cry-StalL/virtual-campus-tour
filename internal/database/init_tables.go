@@ -3,9 +3,10 @@ package database
 import (
 	"errors"
 	"fmt"
-	"gorm.io/gorm"
 	"log"
 	"virtual-campus-tour-backend/internal/models"
+
+	"gorm.io/gorm"
 )
 
 func InitTables() error {
@@ -15,7 +16,7 @@ func InitTables() error {
 	}
 
 	// 创建数据表(AutoMigrate方法可以检测数据表是否存在)
-	if err := db.AutoMigrate(&models.Crossings{}, &models.CrossingDirections{}, &models.Users{}); err != nil {
+	if err := db.AutoMigrate(&models.Crossings{}, &models.CrossingDirections{}, &models.Users{}, &models.Comments{}); err != nil {
 		fmt.Println("自动迁移失败:", err)
 		return err
 	}
