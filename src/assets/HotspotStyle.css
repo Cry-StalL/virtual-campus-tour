@@ -5,11 +5,20 @@
     border-radius: 50%;
 }
 
-.custom-hotspot {
+.arrow-hotspot {
     width: 40px;
     height: 40px;
-    background-image: url('./img/hotspot1.png');
+    background-image: url('./img/arrow_hotspot.png');
+    background-size: 100% 100%;
 }
+
+.scene-hotspot {
+    width: 40px;
+    height: 40px;
+    background-image: url('./img/scene_hotspot.png');
+    background-size: 100% 100%;
+}
+
 div.custom-tooltip span {
     visibility: hidden;
     position: absolute;

@@ -148,14 +148,14 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
-    z-index: 10;
+    z-index: 10; /* 确保按钮在全景图之上 */
   }
 
   .custom-button {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    z-index: 10; /* 确保按钮在全景图之上 */
+    z-index: 10;
   }
 
   .chat-box {
