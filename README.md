@@ -13,6 +13,8 @@
 
 `npm install axios`
 
+`npm install js-cookie`
+
 ---
 
 This template should help get you started developing with Vue 3 in Vite.
