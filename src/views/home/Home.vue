@@ -3,7 +3,7 @@
       <!-- 全景图容器 -->
 <!--      <div ref="streetPanorama" :style="{position: 'absolute', width: '100%', height: '100%', zIndex: 1}"></div>-->
 <!--      <scene-viewer v-if="state.isSceneVisible"/>-->
-      <multires-viewer />
+      <aerial-viewer />
 
       <!-- 登录和注册 -->
       <div class="btnGroup1">
@@ -33,7 +33,7 @@
   // import PanoramaConfig from "@/config/PanoramaConfig.js";
   import {configs, state} from "@/config/PanoramaConfig.js";
   import sceneViewer from "@/views/home/sceneViewer.vue";
-  import multiresViewer from "@/views/home/multiresViewer.vue";
+  import aerialViewer from "@/views/home/aerialViewer.vue";
   
   export default {
     data() {
@@ -48,7 +48,7 @@
 
     components: {
       sceneViewer,
-      multiresViewer
+      aerialViewer
     },
 
     mounted() {

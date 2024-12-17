@@ -1,5 +1,59 @@
 import { reactive } from 'vue'
 
+export const aerial_configs = [
+    {
+        "id": "aerial1",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/aerials/aerial_1",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+    {
+        "id": "aerial2",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/aerials/aerial_2",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+    {
+        "id": "aerial3",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/aerials/aerial_3",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+    {
+        "id": "aerial4",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/aerials/aerial_4",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+]
 
 export const configs = [
     {
@@ -11,7 +65,7 @@ export const configs = [
                 pitch:  -12.2,
                 yaw: 4.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "scene-hotspot",
                 clickHandlerFunc: enterScene
             }
         ]
@@ -25,7 +79,7 @@ export const configs = [
                 pitch:  -33.737,
                 yaw: -118.142,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "scene-hotspot",
                 clickHandlerFunc: enterScene
             }
         ]
