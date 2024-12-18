@@ -5,14 +5,14 @@
   <el-button class="leaveSceneButton" type="primary" @click="leaveScene">返回</el-button>
 
   <!-- 留言按钮 -->
-  <el-button class="custom-button" type="primary" @click="toggleChat">留言</el-button>
+  <el-button class="custom-button" type="primary" @click="handleCommentButtonClick">留言</el-button>
 
   <!-- 留言框 -->
   <div v-if="isChatVisible" class="chat-box">
     <el-input type="textarea" :rows="4" placeholder="请输入留言..." v-model="message"></el-input>
     <div class="btnGroup2">
       <el-button @click="sendMessage">发送</el-button>
-      <el-button @click="toggleChat">返回</el-button>
+      <el-button @click="handleCommentBackButtonClick">返回</el-button>
     </div>
   </div>
 
@@ -94,39 +94,46 @@
         state.isSceneVisible = false;
       },
 
-      toggleChat() {
-        if (this.isLoggedIn) {
-          this.isChatVisible = !this.isChatVisible; // 切换聊天框的显示和隐藏
-
-          if(this.isChatVisible){
-            this.pitch = this.sceneViewer.getPitch();
-            this.yaw = this.sceneViewer.getYaw();
-            this.hotspotId++;
-
-            this.sceneViewer.addHotSpot({
-              pitch: this.pitch,
-              yaw: this.yaw,
-              type: "info",
-              draggable: true,     // 设置热点为可拖动
-              id: this.hotspotId,
-            });
-
-            //留言拖动功能 待修改。。。
-
-
-          }
-          else{
-            this.sceneViewer.removeHotSpot(this.hotspotId);
-            this.hotspotId--;
-          }
-          this.message = '';
-        }
-        else{
+      handleCommentButtonClick() {
+        if (!this.isLoggedIn) {
+          // 如果用户未登录
           this.$message({
             message: '用户未登录，无法使用留言功能!',
             type: "warning",
           });
+          return;
         }
+
+        this.isChatVisible = !this.isChatVisible; // 切换聊天框的显示和隐藏
+
+        if(this.isChatVisible){
+          this.pitch = this.sceneViewer.getPitch();
+          this.yaw = this.sceneViewer.getYaw();
+          this.hotspotId++;
+
+          this.sceneViewer.addHotSpot({
+            pitch: this.pitch,
+            yaw: this.yaw,
+            type: "info",
+            draggable: true,     // 设置热点为可拖动
+            id: this.hotspotId,
+          });
+
+          //留言拖动功能 待修改。。。
+
+
+        }
+        else{
+          this.sceneViewer.removeHotSpot(this.hotspotId);
+          this.hotspotId--;
+        }
+        this.message = '';
+      },
+
+      handleCommentBackButtonClick() {
+        this.isChatVisible = false;
+        this.sceneViewer.removeHotSpot(this.hotspotId);
+        this.hotspotId--;
       },
 
       sendMessage() {
@@ -160,6 +167,7 @@
               if (response.data.code === 200) {
                 // 处理成功响应
                 this.$message.success('留言已成功提交');
+                this.isChatVisible = false;
 
                 //创建留言
                 this.sceneViewer.addHotSpot({
