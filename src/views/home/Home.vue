@@ -98,7 +98,7 @@
           this.viewer.addScene(configs[i].id, configs[i]);
         }
 
-        this.viewer.loadScene('aerial1')
+        this.viewer.loadScene('jy_road2/30')
 
         this.viewer.on('mousedown', (event) =>{
           console.log(this.viewer.mouseEventToCoords(event));
