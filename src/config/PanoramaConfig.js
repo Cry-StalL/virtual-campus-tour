@@ -1,3 +1,4 @@
+import { reactive } from 'vue'
 
 export const configs = [
     {
@@ -9,7 +10,7 @@ export const configs = [
                 pitch:  -12.3,
                 yaw: 7.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -17,7 +18,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ry_road1/17']
             }
@@ -32,7 +33,7 @@ export const configs = [
                 pitch:  -22.3,
                 yaw: -85.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -40,7 +41,7 @@ export const configs = [
                 pitch: -23.8,
                 yaw: 111.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ry_road1/17']
             }
@@ -55,7 +56,7 @@ export const configs = [
                 pitch:  -15.2,
                 yaw: -138.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -63,7 +64,7 @@ export const configs = [
                 pitch: -24.4,
                 yaw: 68.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -78,7 +79,7 @@ export const configs = [
                 pitch:  -19.4,
                 yaw: 177.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -86,7 +87,7 @@ export const configs = [
                 pitch: -26.3,
                 yaw: 16.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -101,7 +102,7 @@ export const configs = [
                 pitch:  -18.1,
                 yaw: 173.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -109,7 +110,7 @@ export const configs = [
                 pitch: -26.6,
                 yaw: -2.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -124,7 +125,7 @@ export const configs = [
                 pitch:  -20.3,
                 yaw: 171.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -132,7 +133,7 @@ export const configs = [
                 pitch: -26.2,
                 yaw: -2.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -147,7 +148,7 @@ export const configs = [
                 pitch:  -16.0,
                 yaw: 173.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -155,7 +156,7 @@ export const configs = [
                 pitch: -26.2,
                 yaw: -4.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -170,7 +171,7 @@ export const configs = [
                 pitch:  -17.7,
                 yaw: 174.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -178,7 +179,7 @@ export const configs = [
                 pitch: -19.5,
                 yaw: -7.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -193,7 +194,7 @@ export const configs = [
                 pitch:  -17.4,
                 yaw: 170.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -201,7 +202,7 @@ export const configs = [
                 pitch: -23.6,
                 yaw: -7.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -216,7 +217,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: 172.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -224,7 +225,7 @@ export const configs = [
                 pitch: -24.9,
                 yaw: -5.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -239,7 +240,7 @@ export const configs = [
                 pitch:  -23.6,
                 yaw: 172.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -247,7 +248,7 @@ export const configs = [
                 pitch: -26.1,
                 yaw: -6.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -262,7 +263,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: 178.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -270,7 +271,7 @@ export const configs = [
                 pitch: -29.0,
                 yaw: 1.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -285,7 +286,7 @@ export const configs = [
                 pitch:  -18.6,
                 yaw: 179.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -293,7 +294,7 @@ export const configs = [
                 pitch: -31.1,
                 yaw: 3.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -308,7 +309,7 @@ export const configs = [
                 pitch:  -19.3,
                 yaw: 177.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -317,7 +318,7 @@ export const configs = [
                 pitch: -27.4,
                 yaw: 1.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -332,7 +333,7 @@ export const configs = [
                 pitch:  -26.0,
                 yaw: 177.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -340,7 +341,7 @@ export const configs = [
                 pitch: -22.1,
                 yaw: 3.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -355,7 +356,7 @@ export const configs = [
                 pitch:  -21.3,
                 yaw: 153.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -363,7 +364,7 @@ export const configs = [
                 pitch: -23.0,
                 yaw: 2.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -378,7 +379,7 @@ export const configs = [
                 pitch:  -25.4,
                 yaw: 142.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -386,7 +387,7 @@ export const configs = [
                 pitch: -22.8,
                 yaw: -28.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -401,7 +402,7 @@ export const configs = [
                 pitch:  -20.1,
                 yaw: 145.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/13']
             },
@@ -409,7 +410,7 @@ export const configs = [
                 pitch: -24.3,
                 yaw: -27.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -424,7 +425,7 @@ export const configs = [
                 pitch:  -10.7,
                 yaw: 12.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -432,7 +433,7 @@ export const configs = [
                 pitch:  -24.2,
                 yaw: -166.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ry_road1/17']
             }
@@ -447,7 +448,7 @@ export const configs = [
                 pitch:  -12.5,
                 yaw: 11.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -455,7 +456,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -470,7 +471,7 @@ export const configs = [
                 pitch:  -14.4,
                 yaw: 14.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -478,7 +479,7 @@ export const configs = [
                 pitch:  -29.2,
                 yaw: -163.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -493,7 +494,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: 14.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -501,7 +502,7 @@ export const configs = [
                 pitch:  -30.1,
                 yaw: -154.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -516,7 +517,7 @@ export const configs = [
                 pitch:  -10.2,
                 yaw: 14.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -524,7 +525,7 @@ export const configs = [
                 pitch:  -30.0,
                 yaw: -160.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -539,7 +540,7 @@ export const configs = [
                 pitch:  -12.1,
                 yaw: 16.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -547,7 +548,7 @@ export const configs = [
                 pitch:  -31.6,
                 yaw: -161.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -562,7 +563,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: 17.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -570,7 +571,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: -163.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -585,7 +586,7 @@ export const configs = [
                 pitch:  -19.5,
                 yaw: 16.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -593,7 +594,7 @@ export const configs = [
                 pitch:  -27.5,
                 yaw: -165.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -608,7 +609,7 @@ export const configs = [
                 pitch:  -17.5,
                 yaw: 15.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -616,7 +617,7 @@ export const configs = [
                 pitch:  -24.2,
                 yaw: -162.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -631,7 +632,7 @@ export const configs = [
                 pitch:  -12.3,
                 yaw: 7.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -639,7 +640,7 @@ export const configs = [
                 pitch:  -27.7,
                 yaw: -166.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -654,7 +655,7 @@ export const configs = [
                 pitch:  -17.5,
                 yaw: 2.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -662,7 +663,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -677,7 +678,7 @@ export const configs = [
                 pitch:  -13.0,
                 yaw: -1.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -685,7 +686,7 @@ export const configs = [
                 pitch:  -18.4,
                 yaw: -172.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -700,7 +701,7 @@ export const configs = [
                 pitch:  -20.3,
                 yaw: -20.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -708,7 +709,7 @@ export const configs = [
                 pitch:  -22.6,
                 yaw: 167.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -723,7 +724,7 @@ export const configs = [
                 pitch:  -13.0,
                 yaw: -11.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -731,7 +732,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: 175.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -746,7 +747,7 @@ export const configs = [
                 pitch:  -15.0,
                 yaw: 14.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -754,7 +755,7 @@ export const configs = [
                 pitch:  -21.9,
                 yaw: -171.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -762,7 +763,7 @@ export const configs = [
                 pitch:  -8.9,
                 yaw: 34.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['byy_road2/1']
             }
@@ -777,7 +778,7 @@ export const configs = [
                 pitch:  -17.9,
                 yaw: 39.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -785,7 +786,7 @@ export const configs = [
                 pitch:  -25.5,
                 yaw: -154.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['byy_road1/16']
             }
@@ -800,7 +801,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 44.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -808,7 +809,7 @@ export const configs = [
                 pitch:  -29.6,
                 yaw: -136.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -822,7 +823,7 @@ export const configs = [
                 pitch:  -25.8,
                 yaw: 45.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -830,7 +831,7 @@ export const configs = [
                 pitch:  -30.1,
                 yaw: -135.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -844,7 +845,7 @@ export const configs = [
                 pitch:  -29.2,
                 yaw: 44.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -852,7 +853,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -135.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -866,7 +867,7 @@ export const configs = [
                 pitch:  -29.2,
                 yaw: 42.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -874,7 +875,7 @@ export const configs = [
                 pitch:  -35.0,
                 yaw: -136.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -888,7 +889,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -139.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -903,7 +904,7 @@ export const configs = [
                 pitch:  -12.3,
                 yaw: 7.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -911,7 +912,7 @@ export const configs = [
                 pitch:  -25.5,
                 yaw: -154.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -926,7 +927,7 @@ export const configs = [
                 pitch:  -16.0,
                 yaw: 12.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -934,7 +935,7 @@ export const configs = [
                 pitch:  -22.6,
                 yaw: -168.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -949,7 +950,7 @@ export const configs = [
                 pitch:  -20.9,
                 yaw: 10.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -957,7 +958,7 @@ export const configs = [
                 pitch:  -24.7,
                 yaw: -165.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -972,7 +973,7 @@ export const configs = [
                 pitch:  -12.3,
                 yaw: 11.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -980,7 +981,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw: -166.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -996,7 +997,7 @@ export const configs = [
                 pitch:  -12.3,
                 yaw: 7.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1004,7 +1005,7 @@ export const configs = [
                 pitch:  -25.3,
                 yaw: -166.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1020,7 +1021,7 @@ export const configs = [
                 pitch:  -13.2,
                 yaw: 56.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1028,7 +1029,7 @@ export const configs = [
                 pitch:  -25.5,
                 yaw: -154.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1044,7 +1045,7 @@ export const configs = [
                 pitch:  -19.5,
                 yaw: 57.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1052,7 +1053,7 @@ export const configs = [
                 pitch:  -12.4,
                 yaw: -131.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1068,7 +1069,7 @@ export const configs = [
                 pitch:  -12.3,
                 yaw: 7.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1076,7 +1077,7 @@ export const configs = [
                 pitch:  -25.5,
                 yaw: -154.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1092,7 +1093,7 @@ export const configs = [
                 pitch:  -18.6,
                 yaw: 1.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1100,7 +1101,7 @@ export const configs = [
                 pitch:  -18.5,
                 yaw: -170.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1116,7 +1117,7 @@ export const configs = [
                 pitch:  -12.3,
                 yaw: 7.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1124,7 +1125,7 @@ export const configs = [
                 pitch:  -15.8,
                 yaw: -172.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1140,7 +1141,7 @@ export const configs = [
                 pitch:  -17.1,
                 yaw: 2.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1148,7 +1149,7 @@ export const configs = [
                 pitch:  -16.2,
                 yaw: -172.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1164,7 +1165,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: 2.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1172,7 +1173,7 @@ export const configs = [
                 pitch:  -19.9,
                 yaw: -172.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1188,7 +1189,7 @@ export const configs = [
                 pitch:  -22.3,
                 yaw: 8.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1196,7 +1197,7 @@ export const configs = [
                 pitch:  -22.4,
                 yaw: -171.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1211,7 +1212,7 @@ export const configs = [
                 pitch: -14.6,
                 yaw: -174.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1226,7 +1227,7 @@ export const configs = [
                 pitch:  -14.8,
                 yaw: -148.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1234,7 +1235,7 @@ export const configs = [
                 pitch: -20.7,
                 yaw: 17.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/16']
             }
@@ -1249,7 +1250,7 @@ export const configs = [
                 pitch:  -9.9,
                 yaw: 121.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1257,7 +1258,7 @@ export const configs = [
                 pitch: -18.5,
                 yaw: -60.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1272,7 +1273,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 119.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1280,7 +1281,7 @@ export const configs = [
                 pitch: -25.2,
                 yaw: -57.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1295,7 +1296,7 @@ export const configs = [
                 pitch:  -23.0,
                 yaw: 120.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1304,7 +1305,7 @@ export const configs = [
                 pitch: -23.9,
                 yaw: -55.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1319,7 +1320,7 @@ export const configs = [
                 pitch:  -28.6,
                 yaw: 123.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1327,7 +1328,7 @@ export const configs = [
                 pitch: -23.3,
                 yaw: -56.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1342,7 +1343,7 @@ export const configs = [
                 pitch:  -22.3,
                 yaw: 124.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1350,7 +1351,7 @@ export const configs = [
                 pitch: -27.7,
                 yaw: -57.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1365,7 +1366,7 @@ export const configs = [
                 pitch:  -25.8,
                 yaw: 129.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1373,7 +1374,7 @@ export const configs = [
                 pitch: -26.9,
                 yaw: -54.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1388,7 +1389,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: 123.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1396,7 +1397,7 @@ export const configs = [
                 pitch: -25.9,
                 yaw: -53.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1411,7 +1412,7 @@ export const configs = [
                 pitch:  -25.0,
                 yaw: 126.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1419,7 +1420,7 @@ export const configs = [
                 pitch:  -28.9,
                 yaw: -56.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1434,7 +1435,7 @@ export const configs = [
                 pitch:  -22.4,
                 yaw: 122.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1442,7 +1443,7 @@ export const configs = [
                 pitch: -25.5,
                 yaw: -56.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1457,7 +1458,7 @@ export const configs = [
                 pitch:  -23.6,
                 yaw: 114.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1465,7 +1466,7 @@ export const configs = [
                 pitch: -20.1,
                 yaw: -60.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1480,7 +1481,7 @@ export const configs = [
                 pitch:  -26.1,
                 yaw: 111.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1488,7 +1489,7 @@ export const configs = [
                 pitch: -23.6,
                 yaw: -67.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1503,7 +1504,7 @@ export const configs = [
                 pitch:  -21.9,
                 yaw: 112.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1511,7 +1512,7 @@ export const configs = [
                 pitch:-23.0,
                 yaw: -66.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1526,7 +1527,7 @@ export const configs = [
                 pitch:  -19.3,
                 yaw: 114.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1534,7 +1535,7 @@ export const configs = [
                 pitch: -25.1,
                 yaw: -67.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1549,7 +1550,7 @@ export const configs = [
                 pitch:  -22.3,
                 yaw: 121.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1557,7 +1558,7 @@ export const configs = [
                 pitch: -23.2,
                 yaw: -56.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1572,7 +1573,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 128.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1580,7 +1581,7 @@ export const configs = [
                 pitch: -26.5,
                 yaw: -48.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1595,7 +1596,7 @@ export const configs = [
                 pitch:   -14.9,
                 yaw: 139.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['byy_road1/2']
             },
@@ -1603,7 +1604,7 @@ export const configs = [
                 pitch: -31.7,
                 yaw: -48.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -1611,7 +1612,7 @@ export const configs = [
                 pitch: -17.1,
                 yaw: 39.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ry_road2/1']
             }
@@ -1626,7 +1627,7 @@ export const configs = [
                 pitch:  -19.4,
                 yaw: -171.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1634,7 +1635,7 @@ export const configs = [
                 pitch: -18.5,
                 yaw: -77.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road2/1']
             },
@@ -1642,7 +1643,7 @@ export const configs = [
                 pitch: -25.6,
                 yaw: 12.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tq_road1/1']
             }
@@ -1657,7 +1658,7 @@ export const configs = [
                 pitch:  -25.4,
                 yaw: 169.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1665,7 +1666,7 @@ export const configs = [
                 pitch: -26.3,
                 yaw: -7.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1680,7 +1681,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: 169.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1688,7 +1689,7 @@ export const configs = [
                 pitch: -27.8,
                 yaw: -3.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1703,7 +1704,7 @@ export const configs = [
                 pitch:  -27.5,
                 yaw: 168.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1711,7 +1712,7 @@ export const configs = [
                 pitch: -28.3,
                 yaw: -1.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1726,7 +1727,7 @@ export const configs = [
                 pitch:  -27.1,
                 yaw: 169.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1734,7 +1735,7 @@ export const configs = [
                 pitch: -26.9,
                 yaw: 1.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1749,7 +1750,7 @@ export const configs = [
                 pitch:  -27.2,
                 yaw: 170.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1757,7 +1758,7 @@ export const configs = [
                 pitch: -26.1,
                 yaw: -0.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1772,7 +1773,7 @@ export const configs = [
                 pitch:  -26.2,
                 yaw: 160.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1780,7 +1781,7 @@ export const configs = [
                 pitch: -25.7,
                 yaw: 14.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1795,7 +1796,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: 173.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1803,7 +1804,7 @@ export const configs = [
                 pitch: -27.8,
                 yaw: 5.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1818,7 +1819,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: 169.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1826,7 +1827,7 @@ export const configs = [
                 pitch: -23.6,
                 yaw: 7.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1841,7 +1842,7 @@ export const configs = [
                 pitch:  -27.7,
                 yaw: 175.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1849,7 +1850,7 @@ export const configs = [
                 pitch: -27.0,
                 yaw: 5.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1864,7 +1865,7 @@ export const configs = [
                 pitch:  -29.0,
                 yaw: 175.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1872,7 +1873,7 @@ export const configs = [
                 pitch: -27.7,
                 yaw: 4.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1887,7 +1888,7 @@ export const configs = [
                 pitch:  -29.2,
                 yaw: 167.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1895,7 +1896,7 @@ export const configs = [
                 pitch: -25.4,
                 yaw: 12.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1910,7 +1911,7 @@ export const configs = [
                 pitch:  -30.3,
                 yaw: 173.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1918,7 +1919,7 @@ export const configs = [
                 pitch: -25.4,
                 yaw: 7.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -1926,7 +1927,7 @@ export const configs = [
                 pitch: -24.9,
                 yaw: 68.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ry_road2/17']
             }
@@ -1941,7 +1942,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: 177.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1949,7 +1950,7 @@ export const configs = [
                 pitch: -31.3,
                 yaw: 5.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1964,7 +1965,7 @@ export const configs = [
                 pitch: -30.6,
                 yaw: 176.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1972,7 +1973,7 @@ export const configs = [
                 pitch: -26.5,
                 yaw: 7.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -1987,7 +1988,7 @@ export const configs = [
                 pitch:  -27.9,
                 yaw: -178.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -1995,7 +1996,7 @@ export const configs = [
                 pitch: -28.3,
                 yaw: 7.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -2003,7 +2004,7 @@ export const configs = [
                 pitch: -23.0,
                 yaw: 92.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ry_road1/1']
             }
@@ -2018,7 +2019,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: 178.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2026,7 +2027,7 @@ export const configs = [
                 pitch: -36.1,
                 yaw: 12.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2041,7 +2042,7 @@ export const configs = [
                 pitch:  -27.8,
                 yaw: 177.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2049,7 +2050,7 @@ export const configs = [
                 pitch: -34.7,
                 yaw: 9.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -2057,7 +2058,7 @@ export const configs = [
                 pitch: -22.9,
                 yaw: -86.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road5/1']
             }
@@ -2072,7 +2073,7 @@ export const configs = [
                 pitch:  -21.3,
                 yaw: -81.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2080,7 +2081,7 @@ export const configs = [
                 pitch: -25.4,
                 yaw: 85.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/18']
             }
@@ -2095,7 +2096,7 @@ export const configs = [
                 pitch:  -23.3,
                 yaw: -82.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2103,7 +2104,7 @@ export const configs = [
                 pitch: -25.1,
                 yaw: 89.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2118,7 +2119,7 @@ export const configs = [
                 pitch:  -27.2,
                 yaw: -85.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2126,7 +2127,7 @@ export const configs = [
                 pitch: -22.5,
                 yaw: 88.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2141,7 +2142,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw: -88.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road3/25']
             },
@@ -2149,7 +2150,7 @@ export const configs = [
                 pitch: -27.0,
                 yaw: 97.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2164,7 +2165,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: 176.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2172,7 +2173,7 @@ export const configs = [
                 pitch: -29.9,
                 yaw: 10.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2187,7 +2188,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: 177.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2195,7 +2196,7 @@ export const configs = [
                 pitch: -28.6,
                 yaw: 9.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2210,7 +2211,7 @@ export const configs = [
                 pitch:  -30.3,
                 yaw: 175.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2218,7 +2219,7 @@ export const configs = [
                 pitch: -29.9,
                 yaw: 12.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2233,7 +2234,7 @@ export const configs = [
                 pitch:  -32.8,
                 yaw: 174.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2241,7 +2242,7 @@ export const configs = [
                 pitch: -32.7,
                 yaw: 14.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2256,7 +2257,7 @@ export const configs = [
                 pitch:  -32.0,
                 yaw: -179.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2264,7 +2265,7 @@ export const configs = [
                 pitch: -26.9,
                 yaw: 9.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2279,7 +2280,7 @@ export const configs = [
                 pitch:  -31.0,
                 yaw: 177.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2287,7 +2288,7 @@ export const configs = [
                 pitch: -24.8,
                 yaw: 10.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2302,7 +2303,7 @@ export const configs = [
                 pitch:  -29.7,
                 yaw: 175.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2310,7 +2311,7 @@ export const configs = [
                 pitch: -25.0,
                 yaw: 12.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2325,7 +2326,7 @@ export const configs = [
                 pitch:  -30.3,
                 yaw: -179.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2333,7 +2334,7 @@ export const configs = [
                 pitch: -27.0,
                 yaw: 8.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2348,7 +2349,7 @@ export const configs = [
                 pitch:  -29.7,
                 yaw: 179.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2356,7 +2357,7 @@ export const configs = [
                 pitch: -25.5,
                 yaw: 7.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2371,7 +2372,7 @@ export const configs = [
                 pitch:  -31.1,
                 yaw: -179.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2379,7 +2380,7 @@ export const configs = [
                 pitch: -25.4,
                 yaw: 7.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2394,7 +2395,7 @@ export const configs = [
                 pitch:  -28.6,
                 yaw: -178.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2402,7 +2403,7 @@ export const configs = [
                 pitch: -24.6,
                 yaw: 7.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2417,7 +2418,7 @@ export const configs = [
                 pitch:  -29.7,
                 yaw: -178.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2425,7 +2426,7 @@ export const configs = [
                 pitch: -24.8,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2440,7 +2441,7 @@ export const configs = [
                 pitch:  -30.6,
                 yaw: -178.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2448,7 +2449,7 @@ export const configs = [
                 pitch: -24.8,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2463,7 +2464,7 @@ export const configs = [
                 pitch:  -29.4,
                 yaw: -179.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2471,7 +2472,7 @@ export const configs = [
                 pitch: -25.4,
                 yaw: 9.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2486,7 +2487,7 @@ export const configs = [
                 pitch: -30.9,
                 yaw: 179.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2494,7 +2495,7 @@ export const configs = [
                 pitch: -26.8,
                 yaw: 11.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -2502,7 +2503,7 @@ export const configs = [
                 pitch: -17.4,
                 yaw: 105.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ly_road4/7']
             }
@@ -2517,7 +2518,7 @@ export const configs = [
                 pitch:  -30.5,
                 yaw: -179.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2525,7 +2526,7 @@ export const configs = [
                 pitch: -26.5,
                 yaw: 12.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -2533,7 +2534,7 @@ export const configs = [
                 pitch: -20.7,
                 yaw: -89.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road4/8']
             }
@@ -2548,7 +2549,7 @@ export const configs = [
                 pitch:  -17.0,
                 yaw: 93.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/34']
             },
@@ -2556,7 +2557,7 @@ export const configs = [
                 pitch:  -17.0,
                 yaw: -86.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2571,7 +2572,7 @@ export const configs = [
                 pitch:  -21.8,
                 yaw: 92.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2579,7 +2580,7 @@ export const configs = [
                 pitch: -19.6,
                 yaw: -86.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2594,7 +2595,7 @@ export const configs = [
                 pitch:  -18.0,
                 yaw: 93.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2602,7 +2603,7 @@ export const configs = [
                 pitch: -17.6,
                 yaw: -86.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -2610,7 +2611,7 @@ export const configs = [
                 pitch: -13.3,
                 yaw: 4.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road3/16']
             },
@@ -2618,7 +2619,7 @@ export const configs = [
                 pitch: -14.8,
                 yaw: -174.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road3/15']
             }
@@ -2633,7 +2634,7 @@ export const configs = [
                 pitch:  -19.7,
                 yaw: 94.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2641,7 +2642,7 @@ export const configs = [
                 pitch: -15.6,
                 yaw: -82.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2656,7 +2657,7 @@ export const configs = [
                 pitch:  -27.9,
                 yaw: 92.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2664,7 +2665,7 @@ export const configs = [
                 pitch: -24.0,
                 yaw: -79.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2679,7 +2680,7 @@ export const configs = [
                 pitch:  -25.8,
                 yaw: 96.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2687,7 +2688,7 @@ export const configs = [
                 pitch: -21.1,
                 yaw: -81.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2702,7 +2703,7 @@ export const configs = [
                 pitch:  -17.3,
                 yaw: 96.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2710,7 +2711,7 @@ export const configs = [
                 pitch: -26.8,
                 yaw: -82.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2725,7 +2726,7 @@ export const configs = [
                 pitch:  -27.1,
                 yaw: 95.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2733,7 +2734,7 @@ export const configs = [
                 pitch: -21.1,
                 yaw: -83.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road2/33']
             }
@@ -2748,7 +2749,7 @@ export const configs = [
                 pitch:  -32.6,
                 yaw: -179.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2756,7 +2757,7 @@ export const configs = [
                 pitch: -28.4,
                 yaw: 15.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2771,7 +2772,7 @@ export const configs = [
                 pitch:  -31.1,
                 yaw: 178.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2779,7 +2780,7 @@ export const configs = [
                 pitch: -27.2,
                 yaw: 11.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2794,7 +2795,7 @@ export const configs = [
                 pitch:  -31.3,
                 yaw: 178.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2802,7 +2803,7 @@ export const configs = [
                 pitch: -27.3,
                 yaw: 14.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -2810,7 +2811,7 @@ export const configs = [
                 pitch:  -17.4,
                 yaw: 88.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ly_road1/1']
             }
@@ -2825,7 +2826,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: 177.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2833,7 +2834,7 @@ export const configs = [
                 pitch: -27.3,
                 yaw: 14.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2848,7 +2849,7 @@ export const configs = [
                 pitch:  -30.6,
                 yaw: 176.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2856,7 +2857,7 @@ export const configs = [
                 pitch: -28.6,
                 yaw: 18.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2871,7 +2872,7 @@ export const configs = [
                 pitch:  -30.6,
                 yaw: 177.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2879,7 +2880,7 @@ export const configs = [
                 pitch: -29.2,
                 yaw: 17.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2894,7 +2895,7 @@ export const configs = [
                 pitch:  -30.2,
                 yaw: 176.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2902,7 +2903,7 @@ export const configs = [
                 pitch: -26.4,
                 yaw: 17.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -2910,7 +2911,7 @@ export const configs = [
                 pitch: -13.2,
                 yaw: 78.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ly_road3/14']
             }
@@ -2925,7 +2926,7 @@ export const configs = [
                 pitch:  -32.1,
                 yaw: 177.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2933,7 +2934,7 @@ export const configs = [
                 pitch: -27.3,
                 yaw: 15.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -2948,7 +2949,7 @@ export const configs = [
                 pitch:   -28.0,
                 yaw: -179.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2956,7 +2957,7 @@ export const configs = [
                 pitch: -27.3,
                 yaw: 13.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -2964,7 +2965,7 @@ export const configs = [
                 pitch: -30.8,
                 yaw: -81.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road3/13']
             }
@@ -2979,7 +2980,7 @@ export const configs = [
                 pitch:  -30.2,
                 yaw: -179.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -2987,7 +2988,7 @@ export const configs = [
                 pitch: -31.6,
                 yaw: 15.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3002,7 +3003,7 @@ export const configs = [
                 pitch:  -29.2,
                 yaw: 179.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3010,7 +3011,7 @@ export const configs = [
                 pitch: -28.2,
                 yaw: 12.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3025,7 +3026,7 @@ export const configs = [
                 pitch:  -31.1,
                 yaw: -179.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3033,7 +3034,7 @@ export const configs = [
                 pitch: -27.1,
                 yaw: 13.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3048,7 +3049,7 @@ export const configs = [
                 pitch:  -30.6,
                 yaw: 179.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3056,7 +3057,7 @@ export const configs = [
                 pitch: -27.9,
                 yaw: 12.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -3064,7 +3065,7 @@ export const configs = [
                 pitch: -12.2,
                 yaw: 88.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ly_road2/1']
             }
@@ -3079,7 +3080,7 @@ export const configs = [
                 pitch:  -31.5,
                 yaw: -176.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3087,7 +3088,7 @@ export const configs = [
                 pitch: -30.6,
                 yaw: 12.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3102,7 +3103,7 @@ export const configs = [
                 pitch:  -29.4,
                 yaw: -178.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3110,7 +3111,7 @@ export const configs = [
                 pitch: -27.9,
                 yaw: 12.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3125,7 +3126,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: -177.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3133,7 +3134,7 @@ export const configs = [
                 pitch: -27.7,
                 yaw: 10.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3148,7 +3149,7 @@ export const configs = [
                 pitch:  -29.4,
                 yaw: -177.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3156,7 +3157,7 @@ export const configs = [
                 pitch: -28.2,
                 yaw: 9.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3171,7 +3172,7 @@ export const configs = [
                 pitch:  -26.6,
                 yaw: -175.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3179,7 +3180,7 @@ export const configs = [
                 pitch: -29.2,
                 yaw: 13.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -3187,7 +3188,7 @@ export const configs = [
                 pitch: -17.8,
                 yaw: -83.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road3/1']
             }
@@ -3202,7 +3203,7 @@ export const configs = [
                 pitch:  -29.3,
                 yaw: -177.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3210,7 +3211,7 @@ export const configs = [
                 pitch: -29.2,
                 yaw: 11.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3225,7 +3226,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: -177.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3233,7 +3234,7 @@ export const configs = [
                 pitch: -25.5,
                 yaw: 10.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3248,7 +3249,7 @@ export const configs = [
                 pitch: -29.3,
                 yaw: -174.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3256,7 +3257,7 @@ export const configs = [
                 pitch: -26.9,
                 yaw: 13.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3271,7 +3272,7 @@ export const configs = [
                 pitch:  -28.9,
                 yaw: -175.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3279,7 +3280,7 @@ export const configs = [
                 pitch: -26.8,
                 yaw: 14.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3294,7 +3295,7 @@ export const configs = [
                 pitch:  -26.5,
                 yaw: 178.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3302,7 +3303,7 @@ export const configs = [
                 pitch: -26.8,
                 yaw: 15.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3317,7 +3318,7 @@ export const configs = [
                 pitch:  -25.8,
                 yaw: 177.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3325,7 +3326,7 @@ export const configs = [
                 pitch: -28.7,
                 yaw: 17.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3340,7 +3341,7 @@ export const configs = [
                 pitch:  -26.3,
                 yaw: -179.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3348,7 +3349,7 @@ export const configs = [
                 pitch: -26.9,
                 yaw: 13.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -3356,7 +3357,7 @@ export const configs = [
                 pitch: -21.8,
                 yaw: -73.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jxl_road2/6']
             }
@@ -3371,7 +3372,7 @@ export const configs = [
                 pitch:  -27.4,
                 yaw: 177.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3379,7 +3380,7 @@ export const configs = [
                 pitch: -29.0,
                 yaw: 15.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3394,7 +3395,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: 178.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3402,7 +3403,7 @@ export const configs = [
                 pitch: -29.6,
                 yaw: 15.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3417,7 +3418,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: 178.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3425,7 +3426,7 @@ export const configs = [
                 pitch: -26.6,
                 yaw: 14.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3440,7 +3441,7 @@ export const configs = [
                 pitch:  -26.5,
                 yaw: 176.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3448,7 +3449,7 @@ export const configs = [
                 pitch: -28.0,
                 yaw: 15.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3463,7 +3464,7 @@ export const configs = [
                 pitch:  -30.3,
                 yaw: 179.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3471,7 +3472,7 @@ export const configs = [
                 pitch: -27.7,
                 yaw: 15.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3486,7 +3487,7 @@ export const configs = [
                 pitch:  -30.5,
                 yaw: 179.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3494,7 +3495,7 @@ export const configs = [
                 pitch: -25.6,
                 yaw: 13.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3509,7 +3510,7 @@ export const configs = [
                 pitch:  -30.8,
                 yaw: -178.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3517,7 +3518,7 @@ export const configs = [
                 pitch: -26.5,
                 yaw: 12.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3532,7 +3533,7 @@ export const configs = [
                 pitch:  -31.2,
                 yaw: -175.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3540,7 +3541,7 @@ export const configs = [
                 pitch: -27.3,
                 yaw: 10.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3555,7 +3556,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 143.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road1/9']
             },
@@ -3563,7 +3564,7 @@ export const configs = [
                 pitch: -29.8,
                 yaw: 14.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -3571,7 +3572,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: -131.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road1/0']
             }
@@ -3586,7 +3587,7 @@ export const configs = [
                 pitch:  -21.2,
                 yaw: -10.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3594,7 +3595,7 @@ export const configs = [
                 pitch: -29.3,
                 yaw: 174.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/1']
             }
@@ -3609,7 +3610,7 @@ export const configs = [
                 pitch:  -30.2,
                 yaw: -12.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3617,7 +3618,7 @@ export const configs = [
                 pitch: -29.3,
                 yaw: 174.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3632,7 +3633,7 @@ export const configs = [
                 pitch:  -35.6,
                 yaw: -7.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3640,7 +3641,7 @@ export const configs = [
                 pitch: -32.1,
                 yaw: 177.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3655,7 +3656,7 @@ export const configs = [
                 pitch:  -38.3,
                 yaw: 3.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3663,7 +3664,7 @@ export const configs = [
                 pitch: -33.1,
                 yaw: 166.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3678,7 +3679,7 @@ export const configs = [
                 pitch:  -33.2,
                 yaw: 26.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3686,7 +3687,7 @@ export const configs = [
                 pitch: -21.0,
                 yaw: -151.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3701,7 +3702,7 @@ export const configs = [
                 pitch:  -35.5,
                 yaw: 37.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3709,7 +3710,7 @@ export const configs = [
                 pitch: -20.0,
                 yaw: -137.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3724,7 +3725,7 @@ export const configs = [
                 pitch:   -31.4,
                 yaw: 34.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3732,7 +3733,7 @@ export const configs = [
                 pitch: -27.8,
                 yaw: -137.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3747,7 +3748,7 @@ export const configs = [
                 pitch:  -31.6,
                 yaw: -5.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3755,7 +3756,7 @@ export const configs = [
                 pitch: -23.6,
                 yaw: -168.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3770,7 +3771,7 @@ export const configs = [
                 pitch:  -37.4,
                 yaw: -37.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3778,7 +3779,7 @@ export const configs = [
                 pitch: -22.8,
                 yaw: 154.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3793,7 +3794,7 @@ export const configs = [
                 pitch:  -27.9,
                 yaw: -77.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3801,7 +3802,7 @@ export const configs = [
                 pitch: -32.7,
                 yaw: 120.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3816,7 +3817,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -83.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3824,7 +3825,7 @@ export const configs = [
                 pitch: -28.61,
                 yaw: 105.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3839,7 +3840,7 @@ export const configs = [
                 pitch:  -32.0,
                 yaw: -90.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3847,7 +3848,7 @@ export const configs = [
                 pitch: -31.2,
                 yaw: 108.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3862,7 +3863,7 @@ export const configs = [
                 pitch: -34.9,
                 yaw: -97.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3870,7 +3871,7 @@ export const configs = [
                 pitch: -32.2,
                 yaw: 103.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3885,7 +3886,7 @@ export const configs = [
                 pitch:  -29.4,
                 yaw: -100.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3893,7 +3894,7 @@ export const configs = [
                 pitch: -31.0,
                 yaw: 97.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3908,7 +3909,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -110.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3916,7 +3917,7 @@ export const configs = [
                 pitch: -30.7,
                 yaw: 89.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3931,7 +3932,7 @@ export const configs = [
                 pitch:  -30.0,
                 yaw: -126.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3939,7 +3940,7 @@ export const configs = [
                 pitch: -34.5,
                 yaw: 80.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3954,7 +3955,7 @@ export const configs = [
                 pitch:  -30.5,
                 yaw: -141.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3962,7 +3963,7 @@ export const configs = [
                 pitch: -27.3,
                 yaw: 52.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -3977,7 +3978,7 @@ export const configs = [
                 pitch:  -30.3,
                 yaw: -141.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -3985,7 +3986,7 @@ export const configs = [
                 pitch: -28.7,
                 yaw: 53.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4000,7 +4001,7 @@ export const configs = [
                 pitch:  -28.2,
                 yaw: -119.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4008,7 +4009,7 @@ export const configs = [
                 pitch: -26.6,
                 yaw: 65.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4023,7 +4024,7 @@ export const configs = [
                 pitch:   -30.3,
                 yaw: -99.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4031,7 +4032,7 @@ export const configs = [
                 pitch: -24.8,
                 yaw: 82.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4046,7 +4047,7 @@ export const configs = [
                 pitch:  -30.0,
                 yaw: -89.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4054,7 +4055,7 @@ export const configs = [
                 pitch: -27.2,
                 yaw: 103.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4069,7 +4070,7 @@ export const configs = [
                 pitch:  -27.4,
                 yaw: -137.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4077,7 +4078,7 @@ export const configs = [
                 pitch: -26.3,
                 yaw: 57.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4092,7 +4093,7 @@ export const configs = [
                 pitch:  -27.7,
                 yaw: -179.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4100,7 +4101,7 @@ export const configs = [
                 pitch: -29.1,
                 yaw: 14.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4115,7 +4116,7 @@ export const configs = [
                 pitch:  -26.3,
                 yaw: 161.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4123,7 +4124,7 @@ export const configs = [
                 pitch: -22.1,
                 yaw: -6.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4138,7 +4139,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 143.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4146,7 +4147,7 @@ export const configs = [
                 pitch: -22.2,
                 yaw: -26.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4161,7 +4162,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 143.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4169,7 +4170,7 @@ export const configs = [
                 pitch: -24.3,
                 yaw: -27.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4184,7 +4185,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 143.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4192,7 +4193,7 @@ export const configs = [
                 pitch: -26.9,
                 yaw: -30.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4207,7 +4208,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 143.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road2/8']
             },
@@ -4215,7 +4216,7 @@ export const configs = [
                 pitch: -21.8,
                 yaw: -33.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4230,7 +4231,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: 178.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4238,7 +4239,7 @@ export const configs = [
                 pitch: -36.1,
                 yaw: 12.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/1']
             }
@@ -4253,7 +4254,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: 178.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4261,7 +4262,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 2.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4276,7 +4277,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: 178.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4284,7 +4285,7 @@ export const configs = [
                 pitch: -21.9,
                 yaw: 2.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4299,7 +4300,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: 178.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4307,7 +4308,7 @@ export const configs = [
                 pitch: -19.8,
                 yaw: 2.53,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4322,7 +4323,7 @@ export const configs = [
                 pitch:  -29.9,
                 yaw: 178.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4330,7 +4331,7 @@ export const configs = [
                 pitch: -17.3,
                 yaw: -0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4345,7 +4346,7 @@ export const configs = [
                 pitch:  -27.9,
                 yaw: 165.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4353,7 +4354,7 @@ export const configs = [
                 pitch: -17.2,
                 yaw: -8.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4368,7 +4369,7 @@ export const configs = [
                 pitch:   -28.7,
                 yaw: 155.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4376,7 +4377,7 @@ export const configs = [
                 pitch:-18.8,
                 yaw: -16.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4391,7 +4392,7 @@ export const configs = [
                 pitch:  -30.5,
                 yaw:  148.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4399,7 +4400,7 @@ export const configs = [
                 pitch: -18.3,
                 yaw: -21.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -4407,7 +4408,7 @@ export const configs = [
                 pitch: -22.5,
                 yaw: -121.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tq_road1/28']
             }
@@ -4422,7 +4423,7 @@ export const configs = [
                 pitch:  -31.2,
                 yaw: 142.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4430,7 +4431,7 @@ export const configs = [
                 pitch:  -15.9,
                 yaw: -33.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4445,7 +4446,7 @@ export const configs = [
                 pitch:  -26.5,
                 yaw: 132.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4453,7 +4454,7 @@ export const configs = [
                 pitch: -15.5,
                 yaw: -40.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4468,7 +4469,7 @@ export const configs = [
                 pitch:  -21.2,
                 yaw: 121.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4476,7 +4477,7 @@ export const configs = [
                 pitch: -10.4,
                 yaw: -52.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4491,7 +4492,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: 111.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4499,7 +4500,7 @@ export const configs = [
                 pitch: -20.1,
                 yaw: -61.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4514,7 +4515,7 @@ export const configs = [
                 pitch:  -35.1,
                 yaw: 95.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4522,7 +4523,7 @@ export const configs = [
                 pitch: -18.9,
                 yaw: -71.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4537,7 +4538,7 @@ export const configs = [
                 pitch:  -32.4,
                 yaw: 94.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4545,7 +4546,7 @@ export const configs = [
                 pitch: -21.7,
                 yaw: -75.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4560,7 +4561,7 @@ export const configs = [
                 pitch:  -27.2,
                 yaw: 86.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4568,7 +4569,7 @@ export const configs = [
                 pitch: -19.5,
                 yaw: -81.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4583,7 +4584,7 @@ export const configs = [
                 pitch:  -25.1,
                 yaw: 83.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4591,7 +4592,7 @@ export const configs = [
                 pitch: -23.6,
                 yaw: -88.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4606,7 +4607,7 @@ export const configs = [
                 pitch:  -24.8,
                 yaw: 73.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4614,7 +4615,7 @@ export const configs = [
                 pitch: -14.8,
                 yaw: -93.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4629,7 +4630,7 @@ export const configs = [
                 pitch:  -30.2,
                 yaw: 68.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4637,7 +4638,7 @@ export const configs = [
                 pitch: -13.5,
                 yaw: -100.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4652,7 +4653,7 @@ export const configs = [
                 pitch:  -29.1,
                 yaw: 67.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4660,7 +4661,7 @@ export const configs = [
                 pitch: -15.6,
                 yaw: -104.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4675,7 +4676,7 @@ export const configs = [
                 pitch:  -25.7,
                 yaw: 64.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4683,7 +4684,7 @@ export const configs = [
                 pitch: -18.2,
                 yaw: -112.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4698,7 +4699,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: 59.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4706,7 +4707,7 @@ export const configs = [
                 pitch: -16.6,
                 yaw: -113.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4721,7 +4722,7 @@ export const configs = [
                 pitch:  -25.8,
                 yaw: 54.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4729,7 +4730,7 @@ export const configs = [
                 pitch: -14.5,
                 yaw: -117.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4744,7 +4745,7 @@ export const configs = [
                 pitch:  -24.0,
                 yaw:  46.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4752,7 +4753,7 @@ export const configs = [
                 pitch: -13.4,
                 yaw: -119.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4767,7 +4768,7 @@ export const configs = [
                 pitch:  -32.0,
                 yaw: 44.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4775,7 +4776,7 @@ export const configs = [
                 pitch: -13.9,
                 yaw: -123.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4790,7 +4791,7 @@ export const configs = [
                 pitch:  -29.3,
                 yaw: 49.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4798,7 +4799,7 @@ export const configs = [
                 pitch: -16.7,
                 yaw: -125.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4813,7 +4814,7 @@ export const configs = [
                 pitch:  -26.2,
                 yaw: 44.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4821,7 +4822,7 @@ export const configs = [
                 pitch: -17.8,
                 yaw: -125.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4836,7 +4837,7 @@ export const configs = [
                 pitch:  -27.8,
                 yaw: 47.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4844,7 +4845,7 @@ export const configs = [
                 pitch: -24.1,
                 yaw: -126.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4859,7 +4860,7 @@ export const configs = [
                 pitch:  -22.1,
                 yaw: 48.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4867,7 +4868,7 @@ export const configs = [
                 pitch: -27.4,
                 yaw: -129.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4882,7 +4883,7 @@ export const configs = [
                 pitch:  -26.3,
                 yaw: 45.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4890,7 +4891,7 @@ export const configs = [
                 pitch: -23.4,
                 yaw: -126.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4905,7 +4906,7 @@ export const configs = [
                 pitch:  -21.2,
                 yaw: 55.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4913,7 +4914,7 @@ export const configs = [
                 pitch: -20.3,
                 yaw: -123.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4928,7 +4929,7 @@ export const configs = [
                 pitch:  -25.6,
                 yaw: 62.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4936,7 +4937,7 @@ export const configs = [
                 pitch: -17.5,
                 yaw: -115.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4951,7 +4952,7 @@ export const configs = [
                 pitch:  -20.8,
                 yaw: 68.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4959,7 +4960,7 @@ export const configs = [
                 pitch: -23.1,
                 yaw: -110.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -4974,7 +4975,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 77.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -4982,7 +4983,7 @@ export const configs = [
                 pitch: -27.5,
                 yaw: -113.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -4990,7 +4991,7 @@ export const configs = [
                 pitch: -13.4,
                 yaw: -22.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road4/1']
             }
@@ -5005,7 +5006,7 @@ export const configs = [
                 pitch:  -23.8,
                 yaw: 70.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5013,7 +5014,7 @@ export const configs = [
                 pitch: -19.5,
                 yaw: -98.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5028,7 +5029,7 @@ export const configs = [
                 pitch:   -24.9,
                 yaw: 76.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5036,7 +5037,7 @@ export const configs = [
                 pitch: -22.7,
                 yaw: -98.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5051,7 +5052,7 @@ export const configs = [
                 pitch:  -20.1,
                 yaw: 80.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5059,7 +5060,7 @@ export const configs = [
                 pitch: -23.2,
                 yaw: -96.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5074,7 +5075,7 @@ export const configs = [
                 pitch:  -27.5,
                 yaw: 83.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5082,7 +5083,7 @@ export const configs = [
                 pitch: -24.8,
                 yaw: -91.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5097,7 +5098,7 @@ export const configs = [
                 pitch:  -29.2,
                 yaw: 83.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5105,7 +5106,7 @@ export const configs = [
                 pitch: -23.5,
                 yaw: -84.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5120,7 +5121,7 @@ export const configs = [
                 pitch:  -28.9,
                 yaw: 88.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road1/11']
             },
@@ -5128,7 +5129,7 @@ export const configs = [
                 pitch: -24.7,
                 yaw: -87.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5143,7 +5144,7 @@ export const configs = [
                 pitch:  -14.3,
                 yaw: 108.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5151,7 +5152,7 @@ export const configs = [
                 pitch: -24.7,
                 yaw: -87.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/52']
             }
@@ -5166,7 +5167,7 @@ export const configs = [
                 pitch:  -18.0,
                 yaw: 106.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5174,7 +5175,7 @@ export const configs = [
                 pitch: -25.2,
                 yaw: -73.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5189,7 +5190,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: 143.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5197,7 +5198,7 @@ export const configs = [
                 pitch: -20.2,
                 yaw: -54.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5212,7 +5213,7 @@ export const configs = [
                 pitch:  -14.7,
                 yaw: -170.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5220,7 +5221,7 @@ export const configs = [
                 pitch: -21.9,
                 yaw: -4.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5235,7 +5236,7 @@ export const configs = [
                 pitch:  -21.7,
                 yaw:  -165.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5243,7 +5244,7 @@ export const configs = [
                 pitch: -26.6,
                 yaw: 16.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5258,7 +5259,7 @@ export const configs = [
                 pitch:  -18.2,
                 yaw: -166.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5266,7 +5267,7 @@ export const configs = [
                 pitch: -23.4,
                 yaw: 16.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5281,7 +5282,7 @@ export const configs = [
                 pitch:   -29.3,
                 yaw: -165.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5289,7 +5290,7 @@ export const configs = [
                 pitch: -21.2,
                 yaw: 15.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5304,7 +5305,7 @@ export const configs = [
                 pitch: -28.1,
                 yaw: -165.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5312,7 +5313,7 @@ export const configs = [
                 pitch: -19.4,
                 yaw: 14.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5327,7 +5328,7 @@ export const configs = [
                 pitch:   -26.6,
                 yaw: -167.91,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road3/10']
             },
@@ -5335,7 +5336,7 @@ export const configs = [
                 pitch: -27.2,
                 yaw: 16.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5350,7 +5351,7 @@ export const configs = [
                 pitch:  -29.6,
                 yaw: -168.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5358,7 +5359,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 16.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road3/10']
             }
@@ -5373,7 +5374,7 @@ export const configs = [
                 pitch:  -23.3,
                 yaw: -171.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5381,7 +5382,7 @@ export const configs = [
                 pitch: -19.4,
                 yaw: 17.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5396,7 +5397,7 @@ export const configs = [
                 pitch:  -21.7,
                 yaw: -174.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5404,7 +5405,7 @@ export const configs = [
                 pitch: -20.3,
                 yaw: 19.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5419,7 +5420,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: -169.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5427,7 +5428,7 @@ export const configs = [
                 pitch: -19.3,
                 yaw: 16.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5442,7 +5443,7 @@ export const configs = [
                 pitch:  -21.6,
                 yaw: -168.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5450,7 +5451,7 @@ export const configs = [
                 pitch: -19.5,
                 yaw: 15.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5465,7 +5466,7 @@ export const configs = [
                 pitch:  -21.9,
                 yaw: -169.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road4/6']
             },
@@ -5473,7 +5474,7 @@ export const configs = [
                 pitch: -24.0,
                 yaw: 14.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5488,7 +5489,7 @@ export const configs = [
                 pitch:  -22.6,
                 yaw: -169.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5496,7 +5497,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 14.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road4/6']
             }
@@ -5511,7 +5512,7 @@ export const configs = [
                 pitch: -19.5,
                 yaw: -169.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5519,7 +5520,7 @@ export const configs = [
                 pitch: -19.3,
                 yaw: 13.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5534,7 +5535,7 @@ export const configs = [
                 pitch:  -23.06,
                 yaw: -169.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5542,7 +5543,7 @@ export const configs = [
                 pitch: -17.3,
                 yaw: 12.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5557,7 +5558,7 @@ export const configs = [
                 pitch:  -23.8,
                 yaw: -171.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5565,7 +5566,7 @@ export const configs = [
                 pitch: -19.9,
                 yaw:  13.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5580,7 +5581,7 @@ export const configs = [
                 pitch:  -20.3,
                 yaw: -171.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5588,7 +5589,7 @@ export const configs = [
                 pitch: -17.4,
                 yaw: 12.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5603,7 +5604,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: -172.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5611,7 +5612,7 @@ export const configs = [
                 pitch: -16.2,
                 yaw: 11.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5626,7 +5627,7 @@ export const configs = [
                 pitch:  -23.2,
                 yaw:  -172.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5634,7 +5635,7 @@ export const configs = [
                 pitch: -18.5,
                 yaw: 9.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5649,7 +5650,7 @@ export const configs = [
                 pitch:  -19.8,
                 yaw: -173.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5657,7 +5658,7 @@ export const configs = [
                 pitch: -18.9,
                 yaw: 11.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5672,7 +5673,7 @@ export const configs = [
                 pitch:  -19.7,
                 yaw: -173.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5680,7 +5681,7 @@ export const configs = [
                 pitch: -21.6,
                 yaw: 9.1 ,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5695,7 +5696,7 @@ export const configs = [
                 pitch:  -20.6,
                 yaw: -172.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5703,7 +5704,7 @@ export const configs = [
                 pitch: -18.1,
                 yaw: 7.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -5711,7 +5712,7 @@ export const configs = [
                 pitch: -15.4,
                 yaw: -28.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road5/4']
             }
@@ -5726,7 +5727,7 @@ export const configs = [
                 pitch:  -21.3,
                 yaw: -174.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5734,7 +5735,7 @@ export const configs = [
                 pitch: -20.2,
                 yaw: 9.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5749,7 +5750,7 @@ export const configs = [
                 pitch:  -21.2,
                 yaw: -175.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5757,7 +5758,7 @@ export const configs = [
                 pitch: -21.6,
                 yaw: 8.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5772,7 +5773,7 @@ export const configs = [
                 pitch:  -19.3,
                 yaw: -174.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5780,7 +5781,7 @@ export const configs = [
                 pitch: -18.5,
                 yaw: 8.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5795,7 +5796,7 @@ export const configs = [
                 pitch:  -24.2,
                 yaw: -175.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5803,7 +5804,7 @@ export const configs = [
                 pitch: -20.8,
                 yaw: 7.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5818,7 +5819,7 @@ export const configs = [
                 pitch:  -16.8,
                 yaw: -177.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5826,7 +5827,7 @@ export const configs = [
                 pitch: -18.6,
                 yaw:  6.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5841,7 +5842,7 @@ export const configs = [
                 pitch:  -21.9,
                 yaw: -177.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5849,7 +5850,7 @@ export const configs = [
                 pitch: -23.5,
                 yaw: 2.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5864,7 +5865,7 @@ export const configs = [
                 pitch:  -20.8,
                 yaw: -175.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5872,7 +5873,7 @@ export const configs = [
                 pitch:-20.8,
                 yaw: 6.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5887,7 +5888,7 @@ export const configs = [
                 pitch:  -15.1,
                 yaw: -175.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5895,7 +5896,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 4.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5910,7 +5911,7 @@ export const configs = [
                 pitch: -15.2,
                 yaw: -167.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5918,7 +5919,7 @@ export const configs = [
                 pitch: -24.0,
                 yaw: 17.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road1/11']
             }
@@ -5933,7 +5934,7 @@ export const configs = [
                 pitch:  -16.6,
                 yaw: -168.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5941,7 +5942,7 @@ export const configs = [
                 pitch: -27.1,
                 yaw: 15.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5956,7 +5957,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: -167.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5964,7 +5965,7 @@ export const configs = [
                 pitch: -27.2,
                 yaw: 13.91,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -5979,7 +5980,7 @@ export const configs = [
                 pitch:  -18.0,
                 yaw: -166.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -5987,7 +5988,7 @@ export const configs = [
                 pitch: -26.4,
                 yaw: 15.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6002,7 +6003,7 @@ export const configs = [
                 pitch:  -19.4,
                 yaw: -166.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6010,7 +6011,7 @@ export const configs = [
                 pitch: -25.1,
                 yaw: 11.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6025,7 +6026,7 @@ export const configs = [
                 pitch:  -21.7,
                 yaw: -167.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6033,7 +6034,7 @@ export const configs = [
                 pitch: -23.4,
                 yaw: 15.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6048,7 +6049,7 @@ export const configs = [
                 pitch:  -20.4,
                 yaw: -166.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6056,7 +6057,7 @@ export const configs = [
                 pitch: -24.9,
                 yaw: 13.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6071,7 +6072,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: -166.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6079,7 +6080,7 @@ export const configs = [
                 pitch: -26.2,
                 yaw: 12.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6094,7 +6095,7 @@ export const configs = [
                 pitch:  -20.3,
                 yaw: -169.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6102,7 +6103,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 4.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6117,7 +6118,7 @@ export const configs = [
                 pitch: -16.0,
                 yaw: -166.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6125,7 +6126,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 4.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -6133,7 +6134,7 @@ export const configs = [
                 pitch: -21.2,
                 yaw: 101.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road3/10']
             },
@@ -6141,7 +6142,7 @@ export const configs = [
                 pitch: -17.2,
                 yaw: -80.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road3/9']
             }
@@ -6156,7 +6157,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: -169.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6164,7 +6165,7 @@ export const configs = [
                 pitch: -31.1,
                 yaw: 15.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6179,7 +6180,7 @@ export const configs = [
                 pitch:  -15.1,
                 yaw: -175.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6187,7 +6188,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 4.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6202,7 +6203,7 @@ export const configs = [
                 pitch:  -15.1,
                 yaw: -175.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/43']
             },
@@ -6210,7 +6211,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 4.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6225,7 +6226,7 @@ export const configs = [
                 pitch:  -17.1,
                 yaw: 157.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6233,7 +6234,7 @@ export const configs = [
                 pitch:  -17.7,
                 yaw: -25.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tsg_road1/1']
             },
@@ -6241,7 +6242,7 @@ export const configs = [
                 pitch:  -12.7,
                 yaw: -96.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jxl_road3/15']
             }
@@ -6256,7 +6257,7 @@ export const configs = [
                 pitch:  -14.9,
                 yaw: 167.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6264,7 +6265,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: -6.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6279,7 +6280,7 @@ export const configs = [
                 pitch:  -17.3,
                 yaw: 160.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6287,7 +6288,7 @@ export const configs = [
                 pitch: -20.6,
                 yaw: -10.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6302,7 +6303,7 @@ export const configs = [
                 pitch:  -17.0,
                 yaw: 156.37,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6310,7 +6311,7 @@ export const configs = [
                 pitch: -22.9,
                 yaw: -15.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6325,7 +6326,7 @@ export const configs = [
                 pitch:  -19.3,
                 yaw: 150.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6333,7 +6334,7 @@ export const configs = [
                 pitch: -22.2,
                 yaw: -20.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6348,7 +6349,7 @@ export const configs = [
                 pitch:  -19.51,
                 yaw: 146.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6356,7 +6357,7 @@ export const configs = [
                 pitch: -18.0,
                 yaw: -27.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6371,7 +6372,7 @@ export const configs = [
                 pitch: -20.1,
                 yaw: 142.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6379,7 +6380,7 @@ export const configs = [
                 pitch: -15.0,
                 yaw: -31.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6394,7 +6395,7 @@ export const configs = [
                 pitch:  -22.0,
                 yaw: 140.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6402,7 +6403,7 @@ export const configs = [
                 pitch: -19.9,
                 yaw: -32.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6417,7 +6418,7 @@ export const configs = [
                 pitch:  -19.2,
                 yaw: 136.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6425,7 +6426,7 @@ export const configs = [
                 pitch: -22.1,
                 yaw: -35.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6440,7 +6441,7 @@ export const configs = [
                 pitch:  -17.4,
                 yaw: 135.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6448,7 +6449,7 @@ export const configs = [
                 pitch: -23.2,
                 yaw: -35.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6463,7 +6464,7 @@ export const configs = [
                 pitch:  -18.4,
                 yaw: 130.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road2/39']
             },
@@ -6471,7 +6472,7 @@ export const configs = [
                 pitch: -17.2,
                 yaw: -39.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -6479,7 +6480,7 @@ export const configs = [
                 pitch:  -15.9,
                 yaw: -156.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road3/1']
             }
@@ -6494,7 +6495,7 @@ export const configs = [
                 pitch:  -18.8,
                 yaw: 67.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6502,7 +6503,7 @@ export const configs = [
                 pitch: -29.8,
                 yaw:  -84.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/47']
             }
@@ -6517,7 +6518,7 @@ export const configs = [
                 pitch: -36.5,
                 yaw: 77.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6525,7 +6526,7 @@ export const configs = [
                 pitch: -30.5,
                 yaw: -103.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6540,7 +6541,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: 79.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6548,7 +6549,7 @@ export const configs = [
                 pitch: -27.5,
                 yaw: -100.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6563,7 +6564,7 @@ export const configs = [
                 pitch:  -23.2,
                 yaw: 79.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6571,7 +6572,7 @@ export const configs = [
                 pitch: -27.6,
                 yaw: -101.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6586,7 +6587,7 @@ export const configs = [
                 pitch:  -29.7,
                 yaw: 83.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6594,7 +6595,7 @@ export const configs = [
                 pitch: -32.0,
                 yaw: -102.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6609,7 +6610,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: 83.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6617,7 +6618,7 @@ export const configs = [
                 pitch: -27.9,
                 yaw: -98.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6632,7 +6633,7 @@ export const configs = [
                 pitch:  -28.2,
                 yaw: 81.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6640,7 +6641,7 @@ export const configs = [
                 pitch: -25.3,
                 yaw: -101.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6655,7 +6656,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 79.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6663,7 +6664,7 @@ export const configs = [
                 pitch: -28.4,
                 yaw: -99.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6678,7 +6679,7 @@ export const configs = [
                 pitch:  -28.9,
                 yaw: 82.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6686,7 +6687,7 @@ export const configs = [
                 pitch:  -31.6,
                 yaw: -101.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6701,7 +6702,7 @@ export const configs = [
                 pitch:  -33.7,
                 yaw: 81.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6709,7 +6710,7 @@ export const configs = [
                 pitch: -33.7,
                 yaw: -98.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6724,7 +6725,7 @@ export const configs = [
                 pitch:  -35.7,
                 yaw: 87.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6732,7 +6733,7 @@ export const configs = [
                 pitch: -29.7,
                 yaw: -101.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6747,7 +6748,7 @@ export const configs = [
                 pitch:  -22.2,
                 yaw: 81.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6755,7 +6756,7 @@ export const configs = [
                 pitch: -26.3,
                 yaw: -97.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6770,7 +6771,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw: 82.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6778,7 +6779,7 @@ export const configs = [
                 pitch: -26.5,
                 yaw: -98.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6793,7 +6794,7 @@ export const configs = [
                 pitch: -20.4,
                 yaw: 78.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6801,7 +6802,7 @@ export const configs = [
                 pitch: -22.6,
                 yaw: -97.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6816,7 +6817,7 @@ export const configs = [
                 pitch:  -22.2,
                 yaw: 80.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6824,7 +6825,7 @@ export const configs = [
                 pitch: -28.8,
                 yaw: -99.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6839,7 +6840,7 @@ export const configs = [
                 pitch:  -24.0,
                 yaw: 78.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6847,7 +6848,7 @@ export const configs = [
                 pitch: -25.9,
                 yaw: -99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6862,7 +6863,7 @@ export const configs = [
                 pitch:  -26.0,
                 yaw: 72.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6870,7 +6871,7 @@ export const configs = [
                 pitch: -29.9,
                 yaw: -106.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6885,7 +6886,7 @@ export const configs = [
                 pitch:  -23.0,
                 yaw: 35.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6893,7 +6894,7 @@ export const configs = [
                 pitch: -24.4,
                 yaw: -124.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6908,7 +6909,7 @@ export const configs = [
                 pitch:  -23.4,
                 yaw: -8.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6916,7 +6917,7 @@ export const configs = [
                 pitch: -26.5,
                 yaw: 178.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6931,7 +6932,7 @@ export const configs = [
                 pitch:  -26.6,
                 yaw: -11.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6939,7 +6940,7 @@ export const configs = [
                 pitch: -23.2,
                 yaw: 169.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6954,7 +6955,7 @@ export const configs = [
                 pitch:  -25.7,
                 yaw: -13.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6962,7 +6963,7 @@ export const configs = [
                 pitch: -20.0,
                 yaw: 168.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -6977,7 +6978,7 @@ export const configs = [
                 pitch: -25.0,
                 yaw: -10.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -6985,7 +6986,7 @@ export const configs = [
                 pitch: -19.5,
                 yaw: 167.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7000,7 +7001,7 @@ export const configs = [
                 pitch:  -32.7,
                 yaw: -82.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ly_road3/1']
             },
@@ -7008,7 +7009,7 @@ export const configs = [
                 pitch:  -20.9,
                 yaw: 153.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7023,7 +7024,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: -101.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7031,7 +7032,7 @@ export const configs = [
                 pitch:   -25.1,
                 yaw: 77.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ly_road2/23']
             }
@@ -7046,7 +7047,7 @@ export const configs = [
                 pitch:  -24.4,
                 yaw: -102.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7054,7 +7055,7 @@ export const configs = [
                 pitch:  -20.9,
                 yaw: 79.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7069,7 +7070,7 @@ export const configs = [
                 pitch: -21.4,
                 yaw: -100.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7077,7 +7078,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 77.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7092,7 +7093,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: -99.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7100,7 +7101,7 @@ export const configs = [
                 pitch:  -22.97,
                 yaw: 76.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7115,7 +7116,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: -99.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7123,7 +7124,7 @@ export const configs = [
                 pitch:  -11.7,
                 yaw: 77.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7138,7 +7139,7 @@ export const configs = [
                 pitch:  -21.7,
                 yaw: -99.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7146,7 +7147,7 @@ export const configs = [
                 pitch:  -18.0,
                 yaw: 79.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7161,7 +7162,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: -99.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7169,7 +7170,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw: 78.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7184,7 +7185,7 @@ export const configs = [
                 pitch:  -32.7,
                 yaw: -82.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7192,7 +7193,7 @@ export const configs = [
                 pitch:  -19.9,
                 yaw: 76.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7207,7 +7208,7 @@ export const configs = [
                 pitch:  -19.8,
                 yaw: -99.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7215,7 +7216,7 @@ export const configs = [
                 pitch:  -18.4,
                 yaw: 74.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7230,7 +7231,7 @@ export const configs = [
                 pitch:  -19.7,
                 yaw: -97.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7238,7 +7239,7 @@ export const configs = [
                 pitch:  -24.0,
                 yaw: 81.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7253,7 +7254,7 @@ export const configs = [
                 pitch: -25.2,
                 yaw: -99.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7261,7 +7262,7 @@ export const configs = [
                 pitch:  -25.9,
                 yaw: 78.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7276,7 +7277,7 @@ export const configs = [
                 pitch:  -24.7,
                 yaw: -105.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7284,7 +7285,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 80.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7299,7 +7300,7 @@ export const configs = [
                 pitch: -22.3,
                 yaw: -95.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7307,7 +7308,7 @@ export const configs = [
                 pitch:  -18.5,
                 yaw: 78.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7322,7 +7323,7 @@ export const configs = [
                 pitch:  -32.7,
                 yaw: -82.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/41']
             },
@@ -7330,7 +7331,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: 77.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7345,7 +7346,7 @@ export const configs = [
                 pitch:   -28.0,
                 yaw: 70.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7354,7 +7355,7 @@ export const configs = [
                 yaw: -106.3,
 
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/37']
             }
@@ -7369,7 +7370,7 @@ export const configs = [
                 pitch:   -23.2,
                 yaw: 72.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7377,7 +7378,7 @@ export const configs = [
                 pitch:  -28.4,
                 yaw: -109.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7392,7 +7393,7 @@ export const configs = [
                 pitch:  -30.7,
                 yaw: 70.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7400,7 +7401,7 @@ export const configs = [
                 pitch:  -28.2,
                 yaw:  -106.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7415,7 +7416,7 @@ export const configs = [
                 pitch:  -34.8,
                 yaw: 70.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7423,7 +7424,7 @@ export const configs = [
                 pitch:  -33.5,
                 yaw: -107.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7438,7 +7439,7 @@ export const configs = [
                 pitch: -30.7,
                 yaw:  68.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7446,7 +7447,7 @@ export const configs = [
                 pitch:  -33.9,
                 yaw:-107.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7461,7 +7462,7 @@ export const configs = [
                 pitch:  -29.8,
                 yaw: 67.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7469,7 +7470,7 @@ export const configs = [
                 pitch:  -23.4,
                 yaw: -110.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7484,7 +7485,7 @@ export const configs = [
                 pitch:  -30.5,
                 yaw: 65.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7492,7 +7493,7 @@ export const configs = [
                 pitch:   -33.3,
                 yaw: -109.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7507,7 +7508,7 @@ export const configs = [
                 pitch:  -30.4,
                 yaw: 72.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7515,7 +7516,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -109.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -7523,7 +7524,7 @@ export const configs = [
                 pitch:  -21.1,
                 yaw: -22.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ly_road4/1']
             }
@@ -7538,7 +7539,7 @@ export const configs = [
                 pitch:  -32.2,
                 yaw: 63.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7546,7 +7547,7 @@ export const configs = [
                 pitch:   -25.8,
                 yaw: -114.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7561,7 +7562,7 @@ export const configs = [
                 pitch:  -32.0,
                 yaw: 69.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7569,7 +7570,7 @@ export const configs = [
                 pitch:  -26.8,
                 yaw: -111.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7584,7 +7585,7 @@ export const configs = [
                 pitch: -31.1,
                 yaw: 74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7592,7 +7593,7 @@ export const configs = [
                 pitch:  -25.5,
                 yaw: -114.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7607,7 +7608,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: 77.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7615,7 +7616,7 @@ export const configs = [
                 pitch:  -27.9,
                 yaw: -114.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7630,7 +7631,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: 77.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7638,7 +7639,7 @@ export const configs = [
                 pitch: -31.0,
                 yaw: -103.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7653,7 +7654,7 @@ export const configs = [
                 pitch:  -22.8,
                 yaw: 85.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7661,7 +7662,7 @@ export const configs = [
                 pitch:   -29.4,
                 yaw: -106.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7676,7 +7677,7 @@ export const configs = [
                 pitch:  -20.3,
                 yaw: 99.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             }*/
@@ -7684,7 +7685,7 @@ export const configs = [
                 pitch:  -30.4,
                 yaw: -99.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7699,7 +7700,7 @@ export const configs = [
                 pitch:  -30.4,
                 yaw: -99.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7707,7 +7708,7 @@ export const configs = [
                 pitch:  -20.3,
                 yaw: 99.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['ly_road1/8']
             }
@@ -7722,7 +7723,7 @@ export const configs = [
                 pitch:  -30.1,
                 yaw: -91.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7730,7 +7731,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 87.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7745,7 +7746,7 @@ export const configs = [
                 pitch:   -27.9,
                 yaw: -139.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7753,7 +7754,7 @@ export const configs = [
                 pitch:  -25.0,
                 yaw: 41.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7768,7 +7769,7 @@ export const configs = [
                 pitch:  -29.2,
                 yaw: -137.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7776,7 +7777,7 @@ export const configs = [
                 pitch:  -23.8,
                 yaw: 47.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7791,7 +7792,7 @@ export const configs = [
                 pitch:  -28.6,
                 yaw: -132.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7799,7 +7800,7 @@ export const configs = [
                 pitch:  -21.3,
                 yaw: 45.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7814,7 +7815,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw:-135.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7822,7 +7823,7 @@ export const configs = [
                 pitch: -23.7,
                 yaw: 43.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7837,7 +7838,7 @@ export const configs = [
                 pitch:  -28.8,
                 yaw: -141.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/33']
             },
@@ -7845,7 +7846,7 @@ export const configs = [
                 pitch:  -26.6,
                 yaw: 37.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7860,7 +7861,7 @@ export const configs = [
                 pitch:  -19.2,
                 yaw: 177.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7868,7 +7869,7 @@ export const configs = [
                 pitch:  -25.9,
                 yaw: 11.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road1/1']
             }
@@ -7883,7 +7884,7 @@ export const configs = [
                 pitch:  -18.2,
                 yaw: 167.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7891,7 +7892,7 @@ export const configs = [
                 pitch: -25.5,
                 yaw: 1.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7906,7 +7907,7 @@ export const configs = [
                 pitch:  -24.1,
                 yaw:166.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7914,7 +7915,7 @@ export const configs = [
                 pitch:  -21.0,
                 yaw: -7.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7929,7 +7930,7 @@ export const configs = [
                 pitch:  -21.3,
                 yaw: 176.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7937,7 +7938,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: -0.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7952,7 +7953,7 @@ export const configs = [
                 pitch:  -16.9,
                 yaw:  -172.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7960,7 +7961,7 @@ export const configs = [
                 pitch:  -22.8,
                 yaw: 10.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7975,7 +7976,7 @@ export const configs = [
                 pitch:  -18.6,
                 yaw: -162.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -7983,7 +7984,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: 19.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -7998,7 +7999,7 @@ export const configs = [
                 pitch:  -18.6,
                 yaw: -155.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8006,7 +8007,7 @@ export const configs = [
                 pitch:  -26.6,
                 yaw: 37.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8021,7 +8022,7 @@ export const configs = [
                 pitch:  -21.3,
                 yaw: -164.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8029,7 +8030,7 @@ export const configs = [
                 pitch:  -26.6,
                 yaw: 37.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8044,7 +8045,7 @@ export const configs = [
                 pitch:  -24.0,
                 yaw: -175.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8052,7 +8053,7 @@ export const configs = [
                 pitch:  -24.6,
                 yaw: 14.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8067,7 +8068,7 @@ export const configs = [
                 pitch:  -24.1,
                 yaw: 170.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8075,7 +8076,7 @@ export const configs = [
                 pitch:  -21.7,
                 yaw: 5.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8090,7 +8091,7 @@ export const configs = [
                 pitch:   -22.8,
                 yaw: 160.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8098,7 +8099,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw:  -11.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8113,7 +8114,7 @@ export const configs = [
                 pitch:  -20.3,
                 yaw: 149.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8121,7 +8122,7 @@ export const configs = [
                 pitch: -20.1,
                 yaw: -21.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8136,7 +8137,7 @@ export const configs = [
                 pitch:  -19.8,
                 yaw: 133.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8144,7 +8145,7 @@ export const configs = [
                 pitch: -18.6,
                 yaw:-33.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8159,7 +8160,7 @@ export const configs = [
                 pitch:  -22.8,
                 yaw: 132.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8167,7 +8168,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: -40.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8182,7 +8183,7 @@ export const configs = [
                 pitch:  -22.0,
                 yaw: 144.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8190,7 +8191,7 @@ export const configs = [
                 pitch:  -23.0,
                 yaw: -30.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8205,7 +8206,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw: 133.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8213,7 +8214,7 @@ export const configs = [
                 pitch:  -19.0,
                 yaw: -41.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8228,7 +8229,7 @@ export const configs = [
                 pitch:  -21.2,
                 yaw: 138.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8236,7 +8237,7 @@ export const configs = [
                 pitch:  -17.0,
                 yaw: -31.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8251,7 +8252,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: 145.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8259,7 +8260,7 @@ export const configs = [
                 pitch: -19.0,
                 yaw: -29.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8274,7 +8275,7 @@ export const configs = [
                 pitch:  -18.6,
                 yaw: 143.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road1/31']
             },
@@ -8282,7 +8283,7 @@ export const configs = [
                 pitch:  -17.3,
                 yaw: -24.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8297,7 +8298,7 @@ export const configs = [
                 pitch: -19.0,
                 yaw: -29.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8305,7 +8306,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: 145.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road1/9']
             }
@@ -8320,7 +8321,7 @@ export const configs = [
                 pitch: -19.0,
                 yaw: -29.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8328,7 +8329,7 @@ export const configs = [
                 yaw: 145.6,
 
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8344,7 +8345,7 @@ export const configs = [
                 pitch: -19.0,
                 yaw: -29.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8352,7 +8353,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: 145.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8367,7 +8368,7 @@ export const configs = [
                 pitch: -19.0,
                 yaw: -29.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8376,7 +8377,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: 145.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8391,7 +8392,7 @@ export const configs = [
                 pitch: -19.5,
                 yaw: -51.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8400,7 +8401,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: 145.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8415,7 +8416,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 24.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jxl_road2/1']
             },
@@ -8423,7 +8424,7 @@ export const configs = [
                 pitch: -19.9,
                 yaw: 133.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -8431,7 +8432,7 @@ export const configs = [
                 pitch: -22.1,
                 yaw: -74.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jxl_road3/1']
             }
@@ -8446,7 +8447,7 @@ export const configs = [
                 pitch:  -21.7,
                 yaw: 35.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8454,7 +8455,7 @@ export const configs = [
                 pitch: -22.6,
                 yaw: -146.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jxl_road1/6']
             }
@@ -8469,7 +8470,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 24.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8477,7 +8478,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: -147.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8492,7 +8493,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 24.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8500,7 +8501,7 @@ export const configs = [
                 pitch: -26.0,
                 yaw:-142.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8515,7 +8516,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 24.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8523,7 +8524,7 @@ export const configs = [
                 pitch:  -22.3,
                 yaw: -142.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8538,7 +8539,7 @@ export const configs = [
                 pitch:  -22.3,
                 yaw: 31.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8546,7 +8547,7 @@ export const configs = [
                 pitch: -17.2,
                 yaw: -145.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8561,7 +8562,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 24.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8569,7 +8570,7 @@ export const configs = [
                 pitch:-21.04,
                 yaw: -140.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8584,7 +8585,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: 101.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8592,7 +8593,7 @@ export const configs = [
                 pitch:-19.7,
                 yaw: -78.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jxl_road1/6']
             }
@@ -8607,7 +8608,7 @@ export const configs = [
                 pitch:  -25.6,
                 yaw: 101.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8615,7 +8616,7 @@ export const configs = [
                 pitch:-29.0,
                 yaw:  -82.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8630,7 +8631,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 92.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8638,7 +8639,7 @@ export const configs = [
                 pitch:-19.9,
                 yaw: -82.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8653,7 +8654,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: 47.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8661,7 +8662,7 @@ export const configs = [
                 pitch:-21.7,
                 yaw: -125.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8676,7 +8677,7 @@ export const configs = [
                 pitch:  -22.1,
                 yaw: 42.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8684,7 +8685,7 @@ export const configs = [
                 pitch:-21.04,
                 yaw: -140.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8699,7 +8700,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: 34.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8707,7 +8708,7 @@ export const configs = [
                 pitch:-21.04,
                 yaw: -140.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8722,7 +8723,7 @@ export const configs = [
                 pitch:  -19.2,
                 yaw: 7.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8730,7 +8731,7 @@ export const configs = [
                 pitch:-21.4,
                 yaw: -169.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8745,7 +8746,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 24.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8753,7 +8754,7 @@ export const configs = [
                 pitch:-22.6,
                 yaw: -165.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8768,7 +8769,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 24.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8776,7 +8777,7 @@ export const configs = [
                 pitch:21.8,
                 yaw: -154.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8791,7 +8792,7 @@ export const configs = [
                 pitch: -22.5,
                 yaw: 45.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8799,7 +8800,7 @@ export const configs = [
                 pitch:-21.04,
                 yaw: -140.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8814,7 +8815,7 @@ export const configs = [
                 pitch:  -21.9,
                 yaw: 55.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8822,7 +8823,7 @@ export const configs = [
                 pitch:-20.1,
                 yaw: -128.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8837,7 +8838,7 @@ export const configs = [
                 pitch:  -17.9,
                 yaw: 24.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8845,7 +8846,7 @@ export const configs = [
                 pitch:-22.8,
                 yaw: -117.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8860,7 +8861,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: 80.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8868,7 +8869,7 @@ export const configs = [
                 pitch:-22.4,
                 yaw: -105.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8883,7 +8884,7 @@ export const configs = [
                 pitch:  -18.8,
                 yaw: 92.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8891,7 +8892,7 @@ export const configs = [
                 pitch:-19.2,
                 yaw: -93.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8906,7 +8907,7 @@ export const configs = [
                 pitch:  -14.6,
                 yaw: 97.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road1/1']
             },
@@ -8914,7 +8915,7 @@ export const configs = [
                 pitch:-23.2,
                 yaw:-80.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8929,7 +8930,7 @@ export const configs = [
                 pitch:  -20.6,
                 yaw: 171.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8937,7 +8938,7 @@ export const configs = [
                 pitch:-27.0,
                 yaw: 1.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road2/31']
             },
@@ -8945,7 +8946,7 @@ export const configs = [
                 pitch:-12.6,
                 yaw: 91.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road2/1']
             }
@@ -8960,7 +8961,7 @@ export const configs = [
                 pitch:  -16.8,
                 yaw:  172.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8968,7 +8969,7 @@ export const configs = [
                 pitch:-22.8,
                 yaw: -2.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -8983,7 +8984,7 @@ export const configs = [
                 pitch:  -15.6,
                 yaw: 175.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -8991,7 +8992,7 @@ export const configs = [
                 pitch:-16.1,
                 yaw:-2.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9006,7 +9007,7 @@ export const configs = [
                 pitch:  -18.5,
                 yaw: 175.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9014,7 +9015,7 @@ export const configs = [
                 pitch:-23.2,
                 yaw:1.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9029,7 +9030,7 @@ export const configs = [
                 pitch:  -21.2,
                 yaw: -174.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9037,7 +9038,7 @@ export const configs = [
                 pitch:-19.2,
                 yaw:14.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -9045,7 +9046,7 @@ export const configs = [
                 pitch:-13.4,
                 yaw:114.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tyg_road2/2']
             }
@@ -9060,7 +9061,7 @@ export const configs = [
                 pitch: -23.7,
                 yaw: -171.21,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9068,7 +9069,7 @@ export const configs = [
                 pitch:-22.5,
                 yaw: 19.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9083,7 +9084,7 @@ export const configs = [
                 pitch:  -23.6,
                 yaw: -170.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9091,7 +9092,7 @@ export const configs = [
                 pitch:-24.9,
                 yaw:20.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9106,7 +9107,7 @@ export const configs = [
                 pitch:  -25.7,
                 yaw: -165.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9114,7 +9115,7 @@ export const configs = [
                 pitch:-17.7,
                 yaw:16.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9129,7 +9130,7 @@ export const configs = [
                 pitch:  -25.7,
                 yaw: -165.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road2/1']
             },
@@ -9137,7 +9138,7 @@ export const configs = [
                 pitch:-27.0,
                 yaw:-6.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/68']
             },
@@ -9145,7 +9146,7 @@ export const configs = [
                 pitch:-23.0,
                 yaw:97.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -9160,7 +9161,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw:  -98.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9168,7 +9169,7 @@ export const configs = [
                 pitch:-20.3,
                 yaw: 87.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road1/1']
             }
@@ -9183,7 +9184,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw:  -98.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9191,7 +9192,7 @@ export const configs = [
                 pitch:-20.3,
                 yaw: 87.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9206,7 +9207,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw:  -98.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9214,7 +9215,7 @@ export const configs = [
                 pitch:-20.3,
                 yaw: 87.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9229,7 +9230,7 @@ export const configs = [
                 pitch:  -18.1,
                 yaw:  -74.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9237,7 +9238,7 @@ export const configs = [
                 pitch:-20.3,
                 yaw: 115.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -9245,7 +9246,7 @@ export const configs = [
                 pitch: -16.2,
                 yaw: -156.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road3/2']
             },
@@ -9253,7 +9254,7 @@ export const configs = [
                 pitch: -16.0,
                 yaw: 7.10,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tyg_road1/1']
             }
@@ -9268,7 +9269,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw:   -75.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9276,7 +9277,7 @@ export const configs = [
                 pitch:-20.9,
                 yaw: 112.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9291,7 +9292,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw:   -75.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9299,7 +9300,7 @@ export const configs = [
                 pitch:-20.9,
                 yaw: 112.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9314,7 +9315,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw:   -75.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9322,7 +9323,7 @@ export const configs = [
                 pitch:-20.9,
                 yaw: 112.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9337,7 +9338,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw:   -75.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9345,7 +9346,7 @@ export const configs = [
                 pitch:-20.9,
                 yaw: 112.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9360,7 +9361,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw:   -75.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9368,7 +9369,7 @@ export const configs = [
                 pitch:-20.9,
                 yaw: 112.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9383,7 +9384,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw:   -75.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9391,7 +9392,7 @@ export const configs = [
                 pitch:-20.9,
                 yaw: 112.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9406,7 +9407,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw:   -75.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9414,7 +9415,7 @@ export const configs = [
                 pitch:-20.9,
                 yaw: 112.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -9422,7 +9423,7 @@ export const configs = [
                 pitch:-15.4,
                 yaw: 13.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tyg_road3/12']
             }
@@ -9437,7 +9438,7 @@ export const configs = [
                 pitch:  -18.2,
                 yaw:  -88.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9445,7 +9446,7 @@ export const configs = [
                 pitch:-20.9,
                 yaw: 112.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9460,7 +9461,7 @@ export const configs = [
                 pitch:  -23.2,
                 yaw:   -137.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9468,7 +9469,7 @@ export const configs = [
                 pitch:-19.3,
                 yaw: 77.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9483,7 +9484,7 @@ export const configs = [
                 pitch: -18.9,
                 yaw:   -155.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9491,7 +9492,7 @@ export const configs = [
                 pitch:-19.5,
                 yaw: 25.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9506,7 +9507,7 @@ export const configs = [
                 pitch:  -19.6,
                 yaw:   -160.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9514,7 +9515,7 @@ export const configs = [
                 pitch:-18.8,
                 yaw: 27.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9529,7 +9530,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw:   137.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9537,7 +9538,7 @@ export const configs = [
                 pitch:-23.9,
                 yaw: -11.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9552,7 +9553,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw:   101.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9560,7 +9561,7 @@ export const configs = [
                 pitch:-27.0,
                 yaw: -77.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9575,7 +9576,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9583,7 +9584,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9598,7 +9599,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9606,7 +9607,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9621,7 +9622,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9629,7 +9630,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9644,7 +9645,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9652,7 +9653,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9667,7 +9668,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9675,7 +9676,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9690,7 +9691,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9698,7 +9699,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -9706,7 +9707,7 @@ export const configs = [
                 pitch:-18.1,
                 yaw: 8.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road3/1']
             }
@@ -9721,7 +9722,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9729,7 +9730,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9744,7 +9745,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9752,7 +9753,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9767,7 +9768,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw:   99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9775,7 +9776,7 @@ export const configs = [
                 pitch:-22.9,
                 yaw: -74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9790,7 +9791,7 @@ export const configs = [
                 pitch:  -21.2,
                 yaw:   46.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9798,7 +9799,7 @@ export const configs = [
                 pitch:-20.7,
                 yaw:  -99.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9813,7 +9814,7 @@ export const configs = [
                 pitch:  -17.9,
                 yaw:   6.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9821,7 +9822,7 @@ export const configs = [
                 pitch:-17.9,
                 yaw: -153.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9836,7 +9837,7 @@ export const configs = [
                 pitch:  -29.1,
                 yaw:   -8.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9844,7 +9845,7 @@ export const configs = [
                 pitch:-30.1,
                 yaw: -169.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9859,7 +9860,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw:   -19.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9867,7 +9868,7 @@ export const configs = [
                 pitch:-16.2,
                 yaw: 149.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9882,7 +9883,7 @@ export const configs = [
                 pitch:  -14.7,
                 yaw:   -30.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road1/1']
             },
@@ -9890,7 +9891,7 @@ export const configs = [
                 pitch:-18.1,
                 yaw: 172.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9905,7 +9906,7 @@ export const configs = [
                 pitch:   -17.9,
                 yaw:   166.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9913,7 +9914,7 @@ export const configs = [
                 pitch:-17.7,
                 yaw: -11.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road2/23']
             }
@@ -9928,7 +9929,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw:  165.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road2/4']
             },
@@ -9936,7 +9937,7 @@ export const configs = [
                 pitch:-21.2,
                 yaw: -11.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9951,7 +9952,7 @@ export const configs = [
                 pitch:  -17.2,
                 yaw:  151.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9959,7 +9960,7 @@ export const configs = [
                 pitch:-19.6,
                 yaw: -25.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road2/4']
             }
@@ -9974,7 +9975,7 @@ export const configs = [
                 pitch:  -17.2,
                 yaw:  151.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -9982,7 +9983,7 @@ export const configs = [
                 pitch:-19.6,
                 yaw: -25.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -9997,7 +9998,7 @@ export const configs = [
                 pitch:  -16.9,
                 yaw:  123.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10005,7 +10006,7 @@ export const configs = [
                 pitch:-17.7,
                 yaw: - -39.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10020,7 +10021,7 @@ export const configs = [
                 pitch:  -17.2,
                 yaw:  151.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10028,7 +10029,7 @@ export const configs = [
                 pitch:-19.6,
                 yaw: -25.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10043,7 +10044,7 @@ export const configs = [
                 pitch:  -17.2,
                 yaw:  151.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10051,7 +10052,7 @@ export const configs = [
                 pitch:-19.6,
                 yaw: -25.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10066,7 +10067,7 @@ export const configs = [
                 pitch:  -17.2,
                 yaw:  151.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10075,7 +10076,7 @@ export const configs = [
                 pitch:-16.5,
                 yaw: 7.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -10084,7 +10085,7 @@ export const configs = [
                 pitch:-17.7,
                 yaw: -112.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tyg_road2/1']
             }
@@ -10099,7 +10100,7 @@ export const configs = [
                 pitch:  -17.1,
                 yaw:  110.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10107,7 +10108,7 @@ export const configs = [
                 pitch:-19.6,
                 yaw: -25.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10122,7 +10123,7 @@ export const configs = [
                 pitch:  -41.1,
                 yaw:  113.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tyg_road3/2']
             },
@@ -10130,7 +10131,7 @@ export const configs = [
                 pitch:-25.3,
                 yaw: -68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10145,7 +10146,7 @@ export const configs = [
                 pitch:  -19.8,
                 yaw:  -105.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10153,7 +10154,7 @@ export const configs = [
                 pitch:-16.7,
                 yaw: 77.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tyg_road1/6']
             }
@@ -10168,7 +10169,7 @@ export const configs = [
                 pitch:  -16.9,
                 yaw: -108.71,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road1/5']
             },
@@ -10176,7 +10177,7 @@ export const configs = [
                 pitch:-18.8,
                 yaw: 82.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10191,7 +10192,7 @@ export const configs = [
                 pitch:  -16.0,
                 yaw: 21.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10199,7 +10200,7 @@ export const configs = [
                 pitch:-22.6,
                 yaw: 179.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road2/4']
             }
@@ -10214,7 +10215,7 @@ export const configs = [
                 pitch:  -14.1,
                 yaw: 49.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10222,7 +10223,7 @@ export const configs = [
                 pitch:-16.4,
                 yaw: -111.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -10230,7 +10231,7 @@ export const configs = [
                 pitch:-14.0,
                 yaw: -29.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tyg_road1/8']
             }
@@ -10245,7 +10246,7 @@ export const configs = [
                 pitch:  -17.3,
                 yaw: 51.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10253,7 +10254,7 @@ export const configs = [
                 pitch:-22.8,
                 yaw: -115.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10268,7 +10269,7 @@ export const configs = [
                 pitch:   -20.0,
                 yaw: 36.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10276,7 +10277,7 @@ export const configs = [
                 pitch:-20.3,
                 yaw: -116.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10291,7 +10292,7 @@ export const configs = [
                 pitch:  -17.0,
                 yaw: -4.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10299,7 +10300,7 @@ export const configs = [
                 pitch:-18.0,
                 yaw:-128.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10314,7 +10315,7 @@ export const configs = [
                 pitch:  -18.2,
                 yaw: -41.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10322,7 +10323,7 @@ export const configs = [
                 pitch:-19.6,
                 yaw: -177.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10337,7 +10338,7 @@ export const configs = [
                 pitch:  -15.2,
                 yaw: -44.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10345,7 +10346,7 @@ export const configs = [
                 pitch:-20.2,
                 yaw: 166.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10360,7 +10361,7 @@ export const configs = [
                 pitch:  -15.2,
                 yaw: -44.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10368,7 +10369,7 @@ export const configs = [
                 pitch:-20.2,
                 yaw: 166.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10383,7 +10384,7 @@ export const configs = [
                 pitch:  -15.2,
                 yaw: -44.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10391,7 +10392,7 @@ export const configs = [
                 pitch:-20.2,
                 yaw: 166.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10406,7 +10407,7 @@ export const configs = [
                 pitch:  -15.2,
                 yaw: -44.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10414,7 +10415,7 @@ export const configs = [
                 pitch:-20.2,
                 yaw: 166.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10429,7 +10430,7 @@ export const configs = [
                 pitch:  -15.2,
                 yaw: -44.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10437,7 +10438,7 @@ export const configs = [
                 pitch:-20.2,
                 yaw: 166.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10452,7 +10453,7 @@ export const configs = [
                 pitch:  -15.2,
                 yaw: -44.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road2/11']
             },
@@ -10460,7 +10461,7 @@ export const configs = [
                 pitch:-20.2,
                 yaw: 166.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10482,7 +10483,7 @@ export const configs = [
                 pitch:  -34.9,
                 yaw: 88.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10490,7 +10491,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: -78.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road2/23']
             }
@@ -10505,7 +10506,7 @@ export const configs = [
                 pitch:  -26.702934887016472,
                 yaw: 89.40444953943697,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10513,7 +10514,7 @@ export const configs = [
                 pitch: -26.4,
                 yaw: -80.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10529,7 +10530,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: 89.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10537,7 +10538,7 @@ export const configs = [
                 pitch:  -24.2,
                 yaw: -79.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10553,7 +10554,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: 89.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10561,7 +10562,7 @@ export const configs = [
                 pitch:  -35.1,
                 yaw: -81.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10577,7 +10578,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: 89.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10585,7 +10586,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: -80.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10601,7 +10602,7 @@ export const configs = [
                 pitch:  -26.702934887016472,
                 yaw: 89.40444953943697,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10609,7 +10610,7 @@ export const configs = [
                 pitch:  -34.6,
                 yaw: -77.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10626,7 +10627,7 @@ export const configs = [
                 pitch:   -22.4,
                 yaw: -81.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10642,7 +10643,7 @@ export const configs = [
                 pitch:  -28.0,
                 yaw: -179.47,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10659,7 +10660,7 @@ export const configs = [
                 pitch:  -27.5,
                 yaw: 169.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10667,7 +10668,7 @@ export const configs = [
                 pitch:  -30.9,
                 yaw: -3.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10683,7 +10684,7 @@ export const configs = [
                 pitch:  -24.6,
                 yaw: 160.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10691,7 +10692,7 @@ export const configs = [
                 pitch:  -34.2,
                 yaw: -13.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10707,7 +10708,7 @@ export const configs = [
                 pitch:  -23.1,
                 yaw: 157.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10715,7 +10716,7 @@ export const configs = [
                 pitch:  -20.0,
                 yaw: -14.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10731,7 +10732,7 @@ export const configs = [
                 pitch:  -25.3,
                 yaw: 157.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10739,7 +10740,7 @@ export const configs = [
                 pitch:  -15.6,
                 yaw: -15.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10755,7 +10756,7 @@ export const configs = [
                 pitch:  -30.9,
                 yaw: 156.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10763,7 +10764,7 @@ export const configs = [
                 pitch:  -18.0,
                 yaw: -14.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10779,7 +10780,7 @@ export const configs = [
                 pitch:  -21.8,
                 yaw: 134.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10787,7 +10788,7 @@ export const configs = [
                 pitch:  -17.7,
                 yaw: -19.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10803,7 +10804,7 @@ export const configs = [
                 pitch:  -14.3,
                 yaw: 106.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10811,7 +10812,7 @@ export const configs = [
                 pitch:  -19.4,
                 yaw: -69.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10827,7 +10828,7 @@ export const configs = [
                 pitch:  -6.4,
                 yaw: 103.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10835,7 +10836,7 @@ export const configs = [
                 pitch:  -17.0,
                 yaw: -69.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10851,7 +10852,7 @@ export const configs = [
                 pitch:  -28.3,
                 yaw: 110.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10859,7 +10860,7 @@ export const configs = [
                 pitch:  -18.4,
                 yaw: -67.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10875,7 +10876,7 @@ export const configs = [
                 pitch:  -28.3,
                 yaw: 110.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10883,7 +10884,7 @@ export const configs = [
                 pitch:  -17.9,
                 yaw: -61.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -10891,7 +10892,7 @@ export const configs = [
                 pitch:  -15.2,
                 yaw: 27.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road6/14']
             }
@@ -10907,7 +10908,7 @@ export const configs = [
                 pitch:  -28.3,
                 yaw: 116.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10915,7 +10916,7 @@ export const configs = [
                 pitch:  -18.4,
                 yaw: -62.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10931,7 +10932,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 137.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10939,7 +10940,7 @@ export const configs = [
                 pitch:  -25.0,
                 yaw: -43.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10955,7 +10956,7 @@ export const configs = [
                 pitch:  -26.4,
                 yaw: 138.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10964,7 +10965,7 @@ export const configs = [
                 pitch:  -23.0,
                 yaw: -26.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -10980,7 +10981,7 @@ export const configs = [
                 pitch:  -21.0,
                 yaw: 131.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -10988,7 +10989,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw: -38.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11004,7 +11005,7 @@ export const configs = [
                 pitch:   -22.3,
                 yaw: 103.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11012,7 +11013,7 @@ export const configs = [
                 pitch:  -24.6,
                 yaw: -58.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11028,7 +11029,7 @@ export const configs = [
                 pitch:  -26.702934887016472,
                 yaw: 89.40444953943697,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11036,7 +11037,7 @@ export const configs = [
                 pitch:  -24.6,
                 yaw: -78.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11052,7 +11053,7 @@ export const configs = [
                 pitch:  -25.6,
                 yaw: 79.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11060,7 +11061,7 @@ export const configs = [
                 pitch:  -16.3,
                 yaw: -93.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11076,7 +11077,7 @@ export const configs = [
                 pitch:  -20.3,
                 yaw: 70.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11084,7 +11085,7 @@ export const configs = [
                 pitch:  -20.9,
                 yaw: -102.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11100,7 +11101,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: 94.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11108,7 +11109,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11124,7 +11125,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 104.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11132,7 +11133,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: -69.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -11140,7 +11141,7 @@ export const configs = [
                 pitch:  -15.1,
                 yaw: 19.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road4/5']
             }
@@ -11156,7 +11157,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 104.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11164,7 +11165,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: -69.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11180,7 +11181,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 104.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11188,7 +11189,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: -69.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11204,7 +11205,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 104.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11212,7 +11213,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: -69.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11228,7 +11229,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 104.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11236,7 +11237,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: -69.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -11245,7 +11246,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: 17.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road3/1']
             }
@@ -11261,7 +11262,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 104.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11269,7 +11270,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: -69.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11285,7 +11286,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 104.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11293,7 +11294,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: -69.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11309,7 +11310,7 @@ export const configs = [
                 pitch:  -22.9,
                 yaw: 98.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road2/23']
             },
@@ -11317,7 +11318,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: -69.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11333,7 +11334,7 @@ export const configs = [
                 pitch:  -14.82,
                 yaw: 93.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11341,7 +11342,7 @@ export const configs = [
                 pitch:  -21.0,
                 yaw: -82.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road2/25']
             }
@@ -11357,7 +11358,7 @@ export const configs = [
                 pitch:  -26.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11365,7 +11366,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11381,7 +11382,7 @@ export const configs = [
                 pitch:  -26.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11389,7 +11390,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11405,7 +11406,7 @@ export const configs = [
                 pitch:  -16.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11413,7 +11414,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11429,7 +11430,7 @@ export const configs = [
                 pitch:  -16.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11437,7 +11438,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11453,7 +11454,7 @@ export const configs = [
                 pitch:  -16.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11461,7 +11462,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11477,7 +11478,7 @@ export const configs = [
                 pitch:  -16.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11485,7 +11486,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11501,7 +11502,7 @@ export const configs = [
                 pitch:  -16.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11509,7 +11510,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -11518,7 +11519,7 @@ export const configs = [
                 pitch:  -13.3,
                 yaw: -80.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road5/4']
             },
@@ -11526,7 +11527,7 @@ export const configs = [
                 pitch:  -21.9,
                 yaw: 107.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road5/4']
             }
@@ -11543,7 +11544,7 @@ export const configs = [
                 pitch:  -16.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11551,7 +11552,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11567,7 +11568,7 @@ export const configs = [
                 pitch:  -16.1,
                 yaw: 0.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road4/9']
             },
@@ -11575,7 +11576,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: -171.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11591,7 +11592,7 @@ export const configs = [
                 pitch:  -16.7,
                 yaw: 175.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11599,7 +11600,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: 7.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road5/10']
             }
@@ -11615,7 +11616,7 @@ export const configs = [
                 pitch:  -16.7,
                 yaw: 175.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11623,7 +11624,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: 7.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11639,7 +11640,7 @@ export const configs = [
                 pitch:  -16.7,
                 yaw: 175.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11647,7 +11648,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: 7.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11663,7 +11664,7 @@ export const configs = [
                 pitch:  -16.7,
                 yaw: 175.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11671,7 +11672,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: 7.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11687,7 +11688,7 @@ export const configs = [
                 pitch:  -16.7,
                 yaw: 175.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road2/21']
             },
@@ -11695,7 +11696,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: 1.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11711,7 +11712,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: -76.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11719,7 +11720,7 @@ export const configs = [
                 pitch:  -30.3,
                 yaw: 98.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road2/15']
             }
@@ -11736,7 +11737,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: -76.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11744,7 +11745,7 @@ export const configs = [
                 pitch:  -36.4,
                 yaw: 98.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11760,7 +11761,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: -76.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road3/8']
             },
@@ -11768,7 +11769,7 @@ export const configs = [
                 pitch:  -36.4,
                 yaw: 98.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11784,7 +11785,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: -76.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11792,7 +11793,7 @@ export const configs = [
                 pitch:  -24.4,
                 yaw: 98.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road3/8']
             }
@@ -11808,7 +11809,7 @@ export const configs = [
                 pitch:  -16.3,
                 yaw: -89.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11816,7 +11817,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: 98.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11832,7 +11833,7 @@ export const configs = [
                 pitch:  -27.9,
                 yaw: -87.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11840,7 +11841,7 @@ export const configs = [
                 pitch:  -23.4,
                 yaw: 91.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11856,7 +11857,7 @@ export const configs = [
                 pitch:  -26.8,
                 yaw: -90.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11864,7 +11865,7 @@ export const configs = [
                 pitch:  -23.4,
                 yaw: 91.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11880,7 +11881,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: -149.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11888,7 +11889,7 @@ export const configs = [
                 pitch:  -20.4,
                 yaw: 78.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11904,7 +11905,7 @@ export const configs = [
                 pitch:  -23.5,
                 yaw: -175.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11912,7 +11913,7 @@ export const configs = [
                 pitch:  -27.6,
                 yaw: 17.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -11928,7 +11929,7 @@ export const configs = [
                 pitch:  -19,
                 yaw: 174.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road4/1']
             },
@@ -11936,7 +11937,7 @@ export const configs = [
                 pitch:  -26.5,
                 yaw: 4.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -11944,7 +11945,7 @@ export const configs = [
                 pitch:  -27.4,
                 yaw: -100.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road6/1']
             }
@@ -11960,7 +11961,7 @@ export const configs = [
                 pitch:  -15.7,
                 yaw: -91.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11968,7 +11969,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: 87.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road5/10']
             }
@@ -11984,7 +11985,7 @@ export const configs = [
                 pitch:  -15.7,
                 yaw: -91.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -11992,7 +11993,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: 87.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12008,7 +12009,7 @@ export const configs = [
                 pitch:  -15.7,
                 yaw: -91.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12016,7 +12017,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: 87.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12032,7 +12033,7 @@ export const configs = [
                 pitch:  -15.7,
                 yaw: -99.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12040,7 +12041,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: 87.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12056,7 +12057,7 @@ export const configs = [
                 pitch:  -15.7,
                 yaw: -91.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12064,7 +12065,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: 87.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12080,7 +12081,7 @@ export const configs = [
                 pitch:  -35.7,
                 yaw: -103.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12088,7 +12089,7 @@ export const configs = [
                 pitch:  -14.9,
                 yaw: 77.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12104,7 +12105,7 @@ export const configs = [
                 pitch:  -28.2,
                 yaw: -138.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12112,7 +12113,7 @@ export const configs = [
                 pitch:  -27.5,
                 yaw: 41.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12128,7 +12129,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: -178.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12136,7 +12137,7 @@ export const configs = [
                 pitch:  -19.5,
                 yaw: 4.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12152,7 +12153,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: -178.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12160,7 +12161,7 @@ export const configs = [
                 pitch:  -31.5,
                 yaw: -12.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12176,7 +12177,7 @@ export const configs = [
                 pitch:  -36.7,
                 yaw: 178.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12184,7 +12185,7 @@ export const configs = [
                 pitch:  -31.5,
                 yaw: -12.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12199,7 +12200,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: 171.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12207,7 +12208,7 @@ export const configs = [
                 pitch:  -31.5,
                 yaw: -12.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12222,7 +12223,7 @@ export const configs = [
                 pitch:  -21.9,
                 yaw: 173.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12230,7 +12231,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: -11.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12245,7 +12246,7 @@ export const configs = [
                 pitch:  -21.9,
                 yaw: 173.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12253,7 +12254,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: -11.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12268,7 +12269,7 @@ export const configs = [
                 pitch:  -31.7,
                 yaw: 174.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road2/11']
             },
@@ -12276,7 +12277,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -12.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12290,7 +12291,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: -173.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road2/1']
             },
@@ -12298,7 +12299,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 17.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/68']
             }
@@ -12315,7 +12316,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: -173.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12323,7 +12324,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 17.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12339,7 +12340,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: -173.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12347,7 +12348,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 17.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12363,7 +12364,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: -173.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12371,7 +12372,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: 15.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12387,7 +12388,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: 179.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12395,7 +12396,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 8.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12411,7 +12412,7 @@ export const configs = [
                 pitch:  -23.8,
                 yaw: 172.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12419,7 +12420,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: 0.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12435,7 +12436,7 @@ export const configs = [
                 pitch:  -25.9,
                 yaw: 154.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12444,7 +12445,7 @@ export const configs = [
                 pitch:  -29.7,
                 yaw: -18.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12460,7 +12461,7 @@ export const configs = [
                 pitch:  -24.7,
                 yaw: 144.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12468,7 +12469,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -21.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12484,7 +12485,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: 152.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12492,7 +12493,7 @@ export const configs = [
                 pitch:  -25.5,
                 yaw: -18.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12508,7 +12509,7 @@ export const configs = [
                 pitch:  -21.62,
                 yaw: 163.57,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12516,7 +12517,7 @@ export const configs = [
                 pitch:  -26.3,
                 yaw: -9.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -12524,7 +12525,7 @@ export const configs = [
                 pitch:  -14.6,
                 yaw: -72.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jxl_road1/1']
             }
@@ -12540,7 +12541,7 @@ export const configs = [
                 pitch:  -19.7,
                 yaw: 169.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12548,7 +12549,7 @@ export const configs = [
                 pitch:  -33.3,
                 yaw: -4.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12564,7 +12565,7 @@ export const configs = [
                 pitch:   -29.3,
                 yaw: 162.17,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12572,7 +12573,7 @@ export const configs = [
                 pitch:  -33.2,
                 yaw: -7.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12588,7 +12589,7 @@ export const configs = [
                 pitch:  -24.8,
                 yaw: 159.57,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12596,7 +12597,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -17.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12612,7 +12613,7 @@ export const configs = [
                 pitch:   -21.5,
                 yaw: 152.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12620,7 +12621,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: -19.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12636,7 +12637,7 @@ export const configs = [
                 pitch: -21.2,
                 yaw: 139.27,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12644,7 +12645,7 @@ export const configs = [
                 pitch:  -34.1,
                 yaw: -34.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12660,7 +12661,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: 137.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12668,7 +12669,7 @@ export const configs = [
                 pitch:  -25.1,
                 yaw: -37.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12684,7 +12685,7 @@ export const configs = [
                 pitch:  -24.6,
                 yaw: 139.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12692,7 +12693,7 @@ export const configs = [
                 pitch:  -19.7,
                 yaw: -26.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -12700,7 +12701,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: 71.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road6/1']
             }
@@ -12716,7 +12717,7 @@ export const configs = [
                 pitch:  -23.1,
                 yaw: 152.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12724,7 +12725,7 @@ export const configs = [
                 pitch:  -16.7,
                 yaw: -24.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12740,7 +12741,7 @@ export const configs = [
                 pitch:  -20.2,
                 yaw: 163.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12748,7 +12749,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -10.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12764,7 +12765,7 @@ export const configs = [
                 pitch:  -30.2,
                 yaw: 170.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12772,7 +12773,7 @@ export const configs = [
                 pitch:  -31.3,
                 yaw: -4.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12788,7 +12789,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: -178.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12796,7 +12797,7 @@ export const configs = [
                 pitch:  -26.2,
                 yaw: 6.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12812,7 +12813,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: -166.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12820,7 +12821,7 @@ export const configs = [
                 pitch:  -26.6,
                 yaw: 20.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12836,7 +12837,7 @@ export const configs = [
                 pitch:  -28.2,
                 yaw: -154.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12844,7 +12845,7 @@ export const configs = [
                 pitch:  -32.1,
                 yaw: 29.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12860,7 +12861,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: -145.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12868,7 +12869,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 36.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12884,7 +12885,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: -145.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12892,7 +12893,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 36.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12908,7 +12909,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: -145.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12916,7 +12917,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 36.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12932,7 +12933,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: -145.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12940,7 +12941,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 36.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12956,7 +12957,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: -145.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12964,7 +12965,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 36.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -12980,7 +12981,7 @@ export const configs = [
                 pitch:  -20.5,
                 yaw: -145.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -12988,7 +12989,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 36.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13003,7 +13004,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: -151.07,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13011,7 +13012,7 @@ export const configs = [
                 pitch:  -23.3,
                 yaw: 46.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13027,7 +13028,7 @@ export const configs = [
                 pitch:  -26.2,
                 yaw: -176.57,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13035,7 +13036,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 37.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13051,7 +13052,7 @@ export const configs = [
                 pitch:  -23.5,
                 yaw: 172.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13059,7 +13060,7 @@ export const configs = [
                 pitch:  -25.7,
                 yaw: 39.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -13067,7 +13068,7 @@ export const configs = [
                 pitch:  -14.6,
                 yaw: -78.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tsg_road1/19']
             }
@@ -13083,7 +13084,7 @@ export const configs = [
                 pitch:  -23.5,
                 yaw: 172.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13091,7 +13092,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: 15.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13107,7 +13108,7 @@ export const configs = [
                 pitch:  -23.5,
                 yaw: 172.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13115,7 +13116,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: -16.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13131,7 +13132,7 @@ export const configs = [
                 pitch:  -23.5,
                 yaw: 172.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13139,7 +13140,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: -16.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13155,7 +13156,7 @@ export const configs = [
                 pitch:  -27.9,
                 yaw: 143.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13163,7 +13164,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: -16.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13179,7 +13180,7 @@ export const configs = [
                 pitch:  -18.3,
                 yaw: 116.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13187,7 +13188,7 @@ export const configs = [
                 pitch:  -21.4,
                 yaw: -56.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13203,7 +13204,7 @@ export const configs = [
                 pitch:  -16.6,
                 yaw: 106.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13211,7 +13212,7 @@ export const configs = [
                 pitch:  -25.0,
                 yaw: -64.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13227,7 +13228,7 @@ export const configs = [
                 pitch:  -17.8,
                 yaw: 96.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13235,7 +13236,7 @@ export const configs = [
                 pitch:  -23.4,
                 yaw: -71.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13252,7 +13253,7 @@ export const configs = [
                 pitch:  -24.8,
                 yaw: 32.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road2/1']
             },
@@ -13260,7 +13261,7 @@ export const configs = [
                 pitch:   -20.1,
                 yaw: 132.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road2/30']
             },
@@ -13268,7 +13269,7 @@ export const configs = [
                 pitch:  -17.8,
                 yaw: -79.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13284,7 +13285,7 @@ export const configs = [
                 pitch:   -18.7,
                 yaw: 144.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13292,7 +13293,7 @@ export const configs = [
                 pitch:  -26.2,
                 yaw: -9.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road1/39']
             }
@@ -13308,7 +13309,7 @@ export const configs = [
                 pitch:  -16.6,
                 yaw: 148.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13316,7 +13317,7 @@ export const configs = [
                 pitch:  -32.8,
                 yaw: -34.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13332,7 +13333,7 @@ export const configs = [
                 pitch:  -16.6,
                 yaw: 148.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13340,7 +13341,7 @@ export const configs = [
                 pitch:  -32.8,
                 yaw: -34.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13356,7 +13357,7 @@ export const configs = [
                 pitch:  -23.3,
                 yaw: 156.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13364,7 +13365,7 @@ export const configs = [
                 pitch:  -32.8,
                 yaw: -34.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13380,7 +13381,7 @@ export const configs = [
                 pitch:  -16.6,
                 yaw: 160.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13388,7 +13389,7 @@ export const configs = [
                 pitch:  -32.8,
                 yaw: -34.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13404,7 +13405,7 @@ export const configs = [
                 pitch:  -16.6,
                 yaw: 160.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13412,7 +13413,7 @@ export const configs = [
                 pitch:  -32.8,
                 yaw: -34.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13428,7 +13429,7 @@ export const configs = [
                 pitch:  -25.6,
                 yaw: 168.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13436,7 +13437,7 @@ export const configs = [
                 pitch:  -25.8,
                 yaw: -23.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13452,7 +13453,7 @@ export const configs = [
                 pitch:  -27.7,
                 yaw: 171.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13460,7 +13461,7 @@ export const configs = [
                 pitch:  -27.2,
                 yaw: -18.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13476,7 +13477,7 @@ export const configs = [
                 pitch:  -27.7,
                 yaw: 171.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13484,7 +13485,7 @@ export const configs = [
                 pitch:  -27.2,
                 yaw: -18.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13500,7 +13501,7 @@ export const configs = [
                 pitch:  -27.7,
                 yaw: 171.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13508,7 +13509,7 @@ export const configs = [
                 pitch:  -27.2,
                 yaw: -18.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -13516,7 +13517,7 @@ export const configs = [
                 pitch:  -15.9,
                 yaw: 126.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road3/1']
             }
@@ -13532,7 +13533,7 @@ export const configs = [
                 pitch:  -23.3,
                 yaw: -161.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13540,7 +13541,7 @@ export const configs = [
                 pitch:  -22.1,
                 yaw: 2.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13556,7 +13557,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: -147.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13564,7 +13565,7 @@ export const configs = [
                 pitch:  -28.4,
                 yaw: 28.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13580,7 +13581,7 @@ export const configs = [
                 pitch:  -28.7,
                 yaw: -147.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13588,7 +13589,7 @@ export const configs = [
                 pitch:  -28.4,
                 yaw: 28.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13604,7 +13605,7 @@ export const configs = [
                 pitch:  -29.0,
                 yaw:  -167.,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13612,7 +13613,7 @@ export const configs = [
                 pitch:  -28.4,
                 yaw: 28.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13628,7 +13629,7 @@ export const configs = [
                 pitch:  -27.8,
                 yaw:  168.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13636,7 +13637,7 @@ export const configs = [
                 pitch:  -26.2,
                 yaw: -4.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13652,7 +13653,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw:  -160.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13660,7 +13661,7 @@ export const configs = [
                 pitch:  -27.9,
                 yaw: -24.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13676,7 +13677,7 @@ export const configs = [
                 pitch:  -33.4,
                 yaw: -89.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13684,7 +13685,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 78.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13700,7 +13701,7 @@ export const configs = [
                 pitch:  -33.4,
                 yaw: -89.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13708,7 +13709,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 78.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13724,7 +13725,7 @@ export const configs = [
                 pitch:  -33.4,
                 yaw: -89.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13732,7 +13733,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 78.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13748,7 +13749,7 @@ export const configs = [
                 pitch:  -33.4,
                 yaw: -89.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13756,7 +13757,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 78.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13772,7 +13773,7 @@ export const configs = [
                 pitch:  -33.4,
                 yaw: -89.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13780,7 +13781,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 78.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13796,7 +13797,7 @@ export const configs = [
                 pitch:  -35.3,
                 yaw: 13.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13804,7 +13805,7 @@ export const configs = [
                 pitch:  -34.2,
                 yaw: 172.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13820,7 +13821,7 @@ export const configs = [
                 pitch:  -26.9,
                 yaw: 14.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13828,7 +13829,7 @@ export const configs = [
                 pitch:  -24.1,
                 yaw: -175.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13844,7 +13845,7 @@ export const configs = [
                 pitch:  -26.9,
                 yaw: 14.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13852,7 +13853,7 @@ export const configs = [
                 pitch:  -24.1,
                 yaw: -175.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13868,7 +13869,7 @@ export const configs = [
                 pitch:  -26.9,
                 yaw: 14.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13876,7 +13877,7 @@ export const configs = [
                 pitch:  -24.1,
                 yaw: -175.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13892,7 +13893,7 @@ export const configs = [
                 pitch:  -26.9,
                 yaw: 14.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13900,7 +13901,7 @@ export const configs = [
                 pitch:  -24.1,
                 yaw: -175.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13916,7 +13917,7 @@ export const configs = [
                 pitch:  -26.9,
                 yaw: 14.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13924,7 +13925,7 @@ export const configs = [
                 pitch:  -24.1,
                 yaw: -175.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13940,7 +13941,7 @@ export const configs = [
                 pitch:  -16.8,
                 yaw: 26.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13948,7 +13949,7 @@ export const configs = [
                 pitch:  -24.7,
                 yaw: -165.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13964,7 +13965,7 @@ export const configs = [
                 pitch:  -16.8,
                 yaw: 26.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -13972,7 +13973,7 @@ export const configs = [
                 pitch:  -24.7,
                 yaw: -165.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -13988,7 +13989,7 @@ export const configs = [
                 pitch:  -17.8,
                 yaw: 67.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road1/39']
             },
@@ -13996,7 +13997,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: -130.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14013,7 +14014,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: 89.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14021,7 +14022,7 @@ export const configs = [
                 pitch:  -37.1,
                 yaw: -113.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road2/10']
             }
@@ -14037,7 +14038,7 @@ export const configs = [
                 pitch:  -23.1,
                 yaw: 97.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14045,7 +14046,7 @@ export const configs = [
                 pitch:  -36.7,
                 yaw: -99.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14061,7 +14062,7 @@ export const configs = [
                 pitch:  -23.1,
                 yaw: 97.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14069,7 +14070,7 @@ export const configs = [
                 pitch:  -36.7,
                 yaw: -99.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14085,7 +14086,7 @@ export const configs = [
                 pitch:  -21.5,
                 yaw: 121.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14093,7 +14094,7 @@ export const configs = [
                 pitch:  -28.8,
                 yaw: -94.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14109,7 +14110,7 @@ export const configs = [
                 pitch:  -18.3,
                 yaw: 134.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14117,7 +14118,7 @@ export const configs = [
                 pitch:  -27.1,
                 yaw: -87.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14133,7 +14134,7 @@ export const configs = [
                 pitch:  -30.0,
                 yaw: 154.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14141,7 +14142,7 @@ export const configs = [
                 pitch:  -31.4,
                 yaw: -67.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14157,7 +14158,7 @@ export const configs = [
                 pitch:  -16.8,
                 yaw: 162.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14165,7 +14166,7 @@ export const configs = [
                 pitch:  -24.0,
                 yaw: -62.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14181,7 +14182,7 @@ export const configs = [
                 pitch:  -24.8,
                 yaw: 173.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14189,7 +14190,7 @@ export const configs = [
                 pitch:  -22.0,
                 yaw: -49.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14205,7 +14206,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 80.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14213,7 +14214,7 @@ export const configs = [
                 pitch:  -30.7,
                 yaw: -41.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14229,7 +14230,7 @@ export const configs = [
                 pitch:  -27.2,
                 yaw: 71.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14237,7 +14238,7 @@ export const configs = [
                 pitch:  -37.3,
                 yaw: -97.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14253,7 +14254,7 @@ export const configs = [
                 pitch:  -20.6,
                 yaw: 59.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14261,7 +14262,7 @@ export const configs = [
                 pitch:  -33.3,
                 yaw: -116.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14277,7 +14278,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw: 54.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14285,7 +14286,7 @@ export const configs = [
                 pitch:  -37.3,
                 yaw: -116.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14301,7 +14302,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw: 54.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14309,7 +14310,7 @@ export const configs = [
                 pitch:  -37.3,
                 yaw: -116.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14325,7 +14326,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw: 54.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14333,7 +14334,7 @@ export const configs = [
                 pitch:  -37.3,
                 yaw: -116.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14349,7 +14350,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw: 54.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14357,7 +14358,7 @@ export const configs = [
                 pitch:  -37.3,
                 yaw: -116.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14373,7 +14374,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw: 54.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14381,7 +14382,7 @@ export const configs = [
                 pitch:  -37.3,
                 yaw: -116.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14397,7 +14398,7 @@ export const configs = [
                 pitch:  -25.2,
                 yaw: 54.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14405,7 +14406,7 @@ export const configs = [
                 pitch:  -37.3,
                 yaw: -116.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14421,7 +14422,7 @@ export const configs = [
                 pitch:  -29.6,
                 yaw: 78.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14429,7 +14430,7 @@ export const configs = [
                 pitch:  -33.3,
                 yaw: -107.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14445,7 +14446,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: 61.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14453,7 +14454,7 @@ export const configs = [
                 pitch:  -24.3,
                 yaw: -66.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14469,7 +14470,7 @@ export const configs = [
                 pitch:  -21.6,
                 yaw: 59.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14477,7 +14478,7 @@ export const configs = [
                 pitch:  -26.8,
                 yaw: -122.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14493,7 +14494,7 @@ export const configs = [
                 pitch:  -21.6,
                 yaw: 59.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14501,7 +14502,7 @@ export const configs = [
                 pitch:  -26.8,
                 yaw: -122.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14517,7 +14518,7 @@ export const configs = [
                 pitch:  -21.6,
                 yaw: 59.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14525,7 +14526,7 @@ export const configs = [
                 pitch:  -26.8,
                 yaw: -122.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14541,7 +14542,7 @@ export const configs = [
                 pitch:  -25.0,
                 yaw: 48.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14549,7 +14550,7 @@ export const configs = [
                 pitch:  -26.3,
                 yaw: -129.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14565,7 +14566,7 @@ export const configs = [
                 pitch:  -25.0,
                 yaw: 48.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14573,7 +14574,7 @@ export const configs = [
                 pitch:  -26.3,
                 yaw: -129.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14589,7 +14590,7 @@ export const configs = [
                 pitch:  -24.4,
                 yaw: 65.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road4/1']
             },
@@ -14597,7 +14598,7 @@ export const configs = [
                 pitch:  -24.2,
                 yaw: -112.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -14605,7 +14606,7 @@ export const configs = [
                 pitch:  -35.2,
                 yaw: -29.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road6/1']
             },
@@ -14613,7 +14614,7 @@ export const configs = [
                 pitch:  -17.2,
                 yaw: 26.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road5/22']
             }
@@ -14628,7 +14629,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14636,7 +14637,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -102.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road3/25']
             }
@@ -14652,7 +14653,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14660,7 +14661,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -102.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14676,7 +14677,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14684,7 +14685,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -112.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14700,7 +14701,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14708,7 +14709,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -112.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14724,7 +14725,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14732,7 +14733,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -112.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14748,7 +14749,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14756,7 +14757,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -112.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14772,7 +14773,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14780,7 +14781,7 @@ export const configs = [
                 pitch:  -27.3,
                 yaw: -121.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14796,7 +14797,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14804,7 +14805,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -112.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14820,7 +14821,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14828,7 +14829,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: -112.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -14836,7 +14837,7 @@ export const configs = [
                 pitch:  -19.5,
                 yaw: 160.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road3/10']
             }
@@ -14852,7 +14853,7 @@ export const configs = [
                 pitch:  -21.6,
                 yaw: 76.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14860,7 +14861,7 @@ export const configs = [
                 pitch:  -26.5,
                 yaw: -103.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14876,7 +14877,7 @@ export const configs = [
                 pitch:  -23.9,
                 yaw: 68.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road2/12']
             },
@@ -14884,7 +14885,7 @@ export const configs = [
                 pitch:  -24.1,
                 yaw: -111.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14903,7 +14904,7 @@ export const configs = [
                 pitch:  -14.3,
                 yaw: 6.3,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14911,7 +14912,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road2/4']
             }
@@ -14927,7 +14928,7 @@ export const configs = [
                 pitch:  -38.4,
                 yaw: -83.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14935,7 +14936,7 @@ export const configs = [
                 pitch:  -31.3,
                 yaw: 168.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14951,7 +14952,7 @@ export const configs = [
                 pitch:  -26.5,
                 yaw: -119.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14959,7 +14960,7 @@ export const configs = [
                 pitch:  -29.3,
                 yaw: 63.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14975,7 +14976,7 @@ export const configs = [
                 pitch:  -20.7,
                 yaw: -108.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -14983,7 +14984,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: 69.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -14999,7 +15000,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: -95.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15007,7 +15008,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw: 74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15023,7 +15024,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: -95.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15031,7 +15032,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw: 74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15047,7 +15048,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: -95.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15055,7 +15056,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw: 74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15071,7 +15072,7 @@ export const configs = [
                 pitch:  -23.7,
                 yaw: -95.2,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15079,7 +15080,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw: 74.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15095,7 +15096,7 @@ export const configs = [
                 pitch:  -19.1,
                 yaw: -77.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15103,7 +15104,7 @@ export const configs = [
                 pitch:  -22.5,
                 yaw: 88.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15119,7 +15120,7 @@ export const configs = [
                 pitch:  -25.5,
                 yaw: -49.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15127,7 +15128,7 @@ export const configs = [
                 pitch:  -28.5,
                 yaw: 122.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15143,7 +15144,7 @@ export const configs = [
                 pitch:  -18.6,
                 yaw: -12.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15151,7 +15152,7 @@ export const configs = [
                 pitch:  -33.5,
                 yaw: 152.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15167,7 +15168,7 @@ export const configs = [
                 pitch:  -18.2,
                 yaw: -11.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15175,7 +15176,7 @@ export const configs = [
                 pitch:  -30.5,
                 yaw: 169.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15191,7 +15192,7 @@ export const configs = [
                 pitch:  -22.2,
                 yaw: -18.7,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15199,7 +15200,7 @@ export const configs = [
                 pitch:  -27.5,
                 yaw: 158.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15215,7 +15216,7 @@ export const configs = [
                 pitch:  -20.7,
                 yaw: -27.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15223,7 +15224,7 @@ export const configs = [
                 pitch:  -27.5,
                 yaw: 151.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15239,7 +15240,7 @@ export const configs = [
                 pitch:  -31.7,
                 yaw: -21.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15247,7 +15248,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: 154.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15263,7 +15264,7 @@ export const configs = [
                 pitch:  -31.7,
                 yaw: -21.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15271,7 +15272,7 @@ export const configs = [
                 pitch:  -28.1,
                 yaw: 154.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15287,7 +15288,7 @@ export const configs = [
                 pitch:  -24.3,
                 yaw: -31.8,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15295,7 +15296,7 @@ export const configs = [
                 pitch:  -27.1,
                 yaw: 147.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15311,7 +15312,7 @@ export const configs = [
                 pitch:  -22.7,
                 yaw: -39.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15319,7 +15320,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: 136.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15335,7 +15336,7 @@ export const configs = [
                 pitch:  -22.2,
                 yaw: -33.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15343,7 +15344,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: 144.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15359,7 +15360,7 @@ export const configs = [
                 pitch:  -36.0,
                 yaw: -42.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15367,7 +15368,7 @@ export const configs = [
                 pitch:  -26.6,
                 yaw: 135.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15383,7 +15384,7 @@ export const configs = [
                 pitch:  -36.0,
                 yaw: -42.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15391,7 +15392,7 @@ export const configs = [
                 pitch:  -28.2,
                 yaw: 126.6,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15407,7 +15408,7 @@ export const configs = [
                 pitch:  -24.0,
                 yaw: -35.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road3/25']
             },
@@ -15415,7 +15416,7 @@ export const configs = [
                 pitch:  -34.5,
                 yaw: 150.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15430,7 +15431,7 @@ export const configs = [
                 pitch:  -26.7,
                 yaw: -3.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road1/16']
             },
@@ -15438,7 +15439,7 @@ export const configs = [
                 pitch:  -31.5,
                 yaw: 179.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road3/25']
             }
@@ -15459,7 +15460,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15467,7 +15468,7 @@ export const configs = [
                 pitch:  -22,
                 yaw: -59.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road1/0']
             },
@@ -15475,7 +15476,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 86.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['jy_road1/9']
             },
@@ -15494,7 +15495,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15502,7 +15503,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15518,7 +15519,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15526,7 +15527,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15543,7 +15544,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15551,7 +15552,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             },
@@ -15559,7 +15560,7 @@ export const configs = [
                 pitch:  -18.1,
                 yaw: -92.4,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road5/1']
             },
@@ -15567,7 +15568,7 @@ export const configs = [
                 pitch:  -14.2,
                 yaw: 124.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['tyg_road3/1']
             }
@@ -15583,7 +15584,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15591,7 +15592,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15607,7 +15608,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15615,7 +15616,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15631,7 +15632,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15639,7 +15640,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15655,7 +15656,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15663,7 +15664,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15679,7 +15680,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15687,7 +15688,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15703,7 +15704,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15711,7 +15712,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15727,7 +15728,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15735,7 +15736,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15751,7 +15752,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15759,7 +15760,7 @@ export const configs = [
                 pitch:  -23.2,
                 yaw: -73.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['rh_road4/11']
 
@@ -15769,7 +15770,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15785,7 +15786,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15793,7 +15794,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15809,7 +15810,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15817,7 +15818,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15833,7 +15834,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15841,7 +15842,7 @@ export const configs = [
                 pitch:  -24.5,
                 yaw: -86.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road5/1']
             },
@@ -15849,7 +15850,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15865,7 +15866,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15873,7 +15874,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15889,7 +15890,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15897,7 +15898,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15913,7 +15914,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15921,7 +15922,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15937,7 +15938,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15945,7 +15946,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15961,7 +15962,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15969,7 +15970,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -15985,7 +15986,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -15993,7 +15994,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -16009,7 +16010,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: -173.1,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['+']
             },
@@ -16017,7 +16018,7 @@ export const configs = [
                 pitch:  -29.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -16033,7 +16034,7 @@ export const configs = [
                 pitch:  -15.6,
                 yaw: 100.5,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road1/1']
             },
@@ -16041,7 +16042,7 @@ export const configs = [
                 pitch:  -16.3,
                 yaw: -84.0,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hq_road2/28']
             },
@@ -16049,7 +16050,7 @@ export const configs = [
                 pitch:  -14.5,
                 yaw: 8.9,
                 type: 'scene',
-                cssClass: "custom-hotspot",
+                cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
             }
@@ -16115,6 +16116,7 @@ export const aerial_configs = [
 
 function getOffset(Id) {
     // 负数代表下一张图的中心向左，正数代表下一张图的中心向右
+    console.log("getOffset")
     switch (Id) {
         // 博雅苑
         case 'byy_road1/23':
@@ -16140,13 +16142,14 @@ function getOffset(Id) {
         case 'ry_road2/16':
             return -30;
         // 榕园-逸仙大道
-
+        default:
+            console.log("getOffset case not found")
     }
     return 0;
 }
 
 function getNextPanorama(event, args) {
-    const current_scene_id = window.panoramaViewer.getConfig().id
+    const current_scene_id = window.streetViewer.getConfig().id
     const direction = args[0]
 
     const [current_road, current_point] = current_scene_id.split('/');
@@ -16167,30 +16170,13 @@ function getNextPanorama(event, args) {
     }
 
     // 加载新场景
-    window.panoramaViewer.loadScene(next_scene_id, window.panoramaViewer.getPitch(), window.panoramaViewer.getYaw() + getOffset(current_scene_id) - getOffset(next_scene_id), window.panoramaViewer.getHfov())
+    window.streetViewer.loadScene(next_scene_id, window.streetViewer.getPitch(), window.streetViewer.getYaw() + getOffset(current_scene_id) - getOffset(next_scene_id), window.streetViewer.getHfov())
 }
 
-/*function getNextPanorama(event, args) {
-    const current_scene_id = window.panoramaViewer.getConfig().id
-    const direction = args[0]
+export const state = reactive({
+    isSceneVisible: false,
+});
 
-    const [current_road, current_point] = current_scene_id.split('/');
-    const current_point_id = parseInt(current_point, 10);
-    let next_point_id = current_point_id;
-    let next_scene_id = current_scene_id;
-
-    if (direction == '-') {
-        const current_point_id = parseInt(current_scene_id.split('/')[1], 10);
-        next_point_id = current_point_id - 1;
-        next_scene_id = current_road + '/' + next_point_id
-    }else if (direction == '+') {
-        const current_point_id = parseInt(current_scene_id.split('/')[1], 10);
-        next_point_id = current_point_id + 1;
-        next_scene_id = current_road + '/' + next_point_id
-    }else{
-        next_scene_id = direction;
-    }
-
-    // 加载新场景
-    window.panoramaViewer.loadScene(next_scene_id, window.panoramaViewer.getPitch() + fun(now_id, next_id), window.panoramaViewer.getYaw(), window.panoramaViewer.getHfov())
-}*/
+function enterScene() {
+    state.isSceneVisible = true;
+}

@@ -23,22 +23,22 @@
       initStreetPanorama() {
         this.$nextTick(() => {
           if (this.$refs.streetPanorama){
-            this.viewer = pannellum.viewer(this.$refs.streetPanorama, {
+            this.streetViewer = pannellum.viewer(this.$refs.streetPanorama, {
               scenes: {},
               "sceneFadeDuration": 1000,
             });
 
             for (let i = 0; i < configs.length; i++) {
-              this.viewer.addScene(configs[i].id, configs[i]);
+              this.streetViewer.addScene(configs[i].id, configs[i]);
             }
 
-            this.viewer.loadScene('1-1')
+            this.streetViewer.loadScene('byy_road1/1')
 
-            this.viewer.on('mousedown', (event) =>{
-              console.log(this.viewer.mouseEventToCoords(event));
-            });
+            // this.streetViewer.on('mousedown', (event) =>{
+            //   console.log(this.viewer.mouseEventToCoords(event));
+            // });
 
-            window.streetViewer = this.viewer; // TODO: 目前viewer是全局的
+            window.streetViewer = this.streetViewer; // TODO: 目前viewer是全局的
 
           }else{
             console.error('streetPanorama reference is not available');
