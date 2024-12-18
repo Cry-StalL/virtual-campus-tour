@@ -5,14 +5,14 @@
   <el-button class="leaveSceneButton" type="primary" @click="leaveScene">返回</el-button>
 
   <!-- 留言按钮 -->
-  <el-button class="custom-button" type="primary" @click="toggleChat">留言</el-button>
+  <el-button class="custom-button" type="primary" @click="handleCommentButtonClick">留言</el-button>
 
   <!-- 留言框 -->
   <div v-if="isChatVisible" class="chat-box">
     <el-input type="textarea" :rows="4" placeholder="请输入留言..." v-model="message"></el-input>
     <div class="btnGroup2">
       <el-button @click="sendMessage">发送</el-button>
-      <el-button @click="toggleChat">返回</el-button>
+      <el-button @click="handleCommentBackButtonClick">返回</el-button>
     </div>
   </div>
 
@@ -33,15 +33,31 @@
   import 'pannellum/build/pannellum.css'
   import {configs, state} from "@/config/PanoramaConfig.js";
   import Cookies from "js-cookie";
+  import axios from "axios";
+  import sceneViewer from "@/views/home/sceneViewer.vue";
   export default {
     data() {
       return {
+        sceneViewer: null,
+        isChatVisible: false,
+        isChatPreviewVisible: false,
+        message: '',
+        hotspotId: 0,    //留言hotspots的编号，便于修改和删除
+        pitch: 0,
+        yaw: 0,
         state,
       };
     },
 
     mounted() {
       this.initScenePanorama();
+    },
+
+    watch: {
+      message(newMessage) {
+        // 当留言框内容变化时，显示预览框
+        this.isChatPreviewVisible = newMessage.trim() !== '';
+      },
     },
 
     computed: {
@@ -67,7 +83,38 @@
               this.sceneViewer.addScene(configs[i].id, configs[i]);
             }
             this.sceneViewer.loadScene('1-2')
-            window.scenePanoViewer = this.sceneViewer; // TODO: 目前viewer是全局的
+            window.sceneViewer = this.sceneViewer; // TODO: 目前viewer是全局的
+
+            const scene_id = this.sceneViewer.getScene();  // 获取当前场景的ID
+
+            axios.get('http://localhost:8080/api/user/GetComment', {
+              params: {
+                scene_id: scene_id,
+              },
+            })
+            .then(response => {
+              console.log(response.data);
+
+              const comments = response.data.data;  // 获取评论数组
+              const num = response.data.num;        // 当前场景的留言数量
+
+              this.hotspotId = num + 1;    //新建hotspots的id
+
+              if (num > 0) {
+                for (let i = 0; i < num; i++) {
+                  const comment = comments[i];
+
+                  console.log(comment);
+
+                  this.sceneViewer.addHotSpot({
+                    pitch: comment.Pitch,
+                    yaw: comment.Yaw,
+                    type: "info",
+                    text: comment.Message,
+                  });
+                }
+              }
+            });
           } else {
             console.error('scenePanorama reference is not available');
           }
@@ -78,23 +125,46 @@
         state.isSceneVisible = false;
       },
 
-      toggleChat() {
-        if (this.isLoggedIn) {
-          this.isChatVisible = !this.isChatVisible; // 切换聊天框的显示和隐藏
-          if (this.isChatVisible) {
-            this.isChatPreviewVisible = true;
-          }
-          else{
-            this.isChatPreviewVisible = false;
-          }
-          this.message = '';
-        }
-        else{
+      handleCommentButtonClick() {
+        if (!this.isLoggedIn) {
+          // 如果用户未登录
           this.$message({
             message: '用户未登录，无法使用留言功能!',
             type: "warning",
           });
+          return;
         }
+
+        this.isChatVisible = !this.isChatVisible; // 切换聊天框的显示和隐藏
+
+        if(this.isChatVisible){
+          this.pitch = this.sceneViewer.getPitch();
+          this.yaw = this.sceneViewer.getYaw();
+          this.hotspotId++;
+
+          this.sceneViewer.addHotSpot({
+            pitch: this.pitch,
+            yaw: this.yaw,
+            type: "info",
+            draggable: true,     // 设置热点为可拖动
+            id: this.hotspotId,
+          });
+
+          //留言拖动功能 待修改。。。
+
+
+        }
+        else{
+          this.sceneViewer.removeHotSpot(this.hotspotId);
+          this.hotspotId--;
+        }
+        this.message = '';
+      },
+
+      handleCommentBackButtonClick() {
+        this.isChatVisible = false;
+        this.sceneViewer.removeHotSpot(this.hotspotId);
+        this.hotspotId--;
       },
 
       sendMessage() {
@@ -102,41 +172,53 @@
           return;
         }
 
-        /*const scene_id = this.viewer.getScene(); // 获取当前场景的ID
+        const scene_id = this.sceneViewer.getScene();   // 获取当前场景的ID
+        const Pitch1 = parseFloat(this.pitch.toFixed(2));   //Pitch 和 Yaw 保留两位小数
+        const Yaw1 = parseFloat(this.yaw.toFixed(2));
+        const UserId1 = parseInt(Cookies.get('userId'), 10);   //userId转化为整数类型
 
         axios.post(
-          'http://localhost:8080/api/user/PostComment',
-          {
-            scene_id: scene_id,
-            user_id: this.user_id,
-            message: this.message,
-            pitch: pitch,
-            yaw: yaw,
-          },
-          {
-            headers: {
-              'Content-Type': 'application/json',
+            'http://localhost:8080/api/user/PostComment',
+            {
+              scene_id: scene_id,
+              user_id: UserId1,
+              message: this.message,
+              pitch: Pitch1,
+              yaw: Yaw1,
+            },
+            {
+              headers: {
+                'Content-Type': 'application/json',
+              }
             }
-          }
         )
-        .then(response => {
-          console.log(response.data);
+            .then(response => {
+              console.log(response.data);
 
-          if (response.data.code === 200) {
-            // 处理成功响应
-            this.$message.success('留言已成功提交');
-            this.message = '';
-          } else {
+              if (response.data.code === 200) {
+                // 处理成功响应
+                this.$message.success('留言已成功提交');
+                this.isChatVisible = false;
 
+                //创建留言
+                this.sceneViewer.addHotSpot({
+                  pitch: this.pitch,
+                  yaw: this.yaw,
+                  type: "info",
+                  text: this.message,
+                });
 
-            // 处理其他响应代码
-            this.$message.error('留言提交失败: ' + response.data.message);
-          }
-        })
-        .catch(error => {
-          // 处理请求错误
-          this.$message.error('留言提交失败: ' + error.message);
-        });*/
+              } else {
+                // 处理其他响应代码
+                this.$message.error('留言提交失败: ' + response.data.message);
+              }
+            })
+            .catch(error => {
+              // 处理请求错误
+              this.$message.error('留言提交失败: ' + error.message);
+            });
+
+        this.isVisible = !this.isVisible;
       },
     }
   }

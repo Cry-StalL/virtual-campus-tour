@@ -1,9 +1,9 @@
 <template>
     <div ref="panoramaContainer" style="width: 100%; height: 100vh; position: relative;">
       <!-- 全景图容器 -->
-<!--      <div ref="streetPanorama" :style="{position: 'absolute', width: '100%', height: '100%', zIndex: 1}"></div>-->
-<!--      <scene-viewer v-if="state.isSceneVisible"/>-->
-      <aerial-viewer />
+      <street-viewer />
+      <scene-viewer v-if="state.isSceneVisible"/>
+<!--      <aerial-viewer />-->
 
       <!-- 登录和注册 -->
       <div class="btnGroup1">
@@ -27,54 +27,41 @@
 <script>
   import 'pannellum'
   import 'pannellum/build/pannellum.css'
-  import { bundlerModuleNameResolver } from 'typescript';
   import axios from 'axios'
   import Cookies from 'js-cookie'
-  // import PanoramaConfig from "@/config/PanoramaConfig.js";
-  import {configs, state} from "@/config/PanoramaConfig.js";
+  import {state} from "@/config/PanoramaConfig.js";
+  import streetViewer from "@/views/home/streetViewer.vue";
   import sceneViewer from "@/views/home/sceneViewer.vue";
   import aerialViewer from "@/views/home/aerialViewer.vue";
-  
+
   export default {
     data() {
       return {
-        isChatVisible: false,
-        isChatPreviewVisible: false,
+        userId: 0,
         username:'',
-        message: '',
         state,
       };
     },
 
     components: {
+      streetViewer,
       sceneViewer,
-      aerialViewer
-    },
-
-    mounted() {
-      this.initStreetPanorama();
+      aerialViewer,
     },
 
     watch: {
-      message(newMessage) {
-        // 当留言框内容变化时，显示预览框
-        this.isChatPreviewVisible = newMessage.trim() !== '';
-      },
-
       // 监听 `state.isSceneVisible` 的变化
       'state.isSceneVisible': function (newValue, oldValue) {
         console.log(`state.isSceneVisible changed from ${oldValue} to ${newValue}`);
       },
-
-
     },
 
     computed: {
       isLoggedIn() {
         // 通过检查 cookie 判断用户是否已登录
-        const userId = Cookies.get('userId')||0;
+        this.userId = Cookies.get('userId');
         this.username = "用户名：" + Cookies.get('username');
-        if(userId == 0)
+        if(this.userId === 0)
           return false;
         else
           return true;
@@ -82,36 +69,12 @@
     },
 
     methods: {
-      initStreetPanorama(){
-        this.$nextTick(() => {
-
-          if (this.$refs.streetPanorama) {
-            this.streetViewer = pannellum.viewer(this.$refs.streetPanorama, {
-              scenes: {},
-              "sceneFadeDuration": 1000,
-              "minPitch": -62
-            });
-            for (let i = 0; i < configs.length; i++) {
-              this.streetViewer.addScene(configs[i].id, configs[i]);
-            }
-            this.streetViewer.loadScene('1-1')
-            this.streetViewer.on('mousedown', (event) =>{
-              console.log(this.streetViewer.mouseEventToCoords(event));
-            });
-            window.streetPanoViewer = this.streetViewer; // TODO: 目前viewer是全局的
-          }else{
-            console.error('streetPanorama reference is not available');
-          }
-        })
-      },
-
       logout() {
         // 将 cookie 中的 userId 改为 0 ，表示用户已退出登录
         Cookies.set('userId', 0, { expires: 1 });
         Cookies.set('username', '', { expires: 1 });
         this.$router.push('/login');
       },
-           
     }
   };
 
