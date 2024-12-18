@@ -39,10 +39,6 @@
       return {
         userId: 0,
         username:'',
-        message: '',
-        pitch: 0,
-        yaw: 0,
-        hotspotId: 0,    //留言hotspots的编号，便于修改和删除
         state,
       };
     },
@@ -54,11 +50,6 @@
     },
 
     watch: {
-      message(newMessage) {
-        // 当留言框内容变化时，显示预览框
-        this.isChatPreviewVisible = newMessage.trim() !== '';
-      },
-
       // 监听 `state.isSceneVisible` 的变化
       'state.isSceneVisible': function (newValue, oldValue) {
         console.log(`state.isSceneVisible changed from ${oldValue} to ${newValue}`);

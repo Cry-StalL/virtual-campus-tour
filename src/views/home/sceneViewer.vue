@@ -41,12 +41,23 @@
         sceneViewer: null,
         isChatVisible: false,
         isChatPreviewVisible: false,
+        message: '',
+        hotspotId: 0,    //留言hotspots的编号，便于修改和删除
+        pitch: 0,
+        yaw: 0,
         state,
       };
     },
 
     mounted() {
       this.initScenePanorama();
+    },
+
+    watch: {
+      message(newMessage) {
+        // 当留言框内容变化时，显示预览框
+        this.isChatPreviewVisible = newMessage.trim() !== '';
+      },
     },
 
     computed: {
