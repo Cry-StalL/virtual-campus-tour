@@ -56,7 +56,8 @@ func main() {
 	r.GET("/api/pano/real-id", pano.GetRealID)
 	r.POST("/api/user/register", api.Register)
 	r.POST("/api/user/login", api.Login)
-	r.POST("/api/user/comment", api.PostComment)
+	r.POST("/api/user/PostComment", api.PostComment)
+	r.GET("/api/user/GetComment", api.GetComment)
 
 	// 启动服务器
 	r.Run(":" + config.Server.Port)
