@@ -33,9 +33,14 @@
   import 'pannellum/build/pannellum.css'
   import {configs, state} from "@/config/PanoramaConfig.js";
   import Cookies from "js-cookie";
+  import axios from "axios";
+  import sceneViewer from "@/views/home/sceneViewer.vue";
   export default {
     data() {
       return {
+        sceneViewer: null,
+        isChatVisible: false,
+        isChatPreviewVisible: false,
         state,
       };
     },
@@ -81,11 +86,27 @@
       toggleChat() {
         if (this.isLoggedIn) {
           this.isChatVisible = !this.isChatVisible; // 切换聊天框的显示和隐藏
-          if (this.isChatVisible) {
-            this.isChatPreviewVisible = true;
+
+          if(this.isChatVisible){
+            this.pitch = this.sceneViewer.getPitch();
+            this.yaw = this.sceneViewer.getYaw();
+            this.hotspotId++;
+
+            this.sceneViewer.addHotSpot({
+              pitch: this.pitch,
+              yaw: this.yaw,
+              type: "info",
+              draggable: true,     // 设置热点为可拖动
+              id: this.hotspotId,
+            });
+
+            //留言拖动功能 待修改。。。
+
+
           }
           else{
-            this.isChatPreviewVisible = false;
+            this.sceneViewer.removeHotSpot(this.hotspotId);
+            this.hotspotId--;
           }
           this.message = '';
         }
@@ -102,41 +123,52 @@
           return;
         }
 
-        /*const scene_id = this.viewer.getScene(); // 获取当前场景的ID
+        const scene_id = this.sceneViewer.getScene();   // 获取当前场景的ID
+        const Pitch1 = parseFloat(this.pitch.toFixed(2));   //Pitch 和 Yaw 保留两位小数
+        const Yaw1 = parseFloat(this.yaw.toFixed(2));
+        const UserId1 = parseInt(Cookies.get('userId'), 10);   //userId转化为整数类型
 
         axios.post(
-          'http://localhost:8080/api/user/PostComment',
-          {
-            scene_id: scene_id,
-            user_id: this.user_id,
-            message: this.message,
-            pitch: pitch,
-            yaw: yaw,
-          },
-          {
-            headers: {
-              'Content-Type': 'application/json',
+            'http://localhost:8080/api/user/PostComment',
+            {
+              scene_id: scene_id,
+              user_id: UserId1,
+              message: this.message,
+              pitch: Pitch1,
+              yaw: Yaw1,
+            },
+            {
+              headers: {
+                'Content-Type': 'application/json',
+              }
             }
-          }
         )
-        .then(response => {
-          console.log(response.data);
+            .then(response => {
+              console.log(response.data);
 
-          if (response.data.code === 200) {
-            // 处理成功响应
-            this.$message.success('留言已成功提交');
-            this.message = '';
-          } else {
+              if (response.data.code === 200) {
+                // 处理成功响应
+                this.$message.success('留言已成功提交');
 
+                //创建留言
+                this.sceneViewer.addHotSpot({
+                  pitch: this.pitch,
+                  yaw: this.yaw,
+                  type: "info",
+                  text: this.message,
+                });
 
-            // 处理其他响应代码
-            this.$message.error('留言提交失败: ' + response.data.message);
-          }
-        })
-        .catch(error => {
-          // 处理请求错误
-          this.$message.error('留言提交失败: ' + error.message);
-        });*/
+              } else {
+                // 处理其他响应代码
+                this.$message.error('留言提交失败: ' + response.data.message);
+              }
+            })
+            .catch(error => {
+              // 处理请求错误
+              this.$message.error('留言提交失败: ' + error.message);
+            });
+
+        this.isVisible = !this.isVisible;
       },
     }
   }
