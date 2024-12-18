@@ -28,3 +28,14 @@ go run main.go
 前端：[Vue3](https://cn.vuejs.org/) + [ElementPlus](https://element-plus.org/zh-CN/)
 
 后端：[Gin](https://gin-gonic.com/)
+
+## Contributors
+[Mark.G](https://github.com/Cry-StalL)
+
+[chen5677](https://github.com/chen5677)
+
+[duanchy3](https://github.com/duanchy3)
+
+[anisnock](https://github.com/anisnock)
+
+[Jonathan-Luo](https://github.com/Jonathan-Luo-SYSU)
