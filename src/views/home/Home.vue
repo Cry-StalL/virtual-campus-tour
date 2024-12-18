@@ -34,14 +34,19 @@
   import {configs, state} from "@/config/PanoramaConfig.js";
   import sceneViewer from "@/views/home/sceneViewer.vue";
   import aerialViewer from "@/views/home/aerialViewer.vue";
-  
+
   export default {
     data() {
       return {
+        viewer: null,
         isChatVisible: false,
         isChatPreviewVisible: false,
+        userId: 0,
         username:'',
         message: '',
+        pitch: 0,
+        yaw: 0,
+        hotspotId: 0,    //留言hotspots的编号，便于修改和删除
         state,
       };
     },
@@ -72,9 +77,9 @@
     computed: {
       isLoggedIn() {
         // 通过检查 cookie 判断用户是否已登录
-        const userId = Cookies.get('userId')||0;
+        this.userId = Cookies.get('userId');
         this.username = "用户名：" + Cookies.get('username');
-        if(userId == 0)
+        if(this.userId === 0)
           return false;
         else
           return true;
@@ -82,27 +87,97 @@
     },
 
     methods: {
-      initStreetPanorama(){
-        this.$nextTick(() => {
 
-          if (this.$refs.streetPanorama) {
-            this.streetViewer = pannellum.viewer(this.$refs.streetPanorama, {
+
+      initStreetPanorama() {
+        this.$nextTick(() => {
+          if (this.$refs.streetPanorama){
+            this.viewer = pannellum.viewer(this.$refs.panorama, {
               scenes: {},
               "sceneFadeDuration": 1000,
-              "minPitch": -62
             });
+
             for (let i = 0; i < configs.length; i++) {
-              this.streetViewer.addScene(configs[i].id, configs[i]);
+              this.viewer.addScene(configs[i].id, configs[i]);
             }
-            this.streetViewer.loadScene('1-1')
-            this.streetViewer.on('mousedown', (event) =>{
-              console.log(this.streetViewer.mouseEventToCoords(event));
+
+            this.viewer.loadScene('1-3,2-3')
+
+            this.viewer.on('mousedown', (event) =>{
+              console.log(this.viewer.mouseEventToCoords(event));
             });
-            window.streetPanoViewer = this.streetViewer; // TODO: 目前viewer是全局的
+
+            window.panoramaViewer = this.viewer; // TODO: 目前viewer是全局的
+
+            const scene_id = this.viewer.getScene();  // 获取当前场景的ID
+
+            axios.get('http://localhost:8080/api/user/GetComment', {
+              params: {
+                scene_id: scene_id,
+              },
+            })
+                .then(response => {
+                  console.log(response.data);
+
+                  const comments = response.data.data;  // 获取评论数组
+                  const num = response.data.num;        // 当前场景的留言数量
+
+                  this.hotspotId = num + 1;    //新建hotspots的id
+
+                  if (num > 0) {
+                    for (let i = 0; i < num; i++) {
+                      const comment = comments[i];
+
+                      console.log(comment);
+
+                      this.viewer.addHotSpot({
+                        pitch: comment.Pitch,
+                        yaw: comment.Yaw,
+                        type: "info",
+                        text: comment.Message,
+                      });
+                    }
+                  }
+                });
           }else{
             console.error('streetPanorama reference is not available');
           }
         })
+      },
+
+      toggleChat() {
+        if (this.isLoggedIn) {
+          this.isVisible = !this.isVisible; // 切换聊天框的显示和隐藏
+
+          if(this.isVisible){
+            this.pitch = this.viewer.getPitch();
+            this.yaw = this.viewer.getYaw();
+            this.hotspotId++;
+
+            this.viewer.addHotSpot({
+              pitch: this.pitch,
+              yaw: this.yaw,
+              type: "info",
+              draggable: true,     // 设置热点为可拖动
+              id: this.hotspotId,
+            });
+
+            //留言拖动功能 待修改。。。
+
+
+          }
+          else{
+            this.viewer.removeHotSpot(this.hotspotId);
+            this.hotspotId--;
+          }
+          this.message = '';
+        }
+        else{
+          this.$message({
+            message: '用户未登录，无法使用留言功能!',
+            type: "warning",
+          });
+        }
       },
 
       logout() {
@@ -111,7 +186,59 @@
         Cookies.set('username', '', { expires: 1 });
         this.$router.push('/login');
       },
-           
+
+      sendMessage() {
+        if (this.message.trim() === '') {
+          return;
+        }
+
+        const scene_id = this.viewer.getScene();   // 获取当前场景的ID
+        const Pitch1 = parseFloat(this.pitch.toFixed(2));   //Pitch 和 Yaw 保留两位小数
+        const Yaw1 = parseFloat(this.yaw.toFixed(2));
+        const UserId1 = parseInt(Cookies.get('userId'), 10);   //userId转化为整数类型
+
+        axios.post(
+            'http://localhost:8080/api/user/PostComment',
+            {
+              scene_id: scene_id,
+              user_id: UserId1,
+              message: this.message,
+              pitch: Pitch1,
+              yaw: Yaw1,
+            },
+            {
+              headers: {
+                'Content-Type': 'application/json',
+              }
+            }
+        )
+            .then(response => {
+              console.log(response.data);
+
+              if (response.data.code === 200) {
+                // 处理成功响应
+                this.$message.success('留言已成功提交');
+
+                //创建留言
+                this.viewer.addHotSpot({
+                  pitch: this.pitch,
+                  yaw: this.yaw,
+                  type: "info",
+                  text: this.message,
+                });
+
+              } else {
+                // 处理其他响应代码
+                this.$message.error('留言提交失败: ' + response.data.message);
+              }
+            })
+            .catch(error => {
+              // 处理请求错误
+              this.$message.error('留言提交失败: ' + error.message);
+            });
+
+        this.isVisible = !this.isVisible;
+      },
     }
   };
 
