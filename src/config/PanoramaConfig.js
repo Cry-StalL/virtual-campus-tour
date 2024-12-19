@@ -3355,7 +3355,7 @@ export const configs = [
             },
             {
                 pitch: -21.8,
-                yaw: -73.2,
+                yaw: -98.2,
                 type: 'scene',
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
@@ -4288,6 +4288,14 @@ export const configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
+            },
+            {
+                pitch: -21.9,
+                yaw: 88.0,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['yxdd_road3/33']
             }
         ]
     },
@@ -8564,7 +8572,7 @@ export const configs = [
                 type: 'scene',
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['+']
+                clickHandlerArgs: ['yxdd_road1/59']
             },
             {
                 pitch:-21.04,
@@ -8774,7 +8782,7 @@ export const configs = [
                 clickHandlerArgs: ['+']
             },
             {
-                pitch:21.8,
+                pitch: -21.8,
                 yaw: -154.6,
                 type: 'scene',
                 cssClass: "arrow-hotspot",
@@ -8836,7 +8844,7 @@ export const configs = [
         hotSpots: [
             {
                 pitch:  -17.9,
-                yaw: 24.1,
+                yaw: 68.0,
                 type: 'scene',
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
@@ -11107,7 +11115,7 @@ export const configs = [
             },
             {
                 pitch:  -29.5,
-                yaw: -173.1,
+                yaw: -88.1,
                 type: 'scene',
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
@@ -16260,7 +16268,7 @@ function getOffset(Id) {
         case 'ry_road2/17': 
             return (180.0) - (145.0)
         case 'yxdd_road1/1': 
-            return (106.0) - (-175.0)
+            return (106.0) - (-170.0)
         case 'yxdd_road1/2': 
             return (106.0) - (176.0)
         case 'yxdd_road1/3': 
@@ -16655,7 +16663,249 @@ function getOffset(Id) {
             return (286.0) - (-11.1)
         case 'hq_road6/14': 
             return (286.0) - (-12.1)
-
+        case 'hl_road1/1': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/2': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/3': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/4': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/5': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/6': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/7': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/8': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/9': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/10': 
+            return (155.0) - (-25.7)
+        case 'hl_road1/11': 
+            return (155.0) - (-25.7)
+        case 'hl_road2/1': 
+            return (196.0) - (178.0)
+        case 'hl_road2/2': 
+            return (196.0) - (178.0)
+        case 'hl_road2/3': 
+            return (196.0) - (178.0)
+        case 'hl_road2/4': 
+            return (196.0) - (178.0)
+        case 'hl_road2/5': 
+            return (196.0) - (178.0)
+        case 'hl_road2/6': 
+            return (196.0) - (177.0)
+        case 'hl_road2/7': 
+            return (196.0) - (176.0)
+        case 'hl_road2/8': 
+            return (196.0) - (175.0)
+        case 'hl_road2/9': 
+            return (196.0) - (174.0)
+        case 'hl_road2/10': 
+            return (196.0) - (173.0)
+        case 'hl_road2/11': 
+            return (196.0) - (172.0)
+        case 'hl_road2/12': 
+            return (196.0) - (171.0)
+        case 'hl_road2/13': 
+            return (196.0) - (170.0)
+        case 'hl_road2/14': 
+            return (196.0) - (169.0)
+        case 'hl_road2/15': 
+            return (196.0) - (168.0)
+        case 'hl_road2/16': 
+            return (196.0) - (168.0)
+        case 'hl_road2/17': 
+            return (196.0) - (167.0)
+        case 'hl_road2/18': 
+            return (196.0) - (166.0)
+        case 'hl_road2/19': 
+            return (196.0) - (165.0)
+        case 'hl_road2/20': 
+            return (196.0) - (164.0)
+        case 'hl_road2/21': 
+            return (196.0) - (163.0)
+        case 'hl_road2/22': 
+            return (196.0) - (162.0)
+        case 'hl_road2/23': 
+            return (196.0) - (161.0)
+        case 'hl_road2/24': 
+            return (196.0) - (160.0)
+        case 'hl_road2/25': 
+            return (196.0) - (160.0)
+        case 'hl_road2/26': 
+            return (196.0) - (159.0)
+        case 'hl_road2/27': 
+            return (196.0) - (158.0)
+        case 'hl_road2/28': 
+            return (196.0) - (158.0)
+        case 'hl_road2/29': 
+            return (196.0) - (157.0)
+        case 'hl_road2/30': 
+            return (196.0) - (156.0)
+        case 'hl_road2/31': 
+            return (196.0) - (156.0)
+        case 'hl_road2/32': 
+            return (196.0) - (155.0)
+        case 'hl_road2/33': 
+            return (196.0) - (155.0)
+        case 'hl_road2/34': 
+            return (196.0) - (155.0)
+        case 'hl_road2/35': 
+            return (196.0) - (155.0)
+        case 'hl_road2/36': 
+            return (196.0) - (155.0)
+        case 'hl_road2/37': 
+            return (196.0) - (155.0)
+        case 'hl_road2/38': 
+            return (196.0) - (155.0)
+        case 'hl_road2/39': 
+            return (196.0) - (155.0)
+        case 'hl_road3/1': 
+            return (196.0) - (15.0)
+        case 'hl_road3/2': 
+            return (196.0) - (15.0)
+        case 'hl_road3/3': 
+            return (196.0) - (15.0)
+        case 'hl_road3/4': 
+            return (196.0) - (15.0)
+        case 'hl_road3/5': 
+            return (196.0) - (15.0)
+        case 'hl_road3/6': 
+            return (196.0) - (15.0)
+        case 'hl_road3/7': 
+            return (196.0) - (15.0)
+        case 'hl_road3/8': 
+            return (196.0) - (15.0)
+        case 'hl_road3/9': 
+            return (196.0) - (15.0)
+        case 'hl_road3/10': 
+            return (196.0) - (15.0)
+        case 'hl_road3/11': 
+            return (196.0) - (15.0)
+        case 'hl_road3/12': 
+            return (196.0) - (15.0)
+        case 'hl_road3/13': 
+            return (196.0) - (15.0)
+        case 'hl_road4/1': 
+            return (196.0) - (-83.0)
+        case 'hl_road4/2': 
+            return (196.0) - (-83.0)
+        case 'hl_road4/3': 
+            return (196.0) - (-83.0)
+        case 'hl_road4/4': 
+            return (196.0) - (-83.0)
+        case 'hl_road4/5': 
+            return (196.0) - (-86.0)
+        case 'hl_road4/6': 
+            return (196.0) - (-86.0)
+        case 'hl_road4/7': 
+            return (196.0) - (-86.0)
+        case 'hl_road4/8': 
+            return (196.0) - (-86.0)
+        case 'hl_road5/1': 
+            return (196.0) - (-86.0)
+        case 'hl_road5/2': 
+            return (196.0) - (-86.0)
+        case 'hl_road5/3': 
+            return (196.0) - (-86.0)
+        case 'hl_road5/4': 
+            return (196.0) - (-86.0)
+        case 'tsg_road1/1': 
+            return (110.0) - (143.0)
+        case 'tsg_road1/2': 
+            return (110.0) - (143.0)
+        case 'tsg_road1/3': 
+            return (110.0) - (143.0)
+        case 'tsg_road1/4': 
+            return (111.0) - (143.0)
+        case 'tsg_road1/5': 
+            return (111.0) - (143.0)
+        case 'tsg_road1/6': 
+            return (111.0) - (143.0)
+        case 'tsg_road1/7': 
+            return (112.0) - (143.0)
+        case 'tsg_road1/8': 
+            return (112.0) - (143.0)
+        case 'tsg_road1/9': 
+            return (113.0) - (143.0)
+        case 'tsg_road1/10': 
+            return (113.0) - (143.0)
+        case 'tsg_road1/11': 
+            return (114.0) - (143.0)
+        case 'tsg_road1/12': 
+            return (114.0) - (143.0)
+        case 'tsg_road1/13': 
+            return (115.0) - (143.0)
+        case 'tsg_road1/14': 
+            return (115.0) - (143.0)
+        case 'tsg_road1/15': 
+            return (115.0) - (143.0)
+        case 'tsg_road1/16': 
+            return (130.0) - (143.0)
+        case 'tsg_road1/17': 
+            return (130.0) - (143.0)
+        case 'tsg_road1/18': 
+            return (130.0) - (143.0)
+        case 'tsg_road1/19': 
+            return (130.0) - (143.0)
+        case 'jxl_road1/1': 
+            return (118.0) - (145.6)
+        case 'jxl_road1/2': 
+            return (118.0) - (145.6)
+        case 'jxl_road1/3': 
+            return (118.0) - (145.6)
+        case 'jxl_road1/4': 
+            return (118.0) - (145.6)
+        case 'jxl_road1/5': 
+            return (122.0) - (145.6)
+        case 'jxl_road1/6': 
+            return (106.0) - (133.2)
+        case 'jxl_road2/1': 
+            return (-2.0) - (24.1)
+        case 'jxl_road2/2': 
+            return (-2.0) - (24.1)
+        case 'jxl_road2/3': 
+            return (-2.0) - (24.1)
+        case 'jxl_road2/4': 
+            return (-2.0) - (24.1)
+        case 'jxl_road2/5': 
+            return (-2.0) - (24.1)
+        case 'jxl_road2/6': 
+            return (-2.0) - (24.1)
+        case 'jxl_road3/1': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/2': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/3': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/4': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/5': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/6': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/7': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/8': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/9': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/10': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/11': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/12': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/13': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/14': 
+            return (88.0) - (-82.5)
+        case 'jxl_road3/15': 
+            return (88.0) - (-82.5)
+        
         default:
             console.log("getOffset case not found")
     }
