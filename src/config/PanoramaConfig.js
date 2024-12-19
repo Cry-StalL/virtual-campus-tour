@@ -7020,6 +7020,14 @@ export const configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
+            },
+            {
+                pitch:  -20.9,
+                yaw: 0,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['ly_road1/15']
             }
         ]
     },
@@ -7681,14 +7689,14 @@ export const configs = [
         autoLoad: true,
         panorama: 'http://127.0.0.1:8080/static/panos/ly_road1/15.jpg',
         hotSpots: [
-            /*,{
+            {
                 pitch:  -20.3,
                 yaw: 99.1,
                 type: 'scene',
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
-                clickHandlerArgs: ['+']
-            }*/
+                clickHandlerArgs: ['ly_road2/23']
+            },
             {
                 pitch:  -30.4,
                 yaw: -99.1,
@@ -12310,6 +12318,14 @@ export const configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road1/68']
+            },
+            {
+                pitch:  -21.5,
+                yaw: -85,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: getNextPanorama,
+                clickHandlerArgs: ['rh_road1/1']
             }
         ]
     },
@@ -16905,7 +16921,321 @@ function getOffset(Id) {
             return (88.0) - (-82.5)
         case 'jxl_road3/15': 
             return (88.0) - (-82.5)
-        
+        case 'tq_road1/1': 
+            return (106.0) - (175.0)
+        case 'tq_road1/2': 
+            return (106.0) - (175.0)
+        case 'tq_road1/3': 
+            return (106.0) - (175.0)
+        case 'tq_road1/4': 
+            return (106.0) - (175.0)
+        case 'tq_road1/5': 
+            return (106.0) - (175.0)
+        case 'tq_road1/6': 
+            return (106.0) - (175.0)
+        case 'tq_road1/7': 
+            return (106.0) - (175.0)
+        case 'tq_road1/8': 
+            return (106.0) - (175.0)
+        case 'tq_road1/9': 
+            return (106.0) - (175.0)
+        case 'tq_road1/10': 
+            return (106.0) - (175.0)
+        case 'tq_road1/11': 
+            return (106.0) - (175.0)
+        case 'tq_road1/12': 
+            return (106.0) - (175.0)
+        case 'tq_road1/13': 
+            return (106.0) - (175.0)
+        case 'tq_road1/14': 
+            return (106.0) - (175.0)
+        case 'tq_road1/15': 
+            return (106.0) - (175.0)
+        case 'tq_road1/16': 
+            return (106.0) - (175.0)
+        case 'tq_road1/17': 
+            return (106.0) - (175.0)
+        case 'tq_road1/18': 
+            return (106.0) - (175.0)
+        case 'tq_road1/19': 
+            return (106.0) - (175.0)
+        case 'tq_road1/20': 
+            return (106.0) - (175.0)
+        case 'tq_road1/21': 
+            return (106.0) - (175.0)
+        case 'tq_road1/22': 
+            return (106.0) - (175.0)
+        case 'tq_road1/23': 
+            return (106.0) - (175.0)
+        case 'tq_road1/24': 
+            return (106.0) - (175.0)
+        case 'tq_road1/25': 
+            return (106.0) - (175.0)
+        case 'tq_road1/26': 
+            return (106.0) - (175.0)
+        case 'tq_road1/27': 
+            return (106.0) - (175.0)
+        case 'tq_road1/28': 
+            return (106.0) - (175.0)
+        case 'rh_road1/0': 
+            return (196.0) - (-85.0)
+        case 'rh_road1/1': 
+            return (20.0) - (17.1)
+        case 'rh_road1/2': 
+            return (20.0) - (17.1)
+        case 'rh_road1/3': 
+            return (20.0) - (17.1)
+        case 'rh_road1/4': 
+            return (20.0) - (17.1)
+        case 'rh_road1/5': 
+            return (20.0) - (17.1)
+        case 'rh_road1/6': 
+            return (20.0) - (17.1)
+        case 'rh_road1/7': 
+            return (20.0) - (17.1)
+        case 'rh_road1/8': 
+            return (20.0) - (17.1)
+        case 'rh_road1/9': 
+            return (25.0) - (17.1)
+        case 'rh_road1/10': 
+            return (25.0) - (17.1)
+        case 'rh_road1/11': 
+            return (25.0) - (17.1)
+        case 'rh_road1/12': 
+            return (30.0) - (17.1)
+        case 'rh_road1/13': 
+            return (30.0) - (17.1)
+        case 'rh_road1/14': 
+            return (30.0) - (17.1)
+        case 'rh_road1/15': 
+            return (30.0) - (17.1)
+        case 'rh_road1/16': 
+            return (30.0) - (17.1)
+        case 'rh_road1/17': 
+            return (30.0) - (17.1)
+        case 'rh_road1/18': 
+            return (30.0) - (17.1)
+        case 'rh_road1/19': 
+            return (30.0) - (17.1)
+        case 'rh_road1/20': 
+            return (30.0) - (17.1)
+        case 'rh_road1/21': 
+            return (30.0) - (17.1)
+        case 'rh_road1/22': 
+            return (30.0) - (17.1)
+        case 'rh_road1/23': 
+            return (30.0) - (17.1)
+        case 'rh_road1/24': 
+            return (30.0) - (17.1)
+        case 'rh_road1/25': 
+            return (30.0) - (17.1)
+        case 'rh_road1/26': 
+            return (30.0) - (17.1)
+        case 'rh_road1/27': 
+            return (30.0) - (17.1)
+        case 'rh_road1/28': 
+            return (30.0) - (17.1)
+        case 'rh_road1/29': 
+            return (30.0) - (17.1)
+        case 'rh_road1/30': 
+            return (30.0) - (17.1)
+        case 'rh_road1/31': 
+            return (30.0) - (17.1)
+        case 'rh_road1/32': 
+            return (30.0) - (17.1)
+        case 'rh_road1/33': 
+            return (30.0) - (17.1)
+        case 'rh_road1/34': 
+            return (30.0) - (17.1)
+        case 'rh_road1/35': 
+            return (30.0) - (17.1)
+        case 'rh_road1/36': 
+            return (30.0) - (17.1)
+        case 'rh_road1/37': 
+            return (30.0) - (17.1)
+        case 'rh_road1/38': 
+            return (30.0) - (17.1)
+        case 'rh_road1/39': 
+            return (30.0) - (17.1)
+        case 'rh_road2/1': 
+            return (74.0) - (-165.2)
+        case 'rh_road2/2': 
+            return (75.0) - (-165.2)
+        case 'rh_road2/3': 
+            return (76.0) - (-165.2)
+        case 'rh_road2/4': 
+            return (77.0) - (-165.2)
+        case 'rh_road2/5': 
+            return (78.0) - (-165.2)
+        case 'rh_road2/6': 
+            return (78.0) - (-165.2)
+        case 'rh_road2/7': 
+            return (79.0) - (-165.2)
+        case 'rh_road2/8': 
+            return (80.0) - (-165.2)
+        case 'rh_road2/9': 
+            return (81.0) - (-165.2)
+        case 'rh_road2/10': 
+            return (82.0) - (-165.2)
+        case 'rh_road2/11': 
+            return (83.0) - (-165.2)
+        case 'rh_road2/12': 
+            return (84.0) - (-165.2)
+        case 'rh_road2/13': 
+            return (85.0) - (-165.2)
+        case 'rh_road2/14': 
+            return (85.0) - (-165.2)
+        case 'rh_road2/15': 
+            return (86.0) - (-165.2)
+        case 'rh_road2/16': 
+            return (87.0) - (-165.2)
+        case 'rh_road2/17': 
+            return (88.0) - (-165.2)
+        case 'rh_road2/18': 
+            return (89.0) - (-165.2)
+        case 'rh_road2/19': 
+            return (90.0) - (-165.2)
+        case 'rh_road2/20': 
+            return (91.0) - (-165.2)
+        case 'rh_road2/21': 
+            return (92.0) - (-165.2)
+        case 'rh_road2/22': 
+            return (93.0) - (-165.2)
+        case 'rh_road2/23': 
+            return (94.0) - (-165.2)
+        case 'rh_road2/24': 
+            return (95.0) - (-165.2)
+        case 'rh_road2/25': 
+            return (96.0) - (-165.2)
+        case 'rh_road2/26': 
+            return (97.0) - (-165.2)
+        case 'rh_road2/27': 
+            return (98.0) - (-165.2)
+        case 'rh_road2/28': 
+            return (98.0) - (-165.2)
+        case 'rh_road2/29': 
+            return (99.0) - (-165.2)
+        case 'rh_road2/30': 
+            return (100.0) - (-165.2)
+        case 'ly_road1/1': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/2': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/3': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/4': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/5': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/6': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/7': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/8': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/9': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/10': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/11': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/12': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/13': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/14': 
+            return (177.0) - (-108.0)
+        case 'ly_road1/15': 
+            return (177.0) - (-108.0)
+        case 'ly_road2/1': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/2': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/3': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/4': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/5': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/6': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/7': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/8': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/9': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/10': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/11': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/12': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/13': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/14': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/15': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/16': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/17': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/18': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/19': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/20': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/21': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/22': 
+            return (177.0) - (-100.0)
+        case 'ly_road2/23': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/1': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/2': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/3': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/4': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/5': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/6': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/7': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/8': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/9': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/10': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/11': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/12': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/13': 
+            return (177.0) - (-100.0)
+        case 'ly_road3/14': 
+            return (177.0) - (-100.0)
+        case 'ly_road4/1': 
+            return (106.0) - (110.0)
+        case 'ly_road4/2': 
+            return (106.0) - (110.0)
+        case 'ly_road4/3': 
+            return (106.0) - (110.0)
+        case 'ly_road4/4': 
+            return (106.0) - (110.0)
+        case 'ly_road4/5': 
+            return (106.0) - (110.0)
+        case 'ly_road4/6': 
+            return (106.0) - (110.0)
+        case 'ly_road4/7': 
+            return (106.0) - (110.0)
+
         default:
             console.log("getOffset case not found")
     }
