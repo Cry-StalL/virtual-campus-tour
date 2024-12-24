@@ -1,6 +1,6 @@
 import { reactive } from 'vue'
 
-export const configs = [
+export const street_configs = [
     {
         id: 'byy_road1/1',
         autoLoad: true,
@@ -9118,7 +9118,15 @@ export const configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:7.3,
+                yaw:-28.4,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['zhongshanxiang']
+            },
         ]
     },
     {
@@ -16058,13 +16066,28 @@ export const configs = [
     },
 ]
 
+export const scene_configs = [
+    {
+        "id": "zhongshanxiang",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/zhongshanxiang",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 5,
+            "cubeResolution": 4768
+        }
+    },
+]
 
 export const aerial_configs = [
     {
-        "id": "aerial1",
+        "id": "aerial0",
         "autoLoad": true,
         "multiRes": {
-            "basePath": "http://127.0.0.1:8080/static/panos/aerials/aerial_1",
+            "basePath": "http://127.0.0.1:8080/static/panos/_aerials/aerial_0",
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -16074,10 +16097,97 @@ export const aerial_configs = [
         }
     },
     {
+        "id": "aerial1",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_aerials/aerial_1",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        },
+        "hotSpots": [
+            {
+                pitch: -24.05,
+                yaw: 95.59,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['yxdd_road1/68']
+            },
+            {
+                pitch: -87.59,
+                yaw: 85.03,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['rh_road1/9']
+            },
+            {
+                pitch: -16.42,
+                yaw: 65.66,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['yxdd_road1/59']
+            },
+            {
+                pitch: -23.08,
+                yaw: -109.58,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['rh_road6/1']
+            },
+            {
+                pitch: -13.35,
+                yaw: 104.03,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['jy_road1/1']
+            },
+            {
+                pitch: -18.17,
+                yaw: 162.95,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['yxdd_road2/12']
+            },
+            {
+                pitch: -8.20,
+                yaw: -85.52,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['rh_road2/10']
+            },
+            {
+                pitch: -9.80,
+                yaw: -15.28,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['hl_road1/1']
+            },
+            {
+                pitch: -6.31,
+                yaw: 41.35,
+                type: 'scene',
+                cssClass: "arrow-hotspot",
+                clickHandlerFunc: enterStreetFromAerial,
+                clickHandlerArgs: ['yxdd_road1/34']
+            },
+        ]
+    },
+    {
         "id": "aerial2",
         "autoLoad": true,
         "multiRes": {
-            "basePath": "http://127.0.0.1:8080/static/panos/aerials/aerial_2",
+            "basePath": "http://127.0.0.1:8080/static/panos/_aerials/aerial_2",
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -16090,20 +16200,7 @@ export const aerial_configs = [
         "id": "aerial3",
         "autoLoad": true,
         "multiRes": {
-            "basePath": "http://127.0.0.1:8080/static/panos/aerials/aerial_3",
-            "path": "/%l/%s%y_%x",
-            "fallbackPath": "/fallback/%s",
-            "extension": "jpg",
-            "tileResolution": 512,
-            "maxLevel": 4,
-            "cubeResolution": 3816
-        }
-    },
-    {
-        "id": "aerial4",
-        "autoLoad": true,
-        "multiRes": {
-            "basePath": "http://127.0.0.1:8080/static/panos/aerials/aerial_4",
+            "basePath": "http://127.0.0.1:8080/static/panos/_aerials/aerial_3",
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -16175,8 +16272,17 @@ function getNextPanorama(event, args) {
 
 export const state = reactive({
     isSceneVisible: false,
+    isStreetVisible: false,
+    street_sceneID: null,
+    scene_sceneID: null,
 });
 
-function enterScene() {
+function enterStreetFromAerial(event, args) {
+    state.street_sceneID = args[0]
+    state.isStreetVisible = true
+}
+
+function enterScene(event, args) {
+    state.scene_sceneID = args[0]
     state.isSceneVisible = true;
 }

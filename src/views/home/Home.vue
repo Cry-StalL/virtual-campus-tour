@@ -1,9 +1,9 @@
 <template>
     <div ref="panoramaContainer" style="width: 100%; height: 100vh; position: relative;">
       <!-- 全景图容器 -->
-      <street-viewer />
-      <scene-viewer v-if="state.isSceneVisible"/>
-<!--      <aerial-viewer />-->
+      <scene-viewer v-if="state.isSceneVisible" :style="{zIndex: 3}" />
+      <street-viewer v-if="state.isStreetVisible" :style="{zIndex: 2}" :constructorArg="streetConstructorArg" />
+      <aerial-viewer :style="{zIndex: 1}"/>
 
       <!-- 登录和注册 -->
       <div class="btnGroup1">
@@ -27,7 +27,6 @@
 <script>
   import 'pannellum'
   import 'pannellum/build/pannellum.css'
-  import axios from 'axios'
   import Cookies from 'js-cookie'
   import {state} from "@/config/PanoramaConfig.js";
   import streetViewer from "@/views/home/streetViewer.vue";
@@ -39,6 +38,7 @@
       return {
         userId: 0,
         username:'',
+        streetConstructorArg: null,
         state,
       };
     },

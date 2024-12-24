@@ -1,40 +1,42 @@
 <template>
-  <div ref="scenePanorama" :style="{position: 'absolute', width: '100%', height: '100%', zIndex: 2}"></div>
+  <div class="scene-viewer-container">
+    <div ref="scenePanorama" :style="{position: 'absolute', width: '100%', height: '100%'}"></div>
 
-  <!--返回按钮-->
-  <el-button class="leaveSceneButton" type="primary" @click="leaveScene">返回</el-button>
+    <!--返回按钮-->
+    <el-button class="leaveSceneButton" type="primary" @click="leaveScene">返回街景图</el-button>
 
-  <!-- 留言按钮 -->
-  <el-button class="custom-button" type="primary" @click="handleCommentButtonClick">留言</el-button>
+    <!-- 留言按钮 -->
+    <el-button class="custom-button" type="primary" @click="handleCommentButtonClick">留言</el-button>
 
-  <!-- 留言框 -->
-  <div v-if="isChatVisible" class="chat-box">
-    <el-input type="textarea" :rows="4" placeholder="请输入留言..." v-model="message"></el-input>
-    <div class="btnGroup2">
-      <el-button @click="sendMessage">发送</el-button>
-      <el-button @click="handleCommentBackButtonClick">返回</el-button>
+    <!-- 留言框 -->
+    <div v-if="isChatVisible" class="chat-box">
+      <el-input type="textarea" :rows="4" placeholder="请输入留言..." v-model="message"></el-input>
+      <div class="btnGroup2">
+        <el-button @click="sendMessage">发送</el-button>
+        <el-button @click="handleCommentBackButtonClick">返回</el-button>
+      </div>
+    </div>
+
+    <!-- 留言发表框 -->
+    <div
+        v-if="isChatPreviewVisible"
+        ref="previewBox"
+        class="comment-box preview"
+        :style="{ top: previewTop, left: previewLeft, zIndex: 1 }"
+        @mousedown="dragStart"
+    >
+      {{ message }}
     </div>
   </div>
 
-  <!-- 留言发表框 -->
-  <div
-      v-if="isChatPreviewVisible"
-      ref="previewBox"
-      class="comment-box preview"
-      :style="{ top: previewTop, left: previewLeft, zIndex: 1 }"
-      @mousedown="dragStart"
-  >
-    {{ message }}
-  </div>
 </template>
 
 <script>
   import 'pannellum'
   import 'pannellum/build/pannellum.css'
-  import {configs, state} from "@/config/PanoramaConfig.js";
+  import {scene_configs, state} from "@/config/PanoramaConfig.js";
   import Cookies from "js-cookie";
   import axios from "axios";
-  import sceneViewer from "@/views/home/sceneViewer.vue";
   export default {
     data() {
       return {
@@ -77,12 +79,15 @@
         this.$nextTick(() => {
           if (this.$refs.scenePanorama) {
             this.sceneViewer = pannellum.viewer(this.$refs.scenePanorama, {
+              "type": "multires",
               scenes: {},
             })
-            for (let i = 0; i < configs.length; i++) {
-              this.sceneViewer.addScene(configs[i].id, configs[i]);
+            for (let i = 0; i < scene_configs.length; i++) {
+              this.sceneViewer.addScene(scene_configs[i].id, scene_configs[i]);
             }
-            this.sceneViewer.loadScene('1-2')
+
+            this.sceneViewer.loadScene(state.scene_sceneID)
+
             window.sceneViewer = this.sceneViewer; // TODO: 目前viewer是全局的
 
             const scene_id = this.sceneViewer.getScene();  // 获取当前场景的ID
@@ -226,10 +231,16 @@
 </script>
 
 <style scoped>
+  .scene-viewer-container {
+    position: relative;
+    width: 100%; /* 占满整个屏幕宽度 */
+    height: 100vh; /* 占满整个屏幕高度 */
+  }
+
   .leaveSceneButton {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 15px;
+    left: 15px;
     z-index: 10; /* 确保按钮在全景图之上 */
   }
 
