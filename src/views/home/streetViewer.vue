@@ -29,7 +29,7 @@
           if (this.$refs.streetPanorama){
             this.streetViewer = pannellum.viewer(this.$refs.streetPanorama, {
               scenes: {},
-              "sceneFadeDuration": 1000,
+              "sceneFadeDuration": 750,
               "minPitch": -65,
             });
 
@@ -40,6 +40,7 @@
             this.streetViewer.loadScene(state.street_sceneID)
 
             this.streetViewer.on('mousedown', (event) =>{
+              console.log(this.streetViewer.getConfig().id);
               console.log(this.streetViewer.mouseEventToCoords(event));
             });
 
