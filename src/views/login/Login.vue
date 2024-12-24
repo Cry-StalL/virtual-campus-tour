@@ -131,6 +131,7 @@
                 Cookies.set('userId', userId, { expires: 1 }); // 设置1天后过期
                 Cookies.set('username', username, { expires: 1 });
 
+
                 this.$router.push('/home');
                 // 显示后端响应的成功信息
                 this.$message({
