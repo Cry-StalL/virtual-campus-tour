@@ -1,7 +1,21 @@
 <template>
     <div ref="panoramaContainer" style="width: 100%; height: 100vh; position: relative;">
+      
       <!-- 全景图容器 -->
       <div ref="panorama" style="width: 100%; height: 100%;"></div>
+
+      <!-- 控制声音开关 -->
+      <el-button 
+        @click="toggleMute" 
+        type="" style="position: absolute; top: 100px; left: 5px; z-index: 10; width: 10px;"
+      >
+      <el-icon>
+        <component :is="isMuted ? 'MuteNotification' : 'Bell'"></component>
+      </el-icon>
+      </el-button>
+
+      <!-- 背景音乐 -->
+      <audio id="audio" :src="audioSrc" :loop="isLoop" controls></audio>
 
       <!-- 登录和注册 -->
       <div class="btnGroup1">
@@ -31,6 +45,7 @@
         </div>
       </div>
     </div>
+
 </template>
   
 <script>
@@ -40,10 +55,12 @@
   import { bundlerModuleNameResolver } from 'typescript';
   import axios from 'axios'
   import Cookies from 'js-cookie'
-  
+  import audioFile from '@/assets/song.mp3'   //背景音乐
+
   export default {
     data() {
       return {
+        audioSrc: audioFile,   //背景音乐
         viewer: null,
         isVisible: false,
         userId: 0,
@@ -53,11 +70,14 @@
         yaw: 0,
         hotspotId: 0,    //留言hotspots的编号，便于修改和删除
         zIndex: 1,       // 用于控制层级
+        isLoop: true,    // 默认开启循环播放
+        isMuted: false   // 默认不静音
       };
     },
 
     mounted() {
       this.initPanorama();
+      this.audioAutoPlay();
     },
 
     watch: {
@@ -225,6 +245,23 @@
 
         this.isVisible = !this.isVisible;
       },
+
+      //播放音乐
+      audioAutoPlay() {
+        let audio = document.getElementById("audio");
+        audio.loop = true; // 设置循环播放
+        audio.play().catch(error => {
+          console.error("无法自动播放音频:", error);
+        });
+      },
+
+      //控制音乐开关
+      toggleMute() {
+        let audio = document.getElementById("audio");
+        this.isMuted = !this.isMuted;
+        audio.muted = this.isMuted; // 设置静音状态
+      },
+      
     }
   };
 
