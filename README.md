@@ -29,13 +29,31 @@ go run main.go
 
 后端：[Gin](https://gin-gonic.com/)
 
-## Contributors
-[Mark.G](https://github.com/Cry-StalL)
+<br>
 
-[chen5677](https://github.com/chen5677)
+<h3 align="center">✨ Contributors ✨</h2>
 
-[duanchy3](https://github.com/duanchy3)
-
-[anisnock](https://github.com/anisnock)
-
-[Jonathan-Luo](https://github.com/Jonathan-Luo-SYSU)
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/108460626?v=4" width="125px;" alt="Mark.G" /><br />
+      <sub><b><a href="https://github.com/Cry-StalL">Mark.G</a></b></sub><br />
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/114389363?v=4" width="125px;" alt="anisnock" /><br />
+      <sub><b><a href="https://github.com/anisnock">anisnock</a></b></sub><br />
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/182666548?v=4" width="125px;" alt="chen5677" /><br />
+      <sub><b><a href="https://github.com/chen5677">chen5677</a></b></sub><br />
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/145515121?v=4" width="125px;" alt="duanchy3" /><br />
+      <sub><b><a href="https://github.com/duanchy3">duanchy3</a></b></sub><br />
+    </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/122197347?v=4" width="125px;" alt="Jonathan-Luo" /><br />
+      <sub><b><a href="https://github.com/Jonathan-Luo-SYSU">Jonathan-Luo</a></b></sub><br />
+    </td>
+  </tr>
+</table>
