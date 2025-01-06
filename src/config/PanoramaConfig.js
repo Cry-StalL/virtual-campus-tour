@@ -16363,7 +16363,7 @@ export const aerial_configs = [
                 pitch: -18.93,
                 yaw: 99.31,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['yxdd_road1/68']
             },
@@ -16371,7 +16371,7 @@ export const aerial_configs = [
                 pitch: -87.59,
                 yaw: 85.03,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['rh_road1/9']
             },
@@ -16379,7 +16379,7 @@ export const aerial_configs = [
                 pitch: -12.44,
                 yaw: 70.25,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['yxdd_road1/59']
             },
@@ -16387,7 +16387,7 @@ export const aerial_configs = [
                 pitch: -17.51,
                 yaw: -105.17,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['rh_road6/1']
             },
@@ -16395,7 +16395,7 @@ export const aerial_configs = [
                 pitch: -10.10,
                 yaw: 108.19,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['jy_road1/1']
             },
@@ -16403,7 +16403,7 @@ export const aerial_configs = [
                 pitch: -13.93,
                 yaw: 167.20,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['yxdd_road2/12']
             },
@@ -16411,7 +16411,7 @@ export const aerial_configs = [
                 pitch: -5.87,
                 yaw: -81.31,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['rh_road2/10']
             },
@@ -16419,7 +16419,7 @@ export const aerial_configs = [
                 pitch: -7.07,
                 yaw: -11.53,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['hl_road1/1']
             },
@@ -16427,7 +16427,7 @@ export const aerial_configs = [
                 pitch: -4.48,
                 yaw: 44.95,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['yxdd_road1/34']
             },
