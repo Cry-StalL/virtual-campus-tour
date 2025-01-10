@@ -101,11 +101,24 @@ export default {
 
     //播放音乐
     audioAutoPlay() {
-      let audio = document.getElementById("audio");
+      const audio = document.getElementById("audio");
       audio.loop = true; // 设置循环播放
-      audio.play().catch(error => {
-        console.error("无法自动播放音频:", error);
+
+      // 等待用户交互后播放
+      const playAudio = () => {
+        audio.play().catch(error => {
+          console.error("无法自动播放音频:", error);
+        });
+      };
+
+      // 添加用户交互事件监听器
+      document.addEventListener("click", () => {
+        playAudio();
+        // 移除事件监听器，防止重复绑定
+        document.removeEventListener("click", playAudio);
       });
+
+      console.log("等待用户点击页面以播放音频...");
     },
 
     //控制音乐开关
