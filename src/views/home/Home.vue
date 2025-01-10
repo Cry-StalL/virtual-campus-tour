@@ -8,7 +8,7 @@
       <!-- 登录和注册 -->
       <div class="btnGroup1">
         <template v-if="isLoggedIn">
-          <el-button type="" style="margin-left:10px">{{ username }}</el-button>
+          <el-button type="" style="margin-left:10px">用户名：{{username}}</el-button>
           <el-button type="primary" style="margin-left:10px" @click="logout">退出登录</el-button>
         </template>
         <template v-else>
@@ -36,8 +36,8 @@
   export default {
     data() {
       return {
-        userId: 0,
-        username:'',
+        userID: '0',
+        username: '',
         streetConstructorArg: null,
         state,
       };
@@ -58,10 +58,10 @@
 
     computed: {
       isLoggedIn() {
+        this.username = Cookies.get('username');
+        this.userID = Cookies.get('userId');
         // 通过检查 cookie 判断用户是否已登录
-        this.userId = Cookies.get('userId');
-        this.username = "用户名：" + Cookies.get('username');
-        if(this.userId === 0)
+        if(Number(this.userID || 0) === 0)
           return false;
         else
           return true;
@@ -69,6 +69,7 @@
     },
 
     methods: {
+      Cookies,
       logout() {
         // 将 cookie 中的 userId 改为 0 ，表示用户已退出登录
         Cookies.set('userId', 0, { expires: 1 });

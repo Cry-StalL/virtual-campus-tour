@@ -2475,7 +2475,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:25.5,
+                yaw:-84.8,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -2537,7 +2545,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road4/8']
-            }
+            },
+            {
+                pitch:24.8,
+                yaw:-55.9,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -2560,7 +2576,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:27.6,
+                yaw:-49.5,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -2583,7 +2607,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:33.9,
+                yaw:-36.6,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -2622,7 +2654,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['yxdd_road3/15']
-            }
+            },
+            {
+                pitch:36.5,
+                yaw:-15.6,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -5508,7 +5548,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['hl_road4/6']
-            }
+            },
+            {
+                pitch:47.0,
+                yaw:157.7,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -5531,7 +5579,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:64.3,
+                yaw:102.9,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -5554,7 +5610,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:51.3,
+                yaw:49.8,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -5577,7 +5641,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:37.8,
+                yaw:36.8,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -5600,7 +5672,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:25.6,
+                yaw:26.8,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['hl_2']
+            },
         ]
     },
     {
@@ -9088,7 +9168,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:9.4,
+                yaw:-62.8,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['zhongshanxiang']
+            },
         ]
     },
     {
@@ -9111,7 +9199,15 @@ export const street_configs = [
                 cssClass: "arrow-hotspot",
                 clickHandlerFunc: getNextPanorama,
                 clickHandlerArgs: ['-']
-            }
+            },
+            {
+                pitch:8.6,
+                yaw:-47.6,
+                type: 'scene',
+                cssClass: "scene-hotspot",
+                clickHandlerFunc: enterScene,
+                clickHandlerArgs: ['zhongshanxiang']
+            },
         ]
     },
     {
@@ -16104,14 +16200,11 @@ export const scene_configs = [
             "cubeResolution": 4768
         }
     },
-]
-
-export const aerial_configs = [
     {
-        "id": "aerial0",
+        "id": "hl_2",
         "autoLoad": true,
         "multiRes": {
-            "basePath": "http://127.0.0.1:8080/static/panos/_aerials/aerial_0",
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/hl_2",
             "path": "/%l/%s%y_%x",
             "fallbackPath": "/fallback/%s",
             "extension": "jpg",
@@ -16120,6 +16213,139 @@ export const aerial_configs = [
             "cubeResolution": 3816
         }
     },
+    {
+        "id": "hl_3",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/hl_3",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+    {
+        "id": "hq2_3",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/hq2_3",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+    {
+        "id": "hq4",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/hq4",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+    {
+        "id": "jxl",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/jxl",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 5,
+            "cubeResolution": 4752
+        }
+    },
+    {
+        "id": "rygc",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/rygc",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 5,
+            "cubeResolution": 4768
+        }
+    },
+    {
+        "id": "south_gate",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/south_gate",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 5,
+            "cubeResolution": 4768
+        }
+    },
+    {
+        "id": "tqzx",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/tqzx",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+    {
+        "id": "tsg",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/tsg",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 5,
+            "cubeResolution": 4768
+        }
+    },
+    {
+        "id": "tyg",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/tyg",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+    {
+        "id": "yinhu",
+        "autoLoad": true,
+        "multiRes": {
+            "basePath": "http://127.0.0.1:8080/static/panos/_scenes/yinhu",
+            "path": "/%l/%s%y_%x",
+            "fallbackPath": "/fallback/%s",
+            "extension": "jpg",
+            "tileResolution": 512,
+            "maxLevel": 4,
+            "cubeResolution": 3816
+        }
+    },
+]
+
+export const aerial_configs = [
     {
         "id": "aerial1",
         "autoLoad": true,
@@ -16134,10 +16360,10 @@ export const aerial_configs = [
         },
         "hotSpots": [
             {
-                pitch: -24.05,
-                yaw: 95.59,
+                pitch: -18.93,
+                yaw: 99.31,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['yxdd_road1/68']
             },
@@ -16145,63 +16371,63 @@ export const aerial_configs = [
                 pitch: -87.59,
                 yaw: 85.03,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['rh_road1/9']
             },
             {
-                pitch: -16.42,
-                yaw: 65.66,
+                pitch: -12.44,
+                yaw: 70.25,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['yxdd_road1/59']
             },
             {
-                pitch: -23.08,
-                yaw: -109.58,
+                pitch: -17.51,
+                yaw: -105.17,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['rh_road6/1']
             },
             {
-                pitch: -13.35,
-                yaw: 104.03,
+                pitch: -10.10,
+                yaw: 108.19,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['jy_road1/1']
             },
             {
-                pitch: -18.17,
-                yaw: 162.95,
+                pitch: -13.93,
+                yaw: 167.20,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['yxdd_road2/12']
             },
             {
-                pitch: -8.20,
-                yaw: -85.52,
+                pitch: -5.87,
+                yaw: -81.31,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['rh_road2/10']
             },
             {
-                pitch: -9.80,
-                yaw: -15.28,
+                pitch: -7.07,
+                yaw: -11.53,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['hl_road1/1']
             },
             {
-                pitch: -6.31,
-                yaw: 41.35,
+                pitch: -4.48,
+                yaw: 44.95,
                 type: 'scene',
-                cssClass: "arrow-hotspot",
+                cssClass: "aerial-hotspot",
                 clickHandlerFunc: enterStreetFromAerial,
                 clickHandlerArgs: ['yxdd_road1/34']
             },

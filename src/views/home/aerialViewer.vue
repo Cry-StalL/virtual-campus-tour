@@ -4,7 +4,6 @@
 
     <!-- 按钮 -->
     <div class="switch-aerial-button-group">
-      <el-button type="primary" class="aerial-button" @click="aerialViewer.loadScene('aerial0')">xxx上空</el-button>
       <el-button type="primary" class="aerial-button" @click="aerialViewer.loadScene('aerial1')">若海湖上空</el-button>
       <el-button type="primary" class="aerial-button" @click="aerialViewer.loadScene('aerial2')">教学楼上空</el-button>
       <el-button type="primary" class="aerial-button" @click="aerialViewer.loadScene('aerial3')">榕园上空</el-button>
